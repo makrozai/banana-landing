@@ -6,23 +6,23 @@
 @font-face {
   font-family: "ptsans";
   src: local(ptsans Regular), 
-    url("#{$roboto-font-path}pt-sans-regular.woff2") format("woff2"),
-    url("#{$roboto-font-path}pt-sans-regular.woff") format("woff");
+    url("#{$font-path}pt-sans-regular.woff2") format("woff2"),
+    url("#{$font-path}pt-sans-regular.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "ptsans";
   src: local(ptsans Bold),
-    url("#{$roboto-font-path}pt-sans-bold.woff2") format("woff2"),
-    url("#{$roboto-font-path}pt-sans-bold.woff") format("woff");
+    url("#{$font-path}pt-sans-bold.woff2") format("woff2"),
+    url("#{$font-path}pt-sans-bold.woff") format("woff");
   font-weight: 700;
 }
 @font-face {
   font-family: "ptsans";
   src: local(ptsans Regular), 
-    url("#{$roboto-font-path}pt-sans-italic.woff2") format("woff2"),
-    url("#{$roboto-font-path}pt-sans-italic.woff") format("woff");
+    url("#{$font-path}pt-sans-italic.woff2") format("woff2"),
+    url("#{$font-path}pt-sans-italic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
@@ -30,8 +30,8 @@
 @font-face {
   font-family: "ptsans";
   src: local(ptsans Bold),
-    url("#{$roboto-font-path}pt-sans-bolditalic.woff2") format("woff2"),
-    url("#{$roboto-font-path}pt-sans-bolditalic.woff") format("woff");
+    url("#{$font-path}pt-sans-bolditalic.woff2") format("woff2"),
+    url("#{$font-path}pt-sans-bolditalic.woff") format("woff");
   font-weight: 700;
   font-style: italic;
 }

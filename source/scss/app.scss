@@ -1,5 +1,18 @@
+// import of global variables
+@import "01-settings/vars";
+
+// import of font
 @import "03-generic/pt-sans";
+
+//import of style framework
+@import "00-vendor/materialize/materialize";
+
+// styles of template
+
+
+
+//import of utilities
 @import "07-trumps/utilities";
 
 // Or selectively include components
-// @import
+// @imports
