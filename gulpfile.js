@@ -54,8 +54,8 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('source/js/*.js', ['uglify']);
-    gulp.watch('source/scss/*.scss', ['scss']);
-    gulp.watch('source/templates/*.pug', ['pug']);
+    gulp.watch('source/js/**/*.js', ['uglify']);
+    gulp.watch('source/scss/**/*.scss', ['scss']);
+    gulp.watch('source/templates/**/*.pug', ['pug']);
     gulp.watch('source/img/*.{jpg,jpeg,png,gif}', ['imagemin']);
 });
