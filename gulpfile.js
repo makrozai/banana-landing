@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
     babel = require('gulp-babel'),
+    concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     pug = require('gulp-pug'),
@@ -13,8 +14,9 @@ var gulp = require('gulp'),
 gulp.task('default', ['uglify', 'scss', 'pug', 'imagemin', 'webserver', 'watch']);
 
 gulp.task('uglify', function() {
-    gulp.src('source/js/*.js')
+    gulp.src('source/js/**/*.js')
         .pipe(plumber())
+        .pipe(concat('main.js'))
         .pipe(babel({
           presets: ['es2015']
         }))
