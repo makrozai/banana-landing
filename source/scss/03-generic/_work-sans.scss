@@ -4,23 +4,25 @@
 * considerar los formatos que se necesitan
 */
 @font-face {
-  font-family: "ptsans";
-  src: local(ptsans Regular), 
-    url("#{$font-path}pt-sans-regular.woff2") format("woff2"),
-    url("#{$font-path}pt-sans-regular.woff") format("woff");
+  font-family: "worksans";
+  src: local(worksans Extra Light),
+    url("#{$font-path}worksans/pt-sans-regular.woff2") format("woff2"),
+    url("#{$font-path}worksans/pt-sans-regular.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "ptsans";
-  src: local(ptsans Bold),
-    url("#{$font-path}pt-sans-bold.woff2") format("woff2"),
-    url("#{$font-path}pt-sans-bold.woff") format("woff");
+  font-family: "worksans";
+  src: local(worksans Bold),
+    url("#{$font-path}worksans/pt-sans-bold.woff2") format("woff2"),
+    url("#{$font-path}worksans/pt-sans-bold.woff") format("woff");
   font-weight: 700;
 }
+
+//font italic or modify of style
 @font-face {
-  font-family: "ptsans";
-  src: local(ptsans Regular), 
+  font-family: "worksans";
+  src: local(worksans Regular),
     url("#{$font-path}pt-sans-italic.woff2") format("woff2"),
     url("#{$font-path}pt-sans-italic.woff") format("woff");
   font-weight: 400;
@@ -28,8 +30,8 @@
 }
 
 @font-face {
-  font-family: "ptsans";
-  src: local(ptsans Bold),
+  font-family: "worksans";
+  src: local(worksans Bold),
     url("#{$font-path}pt-sans-bolditalic.woff2") format("woff2"),
     url("#{$font-path}pt-sans-bolditalic.woff") format("woff");
   font-weight: 700;

@@ -40,7 +40,7 @@ gulp.task('pug', function() {
 });
 
 gulp.task('imagemin', function() {
-    gulp.src('source/img/*.{jpg,jpeg,png,gif}')
+    gulp.src('source/img/*.{jpg,jpeg,png,gif,svg}')
     .pipe(plumber())
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
