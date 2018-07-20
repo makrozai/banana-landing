@@ -1,0 +1,15 @@
+.c-button{
+  display: inline-block;
+  height: $button-large-height;
+  line-height: $button-large-height;
+  background: $g-color-second;
+  min-width: 250px;
+  border-radius: 3em;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: white;
+
+  &--fourth{
+    background: $g-color-fourth;
+  }
+}

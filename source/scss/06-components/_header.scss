@@ -1,4 +1,11 @@
 .c-header{
+  display: flex;
   background: $g-color-first;
   height: 100vh;
+  color: white;
+
+  &__container{
+    max-width: 850px;
+    margin:  auto;
+  }
 }

@@ -1,14 +1,26 @@
 .c-navbar{
   background: transparent;
+  box-shadow: 0 0 0 0 transparent;
+  &__logo{
+    float: left;
+    height: $navbar-height;
+    width: 15%;
+    img{
+      display: block;
+      width: auto;
+      height: 50%;
+
+      margin-top: 7.5%;
+    }
+  }
 
   &--fixed{
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
   }
 
   ul{
-    margin-left: 15%;
     width: 85%;
   }
 }
