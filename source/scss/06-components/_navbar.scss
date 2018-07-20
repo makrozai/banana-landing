@@ -1,0 +1,14 @@
+.c-navbar{
+  background: transparent;
+
+  &--fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  ul{
+    margin-left: 15%;
+    width: 85%;
+  }
+}

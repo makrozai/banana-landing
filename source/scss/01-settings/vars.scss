@@ -1,1 +1,15 @@
+:root {
+  --g-color-first: #1d2258;
+  --g-color-second: #ff4b7d;
+  --g-color-third: #014592;
+  --g-color-fourth: #00d2c3;
+}
+
+//global colors
+$g-color-first: var(--g-color-first) !default; //dark-slate-blue
+$g-color-second: var(--g-color-second) !default; //warm-pink
+$g-color-third: var(--g-color-third) !default; //darkish-blue
+$g-color-fourth: var(--g-color-fourth) !default; //aquamarine
+
+
 $font-path: "../../source/fonts/pt-sans/" !default;
