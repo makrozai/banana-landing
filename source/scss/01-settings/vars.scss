@@ -11,5 +11,14 @@ $g-color-second: var(--g-color-second) !default; //warm-pink
 $g-color-third: var(--g-color-third) !default; //darkish-blue
 $g-color-fourth: var(--g-color-fourth) !default; //aquamarine
 
+//margins and paddings
+$model-sizes:(
+  xs : .5em,
+  s  : 1em,
+  m  : 3em,
+  l  : 5em,
+  xl : 7em,
+  xxl: 9em
+);
 
 $font-path: "../../source/fonts/" !default;

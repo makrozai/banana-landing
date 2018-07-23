@@ -1,0 +1,59 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Documents
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="dist/css/app.css")
+  body
+    include blocks/navbar
+    header.c-banner
+      img(src="dist/img/image-banner.jpg", alt="")
+      .c-banner__container.center
+        h1.c-banner__title Sobre Tudú
+        h2.c-banner__subtitle Nadie tiene tiempo para hacer
+          span todo lo que necesita hacer
+
+    section.u-padding-tb--m
+      .container
+        .row
+          .col.s12
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem placeat eveniet, enim, delectus est iusto minima praesentium laboriosam rerum expedita temporibus dolorem sunt officia quae eum eos, fugit pariatur quas.
+            p Tudú quiere darle a sus usuarios superpoderes
+          .col.s12
+            h2 Nuestro Equipo
+          .col.s12.m6
+            .c-card-member
+              img(src="", alt="").c-card-member__photo
+              h3.c-card-member__name Ruth Vallenas - CEO
+              p Ruth ha liderado las operaciones y entrenamiento en empresas de servicios nacionales y franquicias internacionales por los últimos 15 años
+    section.u-bg-first.u-padding-top--l.u-padding-bottom--m.u-diagonal.u-diagonal--first
+      .container.white-text
+        .row
+          .col.s12
+            h2.c-header__title ¿Quieres saber más sobre cómo podemos ayudarte?
+            p Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros
+        form.row
+          .col.s12.m6
+            input(type="text" placeholder="Ingresa tu correo electrónico").c-newsletter
+          .col.s12
+            button.c-button Conversemos
+    footer.c-footer.u-padding-top--xxl
+      .container.center
+        .c-footer__container
+          .row
+            .col.s12.m6
+              a(href="#!") Términos y condiciones
+            .col.s12.m6
+              a(href="#!") Trabaja con nosotros
+            .col.s12
+              a(href="#!")
+                i.material-icons ac_unit
+              a(href="#!")
+                i.material-icons ac_unit
+        .c-footer__copy
+          p Horario de atención: Lunes a Viernes (9AM a 6PM), Sábados (9AM a 1PM)
+
+
+    script(src="dist/js/main.js")

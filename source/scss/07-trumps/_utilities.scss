@@ -1,0 +1,61 @@
+.u{
+  // directions for margins
+  $boxmodel: ('margin', 'padding');
+  $directions: ('top', 'bottom', 'left', 'right', 'tb', 'lr');
+  $numbers: ('first','second','third','fourth');
+  @each $model in $boxmodel{
+    &-#{$model}{
+      @each $value in $directions{
+        &-#{$value}{
+          @each $name, $item in $model-sizes{
+            &--#{$name}{
+              @if $value =='lr' {
+                #{$model}-left : $item;
+                #{$model}-right : $item;
+              }
+              @elseif $value == 'tb'{
+                #{$model}-top : $item;
+                #{$model}-bottom : $item;
+              }
+              @else{
+                #{$model}-#{$value} : $item;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $number in $numbers{
+    &-bg-#{$number} {
+      background: var(--g-color-#{$number});
+    }
+  }
+
+  &-diagonal{
+    position: relative;
+    z-index: 1;
+
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform:skewY(5deg);
+      transform-origin: top left;
+      z-index: -1;
+    }
+    @each $number in $numbers{
+      &--#{$number}{
+        &:after{
+          background: var(--g-color-#{$number});
+        }
+      }
+    }
+
+  }
+}

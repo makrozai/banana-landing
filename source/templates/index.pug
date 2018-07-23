@@ -1,3 +1,4 @@
+include settings/mixins
 <!DOCTYPE html>
 html(lang="es")
   head
@@ -8,11 +9,78 @@ html(lang="es")
   body
     include blocks/navbar
     header.c-header
-      .c-header__container.center-align
-        h1.c-header__title Delega tus <span>pendientes<span> a un equipo de asistentes personales capacitados.
+      .c-header__container.center
+        h1.c-header__title Delega tus <span>pendientes<br></span>a un equipo de asistentes personales capacitados.
         p.c-header__subtitle Comienza ahora a través de Messenger, Whatsapp, o vía web.
         div
-          a(href="#!").c-button para el negocio
-          a(href="#!").c-button.c-button--fourth para tí
+          a(href="#!").c-button.u-margin-lr--s para el negocio
+          a(href="#!").c-button.c-button--fourth.u-margin-lr--s para tí
+    section.u-bg-fourth.u-padding-top--l.u-padding-bottom--m.u-diagonal.u-diagonal--fourth
+      .container.white-text
+        .row
+          .col.s12
+            h2.center Para el negocio
+          .col.s12.m6
+            +cardWork('dist/img/image-desktop.jpg',2,'45.00','Ricardo necesitaba sacar una vigencia de poder de su empresa.')
+          .col.s12.m6
+            +cardWork('dist/img/image-desktop.jpg',4,'95.00','Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
+    section.u-bg-second.u-padding-top--xxl.u-padding-bottom--l
+      .container.white-text
+        .row
+          .col.s12
+            h2.center Para tí
+          .col.s12.m6
+            +cardWork('dist/img/image-desktop.jpg',1,'16.00','A Andrea se le venció el recibo de Luz del Sur y no tenía tiempo de ir hasta allá')
+          .col.s12.m6
+            +cardWork('dist/img/image-desktop.jpg',8,'200.00','Natalia necesitaba legalizar su diploma de maestría en el extranjero')
+    section.u-padding-top--xl
+      .container.center-align
+        .row
+          .col.s12
+            h2 ¿Por qué Tudú?
+          .col.s12.m6
+            +cardService('comment','Horas Ahorradas','Olvídate de las horas invertidas fuera de la casa o de la oficina en compras, trámites y pagos. ')
+          .col.s12.m6
+            +cardService('comment','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+          .col.s12.m6
+            +cardService('comment','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+          .col.s12.m6
+            +cardService('comment','Programa Pedidos','¿Necesitas ayuda siempre con el mismo pendiente? Programa tu pedido y deja que un dúer se encargue.')
+    section.u-padding-bottom--xl
+      .container.center-align
+        .row
+          .col.s12
+            h2 Empresas que ya coinfían en nosotros
+          .col.s12
+            .c-gallery-client
+              each val in [1,2,3,4,5,6,7,8,9]
+                img(src="dist/img/lavictorialab.png", alt="")
+    section.u-bg-first.u-padding-top--l.u-padding-bottom--m.u-diagonal.u-diagonal--first
+      .container.white-text
+        .row
+          .col.s12
+            h2.c-header__title ¿Quieres saber más sobre cómo podemos ayudarte?
+            p Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros
+        form.row
+          .col.s12.m6
+            input(type="text" placeholder="Ingresa tu correo electrónico").c-newsletter
+          .col.s12
+            button.c-button Conversemos
+    footer.c-footer.u-padding-top--xxl
+      .container.center
+        .c-footer__container
+          .row
+            .col.s12.m6
+              a(href="#!") Términos y condiciones
+            .col.s12.m6
+              a(href="#!") Trabaja con nosotros
+            .col.s12
+              a(href="#!")
+                i.material-icons ac_unit
+              a(href="#!")
+                i.material-icons ac_unit
+        .c-footer__copy
+          p Horario de atención: Lunes a Viernes (9AM a 6PM), Sábados (9AM a 1PM)
+
 
     script(src="dist/js/main.js")

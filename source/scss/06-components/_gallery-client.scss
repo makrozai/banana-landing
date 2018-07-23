@@ -1,0 +1,14 @@
+.c-gallery-client{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+
+  img{
+    display: block;
+    width: 17%;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    opacity: .7;
+  }
+}

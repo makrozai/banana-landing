@@ -7,10 +7,19 @@
 //import of style framework
 @import "00-vendor/materialize/materialize";
 
+//import style reset
+@import "03-generic/reset";
+
 // styles of template
 @import "06-components/button";
 @import "06-components/navbar";
 @import "06-components/header";
+@import "06-components/card-work";
+@import "06-components/card-service";
+@import "06-components/gallery-client";
+@import "06-components/newsletter";
+@import "06-components/footer";
+@import "06-components/banner";
 
 //import of utilities
 @import "07-trumps/utilities";

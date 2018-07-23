@@ -1,0 +1,16 @@
+.c-newsletter{
+  background: transparent;
+  color: #979fac;
+  border: none;
+  outline: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 2.5em;
+  border-bottom: 1px solid rgba(213, 218, 230, 0.7);
+  padding: .5em 0;
+
+  &::placeholder {
+    color: #979fac;
+  }
+
+}

@@ -1,0 +1,10 @@
+mixin cardWork(image,hour,price,description)
+  .c-card-work
+    .c-card-work__image
+      img(src= image, alt="")
+      .c-card-work__badge
+        span.hide-on-med-and-down= hour  + ' horas ahorrada'
+        span.c-card-work__price.hide-on-large-only= price
+    p.c-card-work__description= description
+    span.c-card-work__price.hide-on-med-and-down= price
+    span.hide-on-large-only= hour  + ' horas ahorrada'
