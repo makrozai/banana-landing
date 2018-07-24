@@ -15,7 +15,7 @@ html(lang="es")
         div
           a(href="#!").c-button.u-margin-lr--s para el negocio
           a(href="#!").c-button.c-button--fourth.u-margin-lr--s para tí
-    section.u-bg-fourth.u-padding-top--l.u-padding-bottom--m.u-diagonal.u-diagonal--fourth
+    section.u-bg-fourth.u-padding-top--l.u-padding-bottom--xxl.u-diagonal
       .container.white-text
         .row
           .col.s12
@@ -24,7 +24,7 @@ html(lang="es")
             +cardWork('dist/img/image-desktop.jpg',2,'45.00','Ricardo necesitaba sacar una vigencia de poder de su empresa.')
           .col.s12.m6
             +cardWork('dist/img/image-desktop.jpg',4,'95.00','Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
-    section.u-bg-second.u-padding-top--xxl.u-padding-bottom--l
+    section.u-bg-second.u-padding-top--xxl.u-padding-bottom--l.u-diagonal--reverse
       .container.white-text
         .row
           .col.s12
@@ -55,32 +55,8 @@ html(lang="es")
             .c-gallery-client
               each val in [1,2,3,4,5,6,7,8,9]
                 img(src="dist/img/lavictorialab.png", alt="")
-    section.u-bg-first.u-padding-top--l.u-padding-bottom--m.u-diagonal.u-diagonal--first
-      .container.white-text
-        .row
-          .col.s12
-            h2.c-header__title ¿Quieres saber más sobre cómo podemos ayudarte?
-            p Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros
-        form.row
-          .col.s12.m6
-            input(type="text" placeholder="Ingresa tu correo electrónico").c-newsletter
-          .col.s12
-            button.c-button Conversemos
-    footer.c-footer.u-padding-top--xxl
-      .container.center
-        .c-footer__container
-          .row
-            .col.s12.m6
-              a(href="#!") Términos y condiciones
-            .col.s12.m6
-              a(href="#!") Trabaja con nosotros
-            .col.s12
-              a(href="#!")
-                i.material-icons ac_unit
-              a(href="#!")
-                i.material-icons ac_unit
-        .c-footer__copy
-          p Horario de atención: Lunes a Viernes (9AM a 6PM), Sábados (9AM a 1PM)
+    +newsletter
+    include blocks/footer
 
 
     script(src="dist/js/main.js")
