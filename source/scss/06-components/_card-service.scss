@@ -1,5 +1,33 @@
 .c-card-service{
-  max-width: 400px;
-  margin: 0 auto;
-  font-size: 500;
+  &__image{
+    position: relative;
+    margin-bottom: 2.5em;
+    img{
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  &__badge{
+    background: white;
+    display: inline-block;
+    color: $g-color-first;
+    font-weight: 500;
+
+    padding: .5em .7em;
+    border-radius: 3em;
+    position: absolute;
+    bottom: 0;
+    right: 1.5em;
+    transform:translateY(50%);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+  }
+  &__price{
+    &:before{
+      content: "S./";
+    }
+  }
+  &__description{
+    margin-bottom: .3rem;
+  }
 }

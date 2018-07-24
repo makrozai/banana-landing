@@ -21,31 +21,31 @@ html(lang="es")
           .col.s12
             h2.center Para el negocio
           .col.s12.m6
-            +cardWork('dist/img/image-desktop.jpg',2,'45.00','Ricardo necesitaba sacar una vigencia de poder de su empresa.')
+            +cardService('dist/img/image-desktop.jpg',2,'45.00','Ricardo necesitaba sacar una vigencia de poder de su empresa.')
           .col.s12.m6
-            +cardWork('dist/img/image-desktop.jpg',4,'95.00','Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
+            +cardService('dist/img/image-desktop.jpg',4,'95.00','Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
     section.u-bg-second.u-padding-top--xxl.u-padding-bottom--l.u-diagonal--reverse
       .container.white-text
         .row
           .col.s12
             h2.center Para tí
           .col.s12.m6
-            +cardWork('dist/img/image-desktop.jpg',1,'16.00','A Andrea se le venció el recibo de Luz del Sur y no tenía tiempo de ir hasta allá')
+            +cardService('dist/img/image-desktop.jpg',1,'16.00','A Andrea se le venció el recibo de Luz del Sur y no tenía tiempo de ir hasta allá')
           .col.s12.m6
-            +cardWork('dist/img/image-desktop.jpg',8,'200.00','Natalia necesitaba legalizar su diploma de maestría en el extranjero')
+            +cardService('dist/img/image-desktop.jpg',8,'200.00','Natalia necesitaba legalizar su diploma de maestría en el extranjero')
     section.u-padding-top--xl
       .container.center-align
         .row
           .col.s12
             h2 ¿Por qué Tudú?
           .col.s12.m6
-            +cardService('comment','Horas Ahorradas','Olvídate de las horas invertidas fuera de la casa o de la oficina en compras, trámites y pagos. ')
+            +cardBenefit('comment','Horas Ahorradas','Olvídate de las horas invertidas fuera de la casa o de la oficina en compras, trámites y pagos. ')
           .col.s12.m6
-            +cardService('comment','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+            +cardBenefit('comment','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
           .col.s12.m6
-            +cardService('comment','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+            +cardBenefit('comment','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
           .col.s12.m6
-            +cardService('comment','Programa Pedidos','¿Necesitas ayuda siempre con el mismo pendiente? Programa tu pedido y deja que un dúer se encargue.')
+            +cardBenefit('comment','Programa Pedidos','¿Necesitas ayuda siempre con el mismo pendiente? Programa tu pedido y deja que un dúer se encargue.')
     section.u-padding-bottom--xl
       .container.center-align
         .row
@@ -55,7 +55,7 @@ html(lang="es")
             .c-gallery-client
               each val in [1,2,3,4,5,6,7,8,9]
                 img(src="dist/img/lavictorialab.png", alt="")
-    +newsletter
+    +newsletter('¿Quieres saber más sobre cómo podemos ayudarte?', true, 'Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros', 'Conversemos','')
     include blocks/footer
 
 

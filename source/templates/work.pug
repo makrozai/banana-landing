@@ -1,0 +1,33 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Documents
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="dist/css/app.css")
+  body
+    include blocks/navbar
+
+    section.u-bg-first.u-diagonal.u-padding-tb--xxl
+      .container.white-text
+        .row
+          .col.s12
+            h1.center.u-margin-bottom--s Trabaja con Nosotros
+          .col.s12
+            h2.u-text-medium En tudú estamos buscando:
+        .row
+          .col.s12.m6
+            +cardWork('Lorem Ipsum', 'has been the industry\'s standard dummy text ever since the 1500s.','Postular', '#!')
+          .col.s12.m6
+            +cardWork('Lorem Ipsum', 'has been the industry\'s standard dummy text ever since the 1500s.','Postular', '#!')
+          .col.s12.m6
+            +cardWork('Lorem Ipsum', 'has been the industry\'s standard dummy text ever since the 1500s.','Postular', '#!')
+          .col.s12.m6
+            +cardWork('Lorem Ipsum', 'has been the industry\'s standard dummy text ever since the 1500s.','Postular', '#!')
+          .col.s12.u-margin-top--m
+            p.u-container--small Si tu perfil no encaja en estas posiciones pero quieres trabajar con nosotros, mándanos tu CV a unete@tudu.pe
+    include blocks/footer
+
+
+    script(src="dist/js/main.js")

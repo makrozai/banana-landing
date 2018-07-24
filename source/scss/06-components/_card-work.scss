@@ -1,0 +1,18 @@
+.c-card-work{
+  text-align: center;
+  padding: 2em .5em;
+  h4,p{
+    text-align: left;
+  }
+  h4{
+    color: $g-color-second;
+    margin-bottom:0;
+  }
+  p{
+    font-size: 20px;
+    margin-top:0;
+  }
+  a{
+    margin: 0 auto;
+  }
+}

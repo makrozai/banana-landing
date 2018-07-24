@@ -1,12 +1,17 @@
-mixin newsletter
+mixin newsletter(title, input, description, textButton,linkButton)
   section.u-bg-first.u-padding-top--l.u-padding-bottom--xxl.u-diagonal
     .container.white-text
       .row
         .col.s12
-          h2.c-header__title ¿Quieres saber más sobre cómo podemos ayudarte?
-          p Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros
-      form.row
-        .col.s12.m6
-          input(type="text" placeholder="Ingresa tu correo electrónico").c-newsletter
+          h2.c-header__title= title
+          if description
+            p= description
+      if input
+        form.row
+          .col.s12.m6
+            input(type="text" placeholder="Ingresa tu correo electrónico").c-newsletter
+          .col.s12
+            button.c-button= textButton
+      else
         .col.s12
-          button.c-button Conversemos
+            a(href="#!").c-button.u-margin-top--m= textButton

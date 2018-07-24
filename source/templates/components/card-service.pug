@@ -1,5 +1,10 @@
-mixin cardService(icon,title,description)
-  .c-card-service.u-padding-tb--m
-    i.medium.material-icons= icon
-    h4= title
-    p= description
+mixin cardService(image,hour,price,description)
+  .c-card-service
+    .c-card-service__image
+      img(src= image, alt="")
+      .c-card-service__badge
+        span.hide-on-med-and-down= hour  + ' horas ahorrada'
+        span.c-card-work__price.hide-on-large-only= price
+    p.c-card-work__description= description
+    span.c-card-work__price.hide-on-med-and-down= price
+    span.hide-on-large-only= hour  + ' horas ahorrada'
