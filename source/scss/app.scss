@@ -3,14 +3,17 @@
 
 // import of font
 @import "03-generic/work-sans";
+@import "03-generic/icomoon";
 
 //import of style framework
 @import "00-vendor/materialize/materialize";
 
 //import style reset
 @import "03-generic/reset";
+@import "04-elements/base";
 
 // styles of template
+@import "06-components/form";
 @import "06-components/button";
 @import "06-components/navbar";
 @import "06-components/header";
@@ -22,6 +25,7 @@
 @import "06-components/newsletter";
 @import "06-components/footer";
 @import "06-components/banner";
+@import "06-components/login";
 
 //import of utilities
 @import "07-trumps/utilities";

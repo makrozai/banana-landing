@@ -1,5 +1,5 @@
-mixin cardBenefit(icon,title,description)
+mixin cardBenefit(icon,iconColor,title,description)
   .c-card-benefit.u-padding-tb--m
-    i.medium.material-icons= icon
+    i.medium.material-icons(class="icon-" + icon + ' u-text-' + iconColor)
     h4= title
     p= description

@@ -2,10 +2,14 @@
   display: flex;
   background: $g-color-first;
   height: 100vh;
+  min-height: 650px;
   color: white;
+  position: relative;
 
   &__container{
-    max-width: 800px;
+    width: 800px;
+    position: relative;
+    z-index: 10;
     margin:  auto;
   }
   &__title{
@@ -21,5 +25,39 @@
   &__subtitle{
     margin-bottom: 3em;
     font-size: 20px;
+  }
+  &__image{
+    position: absolute;
+    max-width: 20%;
+
+    &--phone{
+      bottom:0;
+      left: 0;
+      z-index: 2;
+    }
+    &--paper{
+      bottom:0;
+      left: 0;
+      z-index: 1;
+    }
+    &--clock{
+      bottom: 0;
+      right: 0;
+    }
+    &--gift{
+      top: 5em;
+      left: 0;
+    }
+  }
+  &__scrolling{
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+    transform:translateX(-50%);
+
+    i{
+      color: white;
+      font-size: 3em;
+    }
   }
 }

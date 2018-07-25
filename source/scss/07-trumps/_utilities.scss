@@ -32,6 +32,9 @@
     &-bg-#{$number} {
       background: var(--g-color-#{$number});
     }
+    &-text-#{$number} {
+      color: var(--g-color-#{$number});
+    }
   }
 
   &-diagonal{

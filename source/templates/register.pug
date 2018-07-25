@@ -1,0 +1,35 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Documents
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="dist/css/app.css")
+  body
+    include blocks/navbar
+    header.c-header
+      img(src="dist/img/reloj.png", alt="").c-header__image.c-header__image--clock
+      img(src="dist/img/calendar-lg.png", alt="").c-header__image.c-header__image--phone
+      img(src="dist/img/recibo-luz.png", alt="").c-header__image.c-header__image--paper
+      img(src="dist/img/gift.png", alt="").c-header__image.c-header__image--gift
+      .c-header__container
+        .c-login.u-margin-bottom--m
+            h2.u-text-medium.u-margin-bottom--s Crear cuenta
+            form(action="").row
+              .c-form__input.col.s12.m6
+                input(type="text" placeholder="Nombre")
+              .c-form__input.col.s12.m6
+                input(type="text" placeholder="Apellido")
+              .c-form__input.col.s12.m6
+                input(type="email" placeholder="Correo electrónico")
+              .c-form__input.col.s12.m6
+                input(type="text" placeholder="Teléfono")
+              button.c-login__button.c-button.icon-arrow
+        p.c-login__register ¿No tienes una cuenta?
+          a(href="#!") Regístrate
+
+
+
+
+    script(src="dist/js/main.js")

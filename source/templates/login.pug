@@ -1,0 +1,38 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Documents
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="dist/css/app.css")
+  body
+    include blocks/navbar
+    header.c-header
+      img(src="dist/img/reloj.png", alt="").c-header__image.c-header__image--clock
+      img(src="dist/img/calendar-lg.png", alt="").c-header__image.c-header__image--phone
+      img(src="dist/img/recibo-luz.png", alt="").c-header__image.c-header__image--paper
+      img(src="dist/img/gift.png", alt="").c-header__image.c-header__image--gift
+      .c-header__container
+        .c-login.u-margin-bottom--m
+          .c-login__small
+            h2.u-text-medium.u-margin-bottom--s Inicia sesión
+
+            a(href="#!").c-button-logged.u-margin-tb--xs
+              img(src="dist/img/icons/gmail.png", alt="")
+              | Inicia con Google
+            a(href="#!").c-button-logged.u-margin-tb--xs
+              img(src="dist/img/icons/facebook.png", alt="")
+              | Inicia con Facebook
+            span.c-login__separator ó
+
+            form(action="login-2.html")
+              input(type="number" placeholder="Teléfono")
+              button.c-login__button.c-button.icon-arrow
+        p.c-login__register ¿No tienes una cuenta?
+          a(href="#!") Regístrate
+
+
+
+
+    script(src="dist/js/main.js")

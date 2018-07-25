@@ -5,12 +5,12 @@
     float: left;
     height: $navbar-height;
     width: 15%;
+    display: flex;
+    align-items:center;
     img{
       display: block;
-      width: auto;
       height: 50%;
-
-      margin-top: 7.5%;
+      transform:translateY(-5px);
     }
   }
 
@@ -23,5 +23,15 @@
 
   ul{
     width: 85%;
+  }
+  &__icon{
+    display: flex;
+    height: $navbar-height;
+    align-items:center;
+    justify-content:center;
+
+    img{
+      width: 80%;
+    }
   }
 }
