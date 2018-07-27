@@ -1,0 +1,34 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Documents
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="dist/css/app.css")
+  body
+    include blocks/admin-navbar
+
+    header
+      .container
+        .row.u-padding-tb--m
+          .col.s12.m6
+            .c-card-perfil
+              img(src="dist/img/image-user.png", alt="")
+              .c-card-perfil__description.u-padding-top--m
+                span.c-button.c-button--small.c-button-linear--second Editar foto
+          .col.s12
+            form.row.u-margin-tb--m
+              .col.s4
+                label(for="") Nombre
+              .col.s8
+                input(type="text" value="Billy McBridge")
+              .col.s4
+                label(for="")
+
+
+
+
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js")
+    script(src="dist/js/main.js")

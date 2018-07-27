@@ -1,0 +1,12 @@
+.c-price{
+  &:before{
+    content: "S/";
+  }
+  &__cents{
+    font-size: .6em;
+
+    &:before{
+      content: ".";
+    }
+  }
+}

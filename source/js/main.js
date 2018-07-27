@@ -1,4 +1,3 @@
-//import Modal from "00-vendor/modal.js";
+M.AutoInit();
 
-
-let a = () => console.log("Hello World");
+//let a = () => console.log("Hello World");
