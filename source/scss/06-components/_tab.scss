@@ -1,0 +1,32 @@
+.c-tab{
+  $tab-size: 60px;
+  border-top: 1px solid #8e90ab;
+  border-bottom: 1px solid #8e90ab;
+  padding: 0 2em;
+  margin-bottom: 1em;
+  .tabs{
+    height: $tab-size;
+
+    .indicator{
+      height: 3px;
+      z-index: 5;
+      bottom: -1;
+    }
+  }
+  .tab{
+    height: $tab-size;
+    line-height: $tab-size;
+    a{
+      font-size: 20px;
+      text-transform: capitalize;
+
+      &:focus{
+        background: transparent;
+        &.active{
+          background: transparent;
+        }
+      }
+
+    }
+  }
+}

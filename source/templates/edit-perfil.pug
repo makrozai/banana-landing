@@ -12,23 +12,38 @@ html(lang="es")
     header
       .container
         .row.u-padding-tb--m
-          .col.s12.m6
+          .col.s12
             .c-card-perfil
               img(src="dist/img/image-user.png", alt="")
               .c-card-perfil__description.u-padding-top--m
-                span.c-button.c-button--small.c-button-linear--second Editar foto
-          .col.s12
-            form.row.u-margin-tb--m
-              .col.s4
-                label(for="") Nombre
-              .col.s8
-                input(type="text" value="Billy McBridge")
-              .col.s4
-                label(for="")
+                a(href="#!").c-button.c-button--small.c-button-linear--second Editar foto
+          .col.s12.m8
+            form.c-form-admin.u-margin-tb--m
+              .row.valign-wrapper
+                .col.s4
+                  label(for="") Nombre
+                .col.s8
+                  input(type="text" value="Billy McBridge")
+              .row.valign-wrapper
+                .col.s4
+                  label(for="") Contraseña
+                .col.s8
+                  input(type="password" value="asdasdasdasdasd")
+              .row.valign-wrapper
+                .col.s4
+                  label(for="") Teléfono
+                .col.s8
+                  input(type="number" value="998765435")
+              .row.valign-wrapper
+                .col.s4
+                  label(for="") E-mail
+                .col.s8
+                  input(type="email" value="woodrow.glover@howe.tv")
+              .row.u-margin-top--m
+                a(href="#!").c-button.c-button--small.c-button-linear--second Cancelar
+                a(href="#!").c-button.c-button--small.u-margin-left--s Guardar
 
 
 
 
-
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js")
-    script(src="dist/js/main.js")
+    include blocks/scripts

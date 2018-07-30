@@ -14,9 +14,13 @@ var gulp = require('gulp'),
 gulp.task('default', ['uglify', 'scss', 'pug', 'imagemin', 'webserver', 'watch']);
 
 gulp.task('uglify', function() {
-    gulp.src('source/js/**/*.js')
+    gulp.src('source/js/materialize.js')
         .pipe(plumber())
-        .pipe(concat('main.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+    gulp.src('source/js/main.js')
+        .pipe(plumber())
+        //.pipe(concat('main.js'))
         .pipe(babel({
           presets: ['es2015']
         }))

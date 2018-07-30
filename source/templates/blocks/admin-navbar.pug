@@ -5,4 +5,22 @@ nav.c-navbar
         img(src="dist/img/logo-tudu-pink.svg", alt="")
       ul#nav-mobile.left.hide-on-med-and-down
         li.right
-          a(href="about.html").c-button.c-button--small.c-button-linear--second Hacer un pedido
+          a(href="#modal").c-button.c-button--small.c-button-linear--second.modal-trigger Hacer un pedido
+#modal.modal.c-modal
+  .modal-content
+    h2.center Nuevo Pedido
+
+    .row
+      .c-form__input.col.s12
+        input(type="text" placeholder="Título / descripción corta")
+      .c-form__input.col.s12.m6
+        input(type="text" placeholder="Dirección de recojo (si aplica)")
+      .c-form__input.col.s12.m6
+        input(type="text" placeholder="fecha")
+      .c-form__input.col.s12.m6
+        input(type="text" placeholder="Dirección de entrega (si aplica)")
+      .c-form__input.col.s12.m6
+        input(type="text" placeholder="fecha")
+      .c-form__input.col.s12
+        textarea(name="", cols="30", rows="10" placeholder="Descripción detallada del pedido")
+      button.c-login__button.c-button.icon-arrow

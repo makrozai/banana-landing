@@ -14,22 +14,10 @@ html(lang="es")
       img(src="dist/img/recibo-luz.png", alt="").c-header__image.c-header__image--paper
       img(src="dist/img/gift.png", alt="").c-header__image.c-header__image--gift
       .c-header__container
-        .c-login.u-margin-bottom--m
-            h2.u-text-medium.u-margin-bottom--s Crear cuenta
-            form(action="").row
-              .c-form__input.col.s12.m6
-                input(type="text" placeholder="Nombre")
-              .c-form__input.col.s12.m6
-                input(type="text" placeholder="Apellido")
-              .c-form__input.col.s12.m6
-                input(type="email" placeholder="Correo electrónico")
-              .c-form__input.col.s12.m6
-                input(type="text" placeholder="Teléfono")
-              button.c-login__button.c-button.icon-arrow
-        p.c-login__register ¿No tienes una cuenta?
-          a(href="#!") Regístrate
-
-
-
+        .c-login
+          h2.u-text-medium.u-margin-bottom--s ¡Gracias por registrarte en Tudú!
+          h4.c-login__small.u-text-medium Tu cuenta será activada en breve y te enviaremos tu contraseña para que puedas ingresar a tu perfil.
+        button.c-login__button.c-button iniciar sesión
 
     include blocks/scripts
+

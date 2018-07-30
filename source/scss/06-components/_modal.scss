@@ -1,0 +1,16 @@
+.c-modal{
+  border-radius: 6px;
+  box-shadow: 0 0 0 0 transparent;
+  background-color: white;
+  overflow: initial;
+  max-height: initial;
+  padding: 2em;
+
+  input,textarea{
+    text-align: left;
+  }
+}
+.modal-overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
