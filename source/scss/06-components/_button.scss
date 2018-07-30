@@ -16,6 +16,8 @@
               0 3px 14px 2px rgba(0, 0, 0, 0.12),
               0 5px 5px -3px rgba(0, 0, 0, 0.2);
 
+  transition:all .2s;
+
   &-logged{
     display: flex;
     align-items:center;
@@ -48,9 +50,26 @@
 
   &--small{
     height: $button-large-height - 10px;
-    line-height: $button-large-height - 10px;
+    line-height: $button-large-height - 6px;
+    padding: 0 1.5em;
     min-width: 180px;
 
     box-shadow: 0 0 0 0 transparent;
+  }
+  &-linear{
+    $numbers: ('first','second','third','fourth');
+    @each $number in $numbers{
+    &--#{$number} {
+      background: transparent;
+      color: var(--g-color-#{$number});
+      border: 1px solid var(--g-color-#{$number});
+
+      &:hover{
+        background: var(--g-color-#{$number});
+        color: white;
+
+      }
+    }
+  }
   }
 }

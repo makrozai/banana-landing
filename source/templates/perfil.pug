@@ -1,0 +1,62 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Documents
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="dist/css/app.css")
+  body
+    include blocks/admin-navbar
+
+    header
+      .container
+        .row.u-padding-tb--m
+          .col.s12.m6
+            .c-card-perfil
+              img(src="dist/img/image-user.png", alt="")
+              .c-card-perfil__description
+                h4 Callie perkings
+                p 998 765 435
+                p woodrow.glover@howe.tv
+                a(href="#!") Editar perfil
+          .col.s12.m6
+            .row
+              .col.s6
+                .c-card-perfil__info
+                  p.c-price 124
+                    span.c-price__cents 50
+                  p saldo a favor
+              .col.s6
+                .c-card-perfil__info
+                  p 5
+                  p pedidos activos
+        .row
+          .col.s12
+            ul.tabs
+              li.tab.col.s6
+                a(href="#test1") Activos
+              li.tab.col.s6
+                a(href="#test2") Pasados
+          #test1.col.s12
+            table
+              tbody
+                each val in [1,2,3,4]
+                  tr
+                    td
+                      p 24/07/18
+                      p 04:24PM
+                    td Compras en Plaza Vea
+                      span.c-badge-status.c-badge-status--close Cerrado
+                    td
+                      p.c-price 124
+                        span.c-price__cents 50
+                    td
+                      a(href="#!").c-button.c-button--small Repetir
+          #test2.col.s12
+            //p asdasdasdasd2
+
+
+
+
+    script(src="dist/js/main.js")

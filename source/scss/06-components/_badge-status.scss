@@ -1,0 +1,15 @@
+.c-badge-status{
+  background: $g-color-third;
+  color: white;
+  padding:.5em 1em .4em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-left: 2em;
+
+  &--close{
+    color: $off-black;
+    background: transparent;
+    box-shadow: 0 0 0 1px rgba(#1d2258,.3);
+  }
+}

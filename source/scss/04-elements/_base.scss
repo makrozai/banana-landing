@@ -66,3 +66,20 @@ input[type=checkbox]{
     opacity: 1;
   }
 }
+
+
+table{
+  td{
+    font-weight: 500;
+
+    &:first-child{
+      font-weight: 400;
+    }
+    &:last-child{
+      text-align: right;
+    }
+  }
+  p{
+    margin: .2rem 0;
+  }
+}
