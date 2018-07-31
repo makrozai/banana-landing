@@ -1,0 +1,11 @@
+.c-card{
+  border-radius: 10px;
+  border: 1px solid #9395af;
+  padding: 1.5rem 1rem;
+
+  &__title{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+}

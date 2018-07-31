@@ -1,6 +1,60 @@
 .c-form{
+  &--left{
+    input,textarea{
+      text-align: left;
+    }
+  }
   &__input{
-    text-align: left;
+
     margin: 1em 0;
+
+
+    &-datetime{
+      border: solid 1.3px lighten(#8e90ab, 15);
+      margin: 0;
+      border-radius: 6px;
+      display: flex;
+      align-items:center;
+      overflow: hidden;
+
+      input{
+        border-radius: 0;
+        color: white;
+      }
+      li{
+        position:relative;
+        width: 50%;
+        input{
+          border-bottom: 0;
+          border-top: 0;
+          text-align: center;
+        }
+        &:first-child{
+          padding-left: 1em;
+          padding-right: 1em;
+          width: auto;
+        }
+        &:last-child{
+          input{
+            border:none;
+          }
+        }
+
+        label{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform:translate(-50%,-50%);
+          text-align: center;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 1.2;
+        }
+        i{
+          font-size: 2em;
+          display: block;
+        }
+      }
+    }
   }
 }

@@ -13,6 +13,7 @@ $g-color-fourth: var(--g-color-fourth) !default; //aquamarine
 
 //margins and paddings
 $model-sizes:(
+  none: 0,
   xs : .5em,
   s  : 1em,
   m  : 3em,

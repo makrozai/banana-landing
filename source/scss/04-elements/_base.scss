@@ -1,7 +1,13 @@
 *{
   box-sizing: border-box;
 }
-input[type=number],input[type=text],input[type=password],input[type=email],textarea{
+input[type=number],
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=date],
+input[type=time],
+textarea{
   display: block;
   text-align: center;
   width: 100%;
@@ -13,11 +19,17 @@ input[type=number],input[type=text],input[type=password],input[type=email],texta
   font-size: 18px;
   font-weight: 500;
   appearance:textfield;
+  height: 59px;
+
 
   &::placeholder{
     color:$g-color-first;
   }
 }
+input[type=time]::-webkit-inner-spin-button,
+input[type=time]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;

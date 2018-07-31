@@ -7,7 +7,16 @@
   padding: 2em;
 
   input,textarea{
-    text-align: left;
+    text-align: center;
+  }
+
+  &__font{
+    font-size: 18px;
+    font-weight: 500;
+
+    p{
+      margin: 0;
+    }
   }
 }
 .modal-overlay{

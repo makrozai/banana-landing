@@ -10,15 +10,15 @@
           @each $name, $item in $model-sizes{
             &--#{$name}{
               @if $value =='lr' {
-                #{$model}-left : $item;
-                #{$model}-right : $item;
+                #{$model}-left : $item !important;
+                #{$model}-right : $item !important;
               }
               @elseif $value == 'tb'{
-                #{$model}-top : $item;
-                #{$model}-bottom : $item;
+                #{$model}-top : $item !important;
+                #{$model}-bottom : $item !important;
               }
               @else{
-                #{$model}-#{$value} : $item;
+                #{$model}-#{$value} : $item !important;
               }
 
             }
@@ -55,5 +55,12 @@
       max-width: 650px;
       margin: 0 auto;
     }
+  }
+  &-separator{
+    margin: .5em 0;
+    background: $g-color-first;
+    height: 1px;
+    width: 100%;
+    opacity: .5;
   }
 }

@@ -1,0 +1,70 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Documents
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="dist/css/app.css")
+  body
+    include blocks/admin-navbar
+
+    header
+      .container
+        .row.u-margin-top--m
+          .col.s12.m4
+            h4 Compras en Plaza Vea
+            p Pedido # 00345
+          .col.s12.m4.offset-m4.center
+            p Total a pagar:
+            p.c-price 124
+              span.c-price__cents 50
+            a(href="#!") ver detalle
+
+          .col.s12
+            .u-separator.u-margin-tb--m
+          .col.s12.m6
+            ul.c-characters
+              li
+                p Fecha de entrega:
+                p 24/07/18 a las 04:24PM
+              li
+                p Dirección de entrega:
+                p 855 Hettinger Crossing
+              li
+                p Fecha de recojo:
+                p 24/07/18 a las 04:24PM
+              li
+                p Dirección de recojo:
+                p 855 Hettinger Crossing
+          .col.s12.m6
+            p Detalles del pedido:
+            p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        .row
+          .col.s12.m6
+            .c-card
+                p.c-card__title Itinerario del pedido:
+                ul.c-itinerary
+                  li
+                    span Compra
+                    span 24/07 a las 12:00pm
+                    span Hacer compras en Plaza Vea
+                  li
+                    span Entrega
+                    span 24/07 a las 4:20pm
+                    span 855 Hettinger Crossing
+
+
+          .col.s12.m6
+            .c-card
+              .c-card-perfil
+                img(src="dist/img/image-user.png", alt="")
+                .c-card-perfil__description
+                  h4 Callie Perkings
+                  p 988 765 435
+                  p DNI: 45544234
+            .right-align.u-margin-top--s
+              a(href="#!").c-button pagar
+
+
+    include blocks/scripts

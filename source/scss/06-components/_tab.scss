@@ -29,4 +29,38 @@
 
     }
   }
+  &--blue{
+    border:1px solid $g-color-third;
+    padding: 0 0 !important;
+    border-radius: 6px;
+    overflow: hidden;
+    .tabs{
+      height: $tab-size - 20px;
+
+      .indicator{
+        background: $g-color-third;
+        height: 100%;
+        width: 50%;
+      }
+    }
+    .tab{
+      height: $tab-size - 20px;
+      line-height: $tab-size - 20px;
+
+
+      a{
+        color: $g-color-third;
+        font-weight: 500;
+        position: relative;
+        z-index: 10;
+
+        &:hover{
+          color: $g-color-third;
+        }
+        &.active{
+          color: white;
+        }
+      }
+    }
+  }
 }
