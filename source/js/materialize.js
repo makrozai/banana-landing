@@ -2212,7 +2212,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   'use strict';
 
   var _defaults = {
-    alignment: 'left',
+    alignment: 'right',
     autoFocus: true,
     constrainWidth: true,
     container: null,

@@ -1,0 +1,26 @@
+.c-dropdown{
+  width: auto !important;
+
+  box-shadow: 0 5px 10px 0 rgba(29, 34, 88, 0.3);
+  border-radius: 6px;
+  font-weight: 500;
+
+
+
+  li{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-left: 1em;
+    cursor: default;
+
+    &:hover{
+      background: transparent;
+    }
+
+    > span{
+      color: $g-color-first;
+      font-weight: 500;
+    }
+  }
+}

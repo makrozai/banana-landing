@@ -14,12 +14,25 @@ html(lang="es")
         .row.u-margin-top--m
           .col.s12.m4
             h4 Compras en Plaza Vea
-            p Pedido # 00345
+            p.u-margin-top--none Pedido # 00345
+            span.c-badge-status.u-margin-left--none en proceso
           .col.s12.m4.offset-m4.center
-            p Total a pagar:
-            p.c-price 124
-              span.c-price__cents 50
-            a(href="#!") ver detalle
+            .c-total-pay
+              p Total a pagar:
+              p.c-price 124
+                span.c-price__cents 50
+              a(href="#!" data-target='dropdown1').dropdown-trigger ver detalle
+              ul#dropdown1.dropdown-content.c-dropdown
+                li
+                  p Gastos en compras:
+                  span S/ 105.50
+                li
+                  p Costo de envío:
+                  span S/ 8.00
+                li
+                  p Comisión Tudú:
+                  span S/ 11.00
+
 
           .col.s12
             .u-separator.u-margin-tb--m
@@ -38,8 +51,8 @@ html(lang="es")
                 p Dirección de recojo:
                 p 855 Hettinger Crossing
           .col.s12.m6
-            p Detalles del pedido:
-            p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            p.u-text-semibold.u-margin-bottom--none Detalles del pedido:
+            p.u-margin-top--none Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         .row
           .col.s12.m6
             .c-card
@@ -63,8 +76,52 @@ html(lang="es")
                   h4 Callie Perkings
                   p 988 765 435
                   p DNI: 45544234
-            .right-align.u-margin-top--s
-              a(href="#!").c-button pagar
+            .right-align.u-margin-top--m
+              a(href="#form-pay").c-button.modal-trigger pagar
+              #form-pay.modal.c-modal
+                .modal-content
+                  h2.center Pagar
+
+                  form.row
+                    .c-tab.c-tab--blue.col.s12
+                      ul.tabs
+                        li.tab.col.s6
+                          a(href="#payOnline").active En línea
+                        li.tab.col.s6
+                          a(href="#payTransference") Transferencia
+                    .col.s12.u-padding-lr--none
+                      .u-separator
+                    #payOnline.col.s12.u-padding-lr--none
+                      .row
+                        .c-form__input.col.s12.m6
+                          input(type="text" placeholder="Nombre del tarjetahabiente")
+                        .c-form__input.col.s12.m6
+                          input(type="text" placeholder="Número de tarjeta")
+                        .c-form__input.col.s12.m6
+                          input(type="text" placeholder="Nombre del tarjetahabiente")
+                        .c-form__input.col.s12.m6
+                          input(type="text" placeholder="Número de tarjeta")
+                    #payTransference.col.s12.u-padding-lr--none
+                      .row.left-align.c-modal__font
+                        .col.s12.m4
+                          p Número de cuenta:
+                          p Interbank ahorros soles
+                          span 234-455-677-778
+                        .col.s12.m4
+                          p Código interbancario:
+                          span 234-455-677-778
+                        .col.s12
+                          label.valign-wrapper.u-margin-top--s
+                            i.material-icons.icon-photo.u-text-second.u-margin-right--s
+                            | subir foto de voucher
+                            input(type="file")#inputPhoto.hide
+          .col.s12
+            p.u-margin-top--l.u-text-medium Si necesitas modificar o cancelar tu pedido, contáctanos en
+              a(href="#!").u-text-second  hola@tudu.pe
+              |  o llámanos al
+              a(href="#!").u-text-second  999 875 234
+
+
 
 
     include blocks/scripts
