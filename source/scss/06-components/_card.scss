@@ -7,5 +7,15 @@
     font-size: 20px;
     font-weight: 600;
     margin: 0;
+
+    @media #{$medium-and-down} {
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+
+  &__mobile{
+    border:none;
+    padding:0;
   }
 }

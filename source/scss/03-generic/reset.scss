@@ -1,8 +1,16 @@
 h1{
   font-weight: 500;
+  @media #{$medium-and-down} {
+    font-size: 30px;
+    font-weight: 600;
+  }
 }
 h2{
   font-weight: 600;
+
+  @media #{$medium-and-down} {
+    font-size: 30px;
+  }
 }
 h3{
 

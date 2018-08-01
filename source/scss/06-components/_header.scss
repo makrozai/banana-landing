@@ -6,6 +6,10 @@
   color: white;
   position: relative;
 
+  @media #{$medium-and-down} {
+    padding: 0 1em;
+  }
+
   &__container{
     width: 800px;
     position: relative;
@@ -18,6 +22,14 @@
     margin-bottom: 0;
     font-size: 48px;
 
+    @media #{$medium-and-down} {
+      font-size: 30px;
+      text-align: left;
+      margin-bottom: 1em;
+      line-height: 1.2;
+    }
+
+
     span{
       color: $g-color-second;
     }
@@ -25,10 +37,17 @@
   &__subtitle{
     margin-bottom: 3em;
     font-size: 20px;
+
+    @media #{$medium-and-down} {
+      display: none;
+    }
   }
   &__image{
     position: absolute;
     max-width: 20%;
+    @media #{$medium-and-down} {
+      max-width: 40%;
+    }
 
     &--phone{
       bottom:0;
@@ -58,6 +77,13 @@
     i{
       color: white;
       font-size: 3em;
+    }
+  }
+  .c-button{
+    margin: 1em;
+
+    @media #{$medium-and-down} {
+      margin: .5em;
     }
   }
 }

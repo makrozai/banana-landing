@@ -8,17 +8,27 @@ html(lang="es")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
-    include blocks/admin-navbar
+    include blocks/navbar
 
     header
-      .container
-        .row.u-margin-top--m
+      .container.u-container--medium
+        .row.u-margin-top--xl
           .col.s12
             h2.center Nuevo Pedido
           .col.s12
-            form.row.c-form.c-form--left
-              .c-form__input.col.s12
-                input(type="text" placeholder="Título / descripción corta")
+            form.row.c-form
+              .c-form__input.col.s12.m6
+                input(type="text" placeholder="Nombre completo")
+              .c-form__input.col.s12.m6
+                select
+                  option(value="" disabled selected) selecciona el tipo de pedido
+                  option(value="") numero 1
+                  option(value="") numero 2
+                  option(value="") numero 3
+              .c-form__input.col.s12.m6
+                input(type="email" placeholder="Correo electrónico")
+              .c-form__input.col.s12.m6
+                input(type="number" placeholder="Número de teléfono")
               .c-form__input.col.s12.m6
                 input(type="text" placeholder="Dirección de recojo (si aplica)")
               .c-form__input.col.s12.m6
@@ -31,7 +41,6 @@ html(lang="es")
                   li
                     label hora de recojo
                     input(type="time")
-                //input(type="datetime-local" value="2017-06-01T08:30")
               .c-form__input.col.s12.m6
                 input(type="text" placeholder="Dirección de entrega (si aplica)")
               .c-form__input.col.s12.m6
@@ -40,16 +49,25 @@ html(lang="es")
                     i.material-icons.icon-clock
                   li
                     label fecha de recojo
-                    input(type="text")
+                    input(type="date")
                   li
                     label hora de recojo
-                    input(type="text")
-                //input(type="datetime-local" value="2017-06-01T08:30")
+                    input(type="time")
+
               .c-form__input.col.s12
                 textarea(name="", cols="30", rows="10" placeholder="Descripción detallada del pedido")
 
               .col.s12.center
-                a(href="#!").c-button guardar
+                a(href="#confirm").c-button.modal-trigger guardar
+
+              #confirm.modal.c-modal.c-modal__confirm
+                .modal-content.center.u-padding-tb--l
+                  i.material-icons.icon-check
+                  h2.u-text-medium ¡Gracias por tu pedido!
+                  p.u-text-medium Nuestros dúers se comunicarán contigo en breve para confirmar los detalles.
+                  button.c-login__button.c-button entendido
+
+
 
 
 

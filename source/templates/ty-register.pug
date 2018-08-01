@@ -4,6 +4,7 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     title Documents
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
@@ -14,8 +15,9 @@ html(lang="es")
       img(src="dist/img/recibo-luz.png", alt="").c-header__image.c-header__image--paper
       img(src="dist/img/gift.png", alt="").c-header__image.c-header__image--gift
       .c-header__container
-        .c-login
-          h2.u-text-medium.u-margin-bottom--s ¡Gracias por registrarte en Tudú!
+        .c-login.c-modal__confirm
+          i.material-icons.icon-check
+          h2.u-text-medium.u-margin-tb--s ¡Gracias por registrarte en Tudú!
           h4.c-login__small.u-text-medium Tu cuenta será activada en breve y te enviaremos tu contraseña para que puedas ingresar a tu perfil.
         button.c-login__button.c-button iniciar sesión
 

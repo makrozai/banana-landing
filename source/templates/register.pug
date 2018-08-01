@@ -4,6 +4,7 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     title Documents
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
@@ -16,6 +17,14 @@ html(lang="es")
       .c-header__container
         .c-login.u-margin-bottom--m
             h2.u-text-medium.u-margin-bottom--s Crear cuenta
+            .c-login__small
+              a(href="#!").c-button-logged.u-margin-tb--xs
+                img(src="dist/img/icons/gmail.png", alt="")
+                | Inicia con Google
+              a(href="#!").c-button-logged.u-margin-tb--xs
+                img(src="dist/img/icons/facebook.png", alt="")
+                | Inicia con Facebook
+              span.c-login__separator ó
             form(action="").row
               .c-form__input.col.s12.m6
                 input(type="text" placeholder="Nombre")
@@ -25,9 +34,7 @@ html(lang="es")
                 input(type="email" placeholder="Correo electrónico")
               .c-form__input.col.s12.m6
                 input(type="text" placeholder="Teléfono")
-              button.c-login__button.c-button.icon-arrow
-        p.c-login__register ¿No tienes una cuenta?
-          a(href="#!") Regístrate
+              button.c-login__button.c-button.icon-back
 
 
 

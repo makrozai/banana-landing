@@ -1,11 +1,33 @@
 .c-card-service{
+  display: flex;
+  flex-wrap:wrap;
+
+  @media #{$medium-and-down} {
+    margin-bottom: 3em;
+  }
   &__image{
     position: relative;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
+
+    @media #{$medium-and-down} {
+      width: 40%;
+    }
+
     img{
       display: block;
       width: 100%;
       border-radius: 5px;
+
+      @media #{$medium-and-down} {
+        width: 90%;
+        min-width: 8rem;
+        min-height: 8rem;
+        object-fit:cover;
+      }
+      @media #{$small-and-down} {
+        width: 8rem;
+        height: 8rem;
+      }
     }
   }
   &__badge{
@@ -13,7 +35,6 @@
     display: inline-block;
     color: $g-color-first;
     font-weight: 500;
-
     padding: .5em .7em;
     border-radius: 3em;
     position: absolute;
@@ -21,13 +42,30 @@
     right: 1.5em;
     transform:translateY(50%);
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+
+    @media #{$medium-and-down} {
+      right: 1em;
+      box-shadow: 0 2px 8px 0 transparent;
+    }
   }
   &__price{
+    font-weight: 500;
+
     &:before{
       content: "S./";
     }
   }
   &__description{
     margin-bottom: .3rem;
+
+    @media #{$medium-and-down} {
+      margin-top: 0;
+      width: 60%;
+    }
+
+    span{
+      display: block;
+      font-weight: 500;
+    }
   }
 }

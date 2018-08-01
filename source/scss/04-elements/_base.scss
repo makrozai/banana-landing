@@ -21,6 +21,9 @@ textarea{
   appearance:textfield;
   height: 59px;
 
+  @media #{$medium-and-down} {
+    font-size: 14px;
+  }
 
   &::placeholder{
     color:$g-color-first;
@@ -81,7 +84,32 @@ input[type=checkbox]{
 textarea{
   height: 7em;
   resize:none;
+  text-align: left;
 }
+.select-wrapper{
+  input.select-dropdown {
+    border: solid 1.3px lighten(#8e90ab, 15);
+    font-size: 18px;
+    &:focus{
+      outline: none;
+      border: solid 1.3px lighten(#8e90ab, 15);
+    }
+  }
+  .dropdown-content{
+    box-shadow: 0 5px 10px 0 rgba(29, 34, 88, 0.3);
+    border-radius: 6px;
+
+    li{
+      span{
+        font-size: 18px;
+        font-weight: 500;
+        color: $g-color-first;
+      }
+    }
+  }
+}
+
+
 
 
 table{
@@ -91,8 +119,25 @@ table{
     &:first-child{
       font-weight: 400;
     }
+    &:last-child{
+      @media #{$medium-and-down}{
+        padding-top: 2.5em;
+        padding-bottom: 0;
+        vertical-align: text-bottom;
+      }
+    }
   }
   p{
     margin: .2rem 0;
+  }
+  @media #{$medium-and-down} {
+    .c-button{
+      &--small{
+        font-size: 14px;
+        min-width: 40px;
+        height: 30px;
+        line-height: 34px;
+      }
+    }
   }
 }

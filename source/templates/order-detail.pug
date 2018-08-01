@@ -4,6 +4,7 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     title Documents
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
@@ -12,11 +13,12 @@ html(lang="es")
     header
       .container
         .row.u-margin-top--m
-          .col.s12.m4
-            h4 Compras en Plaza Vea
+          .col.s12
+            h4.u-margin-bottom--s Compras en Plaza Vea
+          .col.s6.m4
             p.u-margin-top--none Pedido # 00345
             span.c-badge-status.u-margin-left--none en proceso
-          .col.s12.m4.offset-m4.center
+          .col.s6.m4.offset-m4.center
             .c-total-pay
               p Total a pagar:
               p.c-price 124
@@ -55,7 +57,7 @@ html(lang="es")
             p.u-margin-top--none Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         .row
           .col.s12.m6
-            .c-card
+            .c-card.c-card__mobile
                 p.c-card__title Itinerario del pedido:
                 ul.c-itinerary
                   li
@@ -97,9 +99,9 @@ html(lang="es")
                           input(type="text" placeholder="Nombre del tarjetahabiente")
                         .c-form__input.col.s12.m6
                           input(type="text" placeholder="Número de tarjeta")
-                        .c-form__input.col.s12.m6
+                        .c-form__input.col.s6
                           input(type="text" placeholder="Nombre del tarjetahabiente")
-                        .c-form__input.col.s12.m6
+                        .c-form__input.col.s6
                           input(type="text" placeholder="Número de tarjeta")
                     #payTransference.col.s12.u-padding-lr--none
                       .row.left-align.c-modal__font
@@ -115,6 +117,7 @@ html(lang="es")
                             i.material-icons.icon-photo.u-text-second.u-margin-right--s
                             | subir foto de voucher
                             input(type="file")#inputPhoto.hide
+                    button.c-login__button.c-button pagar S/ 124.50
           .col.s12
             p.u-margin-top--l.u-text-medium Si necesitas modificar o cancelar tu pedido, contáctanos en
               a(href="#!").u-text-second  hola@tudu.pe

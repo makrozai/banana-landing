@@ -4,6 +4,7 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     title Documents
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
@@ -11,14 +12,15 @@ html(lang="es")
 
     header
       .container
-        .row.u-padding-tb--m
+        form.row.u-padding-tb--m
           .col.s12
             .c-card-perfil
               img(src="dist/img/image-user.png", alt="")
               .c-card-perfil__description.u-padding-top--m
-                a(href="#!").c-button.c-button--small.c-button-linear--second Editar foto
+                label.c-button.c-button--small.c-button-linear--second Editar foto
+                  input(type="file").hide
           .col.s12.m8
-            form.c-form-admin.u-margin-tb--m
+            .c-form-admin.u-margin-tb--m
               .row.valign-wrapper
                 .col.s4
                   label(for="") Nombre
@@ -39,7 +41,7 @@ html(lang="es")
                   label(for="") E-mail
                 .col.s8
                   input(type="email" value="woodrow.glover@howe.tv")
-              .row.u-margin-top--m
+              .row.u-margin-top--m.c-form-admin__buttons
                 a(href="#!").c-button.c-button--small.c-button-linear--second Cancelar
                 a(href="#!").c-button.c-button--small.u-margin-left--s Guardar
 

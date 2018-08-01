@@ -23,4 +23,20 @@
       font-weight: 500;
     }
   }
+  &__navbar{
+    top: 100% !important;
+    padding: 1em .5em;
+    li{
+      display: block;
+      min-height: auto;
+
+      > a{
+        color: $g-color-first;
+        text-align: right;
+        font-weight: 500;
+        padding: 7px 16px;
+      }
+    }
+
+  }
 }

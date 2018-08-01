@@ -20,6 +20,10 @@
       font-size: 20px;
       text-transform: capitalize;
 
+      @media #{$medium-and-down} {
+        font-size: 14px;
+      }
+
       &:focus{
         background: transparent;
         &.active{

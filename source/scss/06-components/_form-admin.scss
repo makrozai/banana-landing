@@ -7,4 +7,15 @@
    text-align: left;
    padding: .5em 1em;
   }
+  @media #{$medium-and-down} {
+    .row{
+      margin-bottom: 0;
+    }
+  }
+
+  &__buttons{
+    @media #{$medium-and-down} {
+      text-align: center;
+    }
+  }
 }

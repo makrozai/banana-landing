@@ -4,6 +4,7 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     title Documents
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
@@ -18,15 +19,25 @@ html(lang="es")
           .c-login__small
             h2.u-text-medium.u-margin-bottom--s Inicia sesión
             form(action="")
-              .c-form__input
+              .c-form__input.u-margin-bottom--none.right-align
                 input(type="password" placeholder="Contraseña")
-              .c-form__input
+                a(href="#passRecover").recover.modal-trigger La olvidé
+
+              #passRecover.modal.c-modal.c-modal__recover
+                .modal-content.center.u-padding-tb--m
+                  h3.u-text-medium Contraseña olvidada
+                  p.u-text-medium Ingresa tu correo electrónico y te mandaremos un link para que puedas crear una nueva contraseña.
+                  form(action="")
+                    .c-form__input
+                      input(type="email" placeholder="Correo electrónico")
+                  button.c-login__button.c-button enviar
+              .c-form__input.left-align.u-margin-tb--none
                 label
                   input(type="checkbox")
                   span Recordar
-              button.c-login__button.c-button.icon-arrow
+              button.c-login__button.c-button.icon-back
         p.c-login__register ¿No tienes una cuenta?
-          a(href="#!") Regístrate
+          a(href="register.html") Regístrate
 
 
 

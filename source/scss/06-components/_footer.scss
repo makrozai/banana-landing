@@ -1,9 +1,13 @@
 .c-footer{
-  $blue-color: #014592;
-  color: $blue-color;
+  color: $g-color-third;
   a{
-    color: $blue-color;
+    color: $g-color-third;
     transition:all .3s;
+
+    @media #{$medium-and-down} {
+      display: inline-block;
+      margin: 1em 0;
+    }
 
     &:hover{
       color: color("light-blue", "darken-1");
@@ -12,6 +16,10 @@
     i{
       font-size: 30px;
       margin: 1em .5em;
+
+      @media #{$medium-and-down} {
+        margin: .5em .5em;
+      }
     }
   }
   &__container{
@@ -19,6 +27,6 @@
     margin: 0 auto;
   }
   &__copy{
-    border-top: 2px solid $blue-color;
+    border-top: 2px solid $g-color-third;
   }
 }

@@ -7,10 +7,36 @@
     width: 15%;
     display: flex;
     align-items:center;
+
+    @media #{$medium-and-down} {
+      height: $navbar-height-mobile
+    }
     img{
       display: block;
       height: 50%;
       transform:translateY(-5px);
+    }
+
+
+  }
+  &__new{
+    display: none;
+    position: absolute;
+    top: .5em;
+    left: 50%;
+    background: white;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    color: $g-color-first;
+    transform:translateX(-50%);
+    i{
+      text-align: center;
+      line-height: 3rem !important;
+      height: 3rem !important;
+    }
+    @media #{$medium-and-down} {
+      display: block;
     }
   }
 
@@ -18,20 +44,29 @@
     position: absolute;
     width: 100%;
     top: 0;
-    z-index: 10000;
+    z-index: 100;
   }
 
   ul{
     width: 85%;
-  }
-  &__icon{
-    display: flex;
-    height: $navbar-height;
-    align-items:center;
-    justify-content:center;
 
-    img{
-      width: 80%;
+    a{
+      &:hover{
+        background: transparent;
+      }
     }
+  }
+  &__mobile{
+    display: flex;
+    justify-content:flex-end;
+
+    i{
+      display: flex;
+      align-items:center;
+      &.icon-more{
+        font-size: .6em;
+      }
+    }
+
   }
 }

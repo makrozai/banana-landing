@@ -1,11 +1,13 @@
 .c-form{
+  display: flex;
+  flex-wrap:wrap;
   &--left{
     input,textarea{
       text-align: left;
     }
   }
   &__input{
-
+    position: relative;
     margin: 1em 0;
 
 
@@ -49,12 +51,24 @@
           font-weight: 500;
           font-size: 18px;
           line-height: 1.2;
+          width: 5em;
         }
         i{
           font-size: 2em;
           display: block;
         }
       }
+      &.error{
+        border: 2px solid $g-color-second;
+        + span{
+          color: $g-color-second;
+          font-size: 14px;
+        }
+      }
     }
+  }
+  .select-wrapper input.select-dropdown{
+    margin-bottom: 0;
+    height: 59px;
   }
 }

@@ -4,6 +4,7 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     title Documents
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
@@ -11,7 +12,7 @@ html(lang="es")
 
     header
       .container
-        .row.u-padding-tb--m
+        .row.u-padding-top--m
           .col.s12.m6
             .c-card-perfil
               img(src="dist/img/image-user.png", alt="")
@@ -36,9 +37,9 @@ html(lang="es")
             .c-tab
               ul.tabs
                 li.tab.col.s6
-                  a(href="#test1").active Activos
+                  a(href="#test1") Activos
                 li.tab.col.s6
-                  a(href="#test2") Pasados
+                  a(href="#test2").active Pasados
           #test1.col.s12
             table
               tbody
@@ -48,7 +49,8 @@ html(lang="es")
                       p 24/07/18
                       p 04:24PM
                     td Compras en Plaza Vea
-                    td
+                      span.c-badge-status.hide-on-med-and-up En Proceso
+                    td.hide-on-small-and-down
                       span.c-badge-status En Proceso
                     td.center
                       p.c-price 124
@@ -62,8 +64,11 @@ html(lang="es")
                       p 24/07/18
                       p 04:24PM
                     td Compras en Plaza Vea
-                      span.c-badge-status.c-badge-status--close Cerrado
-                    td
+                      span.c-badge-status.c-badge-status--close.hide-on-small-and-down Cerrado
+
+                      p.c-price.hide-on-med-and-up 124
+                        span.c-price__cents 50
+                    td.hide-on-small-and-down
                       p.c-price 124
                         span.c-price__cents 50
                     td.right
