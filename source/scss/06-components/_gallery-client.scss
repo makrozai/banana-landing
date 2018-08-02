@@ -3,12 +3,42 @@
   flex-wrap:wrap;
   justify-content:space-between;
   align-items:center;
+  position: relative;
 
-  img{
+  &__img{
     display: block;
     width: 17%;
     margin-top: 2.5em;
     margin-bottom: 2.5em;
     opacity: .7;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+
+
+  @media #{$medium-and-down} {
+    flex-wrap:nowrap;
+    overflow-x: hidden;
+    transition:all .3s;
+
+    &__img{
+      display: flex;
+      align-items:center;
+      width: 100%;
+      height: 120px;
+      flex:1 0 auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      opacity: .9;
+
+      img{
+        width: auto;
+        max-height: 100%;
+        margin: 0 auto;
+      }
+    }
   }
 }

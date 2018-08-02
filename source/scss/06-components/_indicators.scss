@@ -1,0 +1,17 @@
+.c-indicators{
+  display: flex;
+  justify-content:center;
+  margin-top: 1rem;
+  li{
+    background-color: $g-color-first;
+    width: .6em;
+    height: .6em;
+    margin: 0 .3em;
+    border-radius: 50%;
+    opacity: .3;
+
+    &.active{
+      opacity: 1;
+    }
+  }
+}
