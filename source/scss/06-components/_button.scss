@@ -43,12 +43,16 @@
 
 
     img{
-      margin-right: .5em;
       position: absolute;
       top: 50%;
       left: 1em;
       transform:translateY(-50%);
       height: 65%;
+
+      @media #{$medium-and-down}{
+        height: 45%;
+        left: .5em;
+      }
     }
   }
 

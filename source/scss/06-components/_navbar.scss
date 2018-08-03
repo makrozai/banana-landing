@@ -69,4 +69,15 @@
     }
 
   }
+  &--admin{
+    .c-navbar__new{
+      background: $g-color-second;
+      color: white;
+    }
+    ul{
+      a{
+        color: $g-color-second;
+      }
+    }
+  }
 }

@@ -38,12 +38,22 @@
   }
 
   &-diagonal{
-    clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 100px));
+    clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - $diagonal-size));
+
+    @media #{$medium-and-down} {
+      clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - #{$diagonal-size / 2}));
+    }
 
     &--reverse{
-      margin-top: -100px;
-      clip-path: polygon(0 0,100% 100px,100% 100%,0 100%);
+      margin-top: -$diagonal-size;
+      clip-path: polygon(0 0,100% $diagonal-size,100% 100%,0 100%);
+
+      @media #{$medium-and-down} {
+        clip-path: polygon(0 0,100% #{$diagonal-size / 2},100% 100%,0 100%);
+      }
     }
+
+
   }
   &-text{
     &-medium{

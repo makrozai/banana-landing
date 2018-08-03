@@ -1,7 +1,11 @@
 .c-indicators{
   display: flex;
   justify-content:center;
-  margin-top: 1rem;
+  margin-top: 2rem;
+
+    @media #{$large-and-up} {
+      display: none;
+    }
   li{
     background-color: $g-color-first;
     width: .6em;
@@ -9,6 +13,8 @@
     margin: 0 .3em;
     border-radius: 50%;
     opacity: .3;
+    transition:all .3s;
+    cursor:pointer;
 
     &.active{
       opacity: 1;

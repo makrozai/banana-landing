@@ -1,11 +1,30 @@
-nav.c-navbar
+nav.c-navbar.c-navbar--admin
   .container
     .nav-wrapper
-      a(href="index.html").c-navbar__logo
+      a(href="perfil.html").c-navbar__logo
         img(src="dist/img/logo-tudu-pink.svg", alt="")
+      a(href="add-order.html").c-navbar__new
+        i.material-icons.icon-nuevo
       ul#nav-mobile.left.hide-on-med-and-down
         li.right
           a(href="#modal").c-button.c-button--small.c-button-linear--second.modal-trigger Hacer un pedido
+      ul.hide-on-med-and-up.c-navbar__mobile
+        li
+          a(href="edit-perfil.html")
+            i.materialize-icons.icon-edit
+        li
+          a(href="#!" data-target='navMore').dropdown-trigger
+            i.materialize-icons.icon-more
+
+          ul#navMore.dropdown-content.c-dropdown.c-dropdown__navbar
+            li
+              a(href="#!") Sobre Tudú
+            li
+              a(href="#!") Trabaja con Nosotros
+            li
+              a(href="#!") Contáctanos
+
+
 #modal.modal.c-modal
   .modal-content
     h2.center Nuevo Pedido

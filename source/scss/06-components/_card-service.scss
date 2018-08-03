@@ -68,4 +68,11 @@
       font-weight: 500;
     }
   }
+  &__mobile{
+    @media #{$medium-and-down} {
+      &--reverse{
+        flex-direction:row-reverse;
+      }
+    }
+  }
 }

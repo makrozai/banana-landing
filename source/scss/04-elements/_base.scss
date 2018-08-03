@@ -20,6 +20,7 @@ textarea{
   font-weight: 500;
   appearance:textfield;
   height: 59px;
+  background: white;
 
   @media #{$medium-and-down} {
     font-size: 14px;
@@ -125,6 +126,11 @@ table{
         padding-bottom: 0;
         vertical-align: text-bottom;
       }
+    }
+
+    @media #{$medium-and-down}{
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
   p{

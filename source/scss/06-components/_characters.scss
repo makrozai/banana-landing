@@ -4,6 +4,10 @@
   li{
     p:first-child{
       font-weight: 600;
+
+      @media #{$medium-and-down} {
+        font-weight: 400;
+      }
       margin-bottom: 0;
     }
     p:last-child{

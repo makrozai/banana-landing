@@ -6,6 +6,11 @@
   max-height: initial;
   padding: 2em;
 
+  @media #{$medium-and-down} {
+    padding: 1em;
+    width: 90%;
+  }
+
   input,textarea{
     text-align: center;
   }

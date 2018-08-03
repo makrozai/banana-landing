@@ -4,8 +4,17 @@
   border-bottom: 1px solid #8e90ab;
   padding: 0 2em;
   margin-bottom: 1em;
+
+  @media #{$medium-and-down} {
+    padding: 0 0;
+  }
+
   .tabs{
     height: $tab-size;
+
+    @media #{$medium-and-down} {
+      height: $tab-size - 15px;
+    }
 
     .indicator{
       height: 3px;
@@ -16,6 +25,11 @@
   .tab{
     height: $tab-size;
     line-height: $tab-size;
+
+    @media #{$medium-and-down} {
+      height: $tab-size - 15px;
+      line-height: $tab-size - 15px;
+    }
     a{
       font-size: 20px;
       text-transform: capitalize;

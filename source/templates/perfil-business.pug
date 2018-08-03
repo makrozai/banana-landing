@@ -12,7 +12,7 @@ html(lang="es")
 
     header
       .container
-        .row.u-padding-tb--m
+        .row.u-padding-top--m
           .col.s12.m6
             .c-card-perfil
               img(src="dist/img/image-user.png", alt="")
@@ -51,7 +51,8 @@ html(lang="es")
                       p 24/07/18
                       p 04:24PM
                     td Compras en Plaza Vea
-                    td
+                      span.c-badge-status.hide-on-med-and-up En Proceso
+                    td.hide-on-small-and-down
                       span.c-badge-status En Proceso
                     td.center
                       p.c-price 124
@@ -65,8 +66,11 @@ html(lang="es")
                       p 24/07/18
                       p 04:24PM
                     td Compras en Plaza Vea
-                      span.c-badge-status.c-badge-status--close Cerrado
-                    td
+                      span.c-badge-status.c-badge-status--close.hide-on-small-and-down Cerrado
+
+                      p.c-price.hide-on-med-and-up 124
+                        span.c-price__cents 50
+                    td.hide-on-small-and-down
                       p.c-price 124
                         span.c-price__cents 50
                     td.right
@@ -77,12 +81,13 @@ html(lang="es")
                 each val in [1,2,3,4]
                   tr
                     td
-                      p 24/07/18
-                      p 04:24PM
-                    td Compras en Plaza Vea
-                    td
+                      p #00054
+                    td Pagada 12/03/18
+                      p.c-price.hide-on-med-and-up 124
+                        span.c-price__cents 50
+                    td.hide-on-small-and-down
                       span.c-badge-status En Proceso
-                    td.center
+                    td.center.hide-on-small-and-down
                       p.c-price 124
                         span.c-price__cents 50
 

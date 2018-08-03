@@ -80,44 +80,50 @@ html(lang="es")
                   p DNI: 45544234
             .right-align.u-margin-top--m
               a(href="#form-pay").c-button.modal-trigger pagar
-              #form-pay.modal.c-modal
-                .modal-content
-                  h2.center Pagar
+            #form-pay.modal.c-modal
+              .modal-content
+                h2.center Pagar
 
-                  form.row
-                    .c-tab.c-tab--blue.col.s12
-                      ul.tabs
-                        li.tab.col.s6
-                          a(href="#payOnline").active En línea
-                        li.tab.col.s6
-                          a(href="#payTransference") Transferencia
-                    .col.s12.u-padding-lr--none
-                      .u-separator
-                    #payOnline.col.s12.u-padding-lr--none
-                      .row
-                        .c-form__input.col.s12.m6
-                          input(type="text" placeholder="Nombre del tarjetahabiente")
-                        .c-form__input.col.s12.m6
-                          input(type="text" placeholder="Número de tarjeta")
-                        .c-form__input.col.s6
-                          input(type="text" placeholder="Nombre del tarjetahabiente")
-                        .c-form__input.col.s6
-                          input(type="text" placeholder="Número de tarjeta")
-                    #payTransference.col.s12.u-padding-lr--none
-                      .row.left-align.c-modal__font
-                        .col.s12.m4
-                          p Número de cuenta:
-                          p Interbank ahorros soles
-                          span 234-455-677-778
-                        .col.s12.m4
-                          p Código interbancario:
-                          span 234-455-677-778
-                        .col.s12
-                          label.valign-wrapper.u-margin-top--s
-                            i.material-icons.icon-photo.u-text-second.u-margin-right--s
-                            | subir foto de voucher
-                            input(type="file")#inputPhoto.hide
-                    button.c-login__button.c-button pagar S/ 124.50
+                form.row
+                  .col.s12.u-padding-lr--none
+                    p.u-text-medium Método de pago
+                  .c-tab.c-tab--blue.col.s12
+                    ul.tabs
+                      li.tab.col.s6
+                        a(href="#payOnline").active En línea
+                      li.tab.col.s6
+                        a(href="#payTransference") Transferencia
+                  .col.s12.u-padding-lr--none
+                    .u-separator
+                  #payOnline.col.s12.u-padding-lr--none
+                    .row
+                      .c-form__input.col.s12.m6
+                        input(type="text" placeholder="Nombre del tarjetahabiente")
+                      .c-form__input.col.s12.m6
+                        input(type="text" placeholder="Número de tarjeta")
+                      .c-form__input.col.s12
+                        ul.c-form__input-target
+                          li
+                            label fecha de vencimiento
+                            input(type="date")
+                          li
+                            label Código de seguridad
+                            input(type="time")
+                  #payTransference.col.s12.u-padding-lr--none
+                    .row.left-align.c-modal__font
+                      .col.s12.m4
+                        p Número de cuenta:
+                        p Interbank ahorros soles
+                        span 234-455-677-778
+                      .col.s12.m4
+                        p Código interbancario:
+                        span 234-455-677-778
+                      .col.s12
+                        label.valign-wrapper.u-margin-top--s
+                          i.material-icons.icon-photo.u-text-second.u-margin-right--s
+                          | subir foto de voucher
+                          input(type="file")#inputPhoto.hide
+                  button.c-login__button.c-button pagar S/ 124.50
           .col.s12
             p.u-margin-top--l.u-text-medium Si necesitas modificar o cancelar tu pedido, contáctanos en
               a(href="#!").u-text-second  hola@tudu.pe
