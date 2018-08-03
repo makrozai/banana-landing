@@ -13,9 +13,11 @@
       font-size: 18px;
     }
   }
-
-  &__mobile{
-    border:none;
-    padding:0;
+  @media #{$medium-and-down} {
+    &__mobile{
+      border:none;
+      padding:0;
+    }
   }
+
 }

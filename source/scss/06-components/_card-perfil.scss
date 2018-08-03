@@ -35,4 +35,72 @@
       }
     }
   }
+  &__phone{
+    color: $g-color-second;
+    margin-left: auto;
+    position: relative;
+    padding: .5em 1em 0 1.5em;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background: white;
+    }
+
+    i{
+      font-size: 2em;
+      display: block;
+    }
+  }
+  &__button{
+    margin-top: 3em;
+    @media #{$small-and-down}{
+      margin-top: 1em;
+      text-align: center;
+    }
+  }
+  &--fixed{
+    @media #{$small-and-down} {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: $g-color-first;
+      color: white;
+      padding:.7em 1em;
+      margin-bottom: 0;
+      width: 100%;
+      align-items:center;
+
+      img{
+        max-width: 40px;
+      }
+      h4{
+        &:before{
+          content: "Dúer: ";
+        }
+        font-size: 15px;
+        font-weight: 500;
+      }
+      p{
+        margin: 0;
+        line-height: 1.4;
+      }
+    }
+  }
+  &--space{
+    margin-top: 2em;
+    @media #{$medium-and-down}{
+
+      &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4.5em;
+      }
+    }
+
+  }
 }

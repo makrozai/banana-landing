@@ -71,14 +71,16 @@ html(lang="es")
 
 
           .col.s12.m6
-            .c-card
-              .c-card-perfil
+            .c-card.c-card__mobile
+              .c-card-perfil.c-card-perfil--fixed
                 img(src="dist/img/image-user.png", alt="")
                 .c-card-perfil__description
                   h4 Callie Perkings
                   p 988 765 435
                   p DNI: 45544234
-            .right-align.u-margin-top--m
+                a(href="tel:+51988765435").c-card-perfil__phone
+                  i.material-icons.icon-call
+            .right-align.c-card-perfil__button
               a(href="#form-pay").c-button.modal-trigger pagar
             #form-pay.modal.c-modal
               .modal-content
@@ -125,7 +127,7 @@ html(lang="es")
                           input(type="file")#inputPhoto.hide
                   button.c-login__button.c-button pagar S/ 124.50
           .col.s12
-            p.u-margin-top--l.u-text-medium Si necesitas modificar o cancelar tu pedido, contáctanos en
+            p.u-text-medium.c-card-perfil--space Si necesitas modificar o cancelar tu pedido, contáctanos en
               a(href="#!").u-text-second  hola@tudu.pe
               |  o llámanos al
               a(href="#!").u-text-second  999 875 234
