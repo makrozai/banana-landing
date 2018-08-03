@@ -27,5 +27,9 @@ input[type=password]{
     font-weight: 600;
     text-decoration: underline;
     padding-top: .5em;
+
+    @media #{$medium-and-down} {
+      font-weight: 500;
+    }
   }
 }
