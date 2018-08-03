@@ -8,7 +8,8 @@ html(lang="es")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
-    include blocks/navbar
+    +navbar()
+
     header.c-header
       img(src="dist/img/reloj.png", alt="").c-header__image.c-header__image--clock
       img(src="dist/img/calendar-lg.png", alt="").c-header__image.c-header__image--phone
@@ -23,14 +24,6 @@ html(lang="es")
                 input(type="password" placeholder="Contraseña")
                 a(href="#passRecover").recover.modal-trigger La olvidé
 
-              #passRecover.modal.c-modal.c-modal__recover
-                .modal-content.center.u-padding-tb--m
-                  h3.u-text-medium Contraseña olvidada
-                  p.u-text-medium Ingresa tu correo electrónico y te mandaremos un link para que puedas crear una nueva contraseña.
-                  form(action="")
-                    .c-form__input
-                      input(type="email" placeholder="Correo electrónico")
-                  button.c-login__button.c-button enviar
               .c-form__input.left-align.u-margin-tb--none
                 label
                   input(type="checkbox")
@@ -38,6 +31,15 @@ html(lang="es")
               button.c-login__button.c-button.icon-back
         p.c-login__register ¿No tienes una cuenta?
           a(href="register.html") Regístrate
+
+    #passRecover.modal.c-modal.c-modal__recover
+      .modal-content.center.u-padding-tb--m
+        h3.u-text-medium Contraseña olvidada
+        p.u-text-medium Ingresa tu correo electrónico y te mandaremos un link para que puedas crear una nueva contraseña.
+        form(action="")
+          .c-form__input
+            input(type="email" placeholder="Correo electrónico")
+        button.c-login__button.c-button enviar
 
 
 

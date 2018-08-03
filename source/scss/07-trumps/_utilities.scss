@@ -61,6 +61,10 @@
     }
     &-semibold{
       font-weight: 600;
+
+      @media #{$medium-and-down} {
+        font-weight: 500;
+      }
     }
   }
   &-container{

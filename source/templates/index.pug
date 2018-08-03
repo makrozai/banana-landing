@@ -8,7 +8,8 @@ html(lang="es")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
-    include blocks/navbar
+    +navbar()
+
     header.c-header
       img(src="dist/img/reloj.png", alt="").c-header__image.c-header__image--clock
       img(src="dist/img/calendar-lg.png", alt="").c-header__image.c-header__image--phone

@@ -8,8 +8,9 @@ html(lang="es")
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="dist/css/app.css")
   body
-    include blocks/admin-navbar
+    +navbarAdmin().hide-on-small-and-down
 
+    +navbaBehind('Pedido # 00345').hide-on-med-and-up
     header
       .container
         .row.u-margin-top--m
@@ -60,6 +61,7 @@ html(lang="es")
             .c-card.c-card__mobile
                 p.c-card__title Itinerario del pedido:
                 ul.c-itinerary
+                  span.c-itinerary__price 105.50
                   li
                     span Compra
                     span 24/07 a las 12:00pm

@@ -1,0 +1,37 @@
+$navbar-behind--size: 45px;
+.c-navbar-behind{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  position: relative;
+  background: white;
+  color: $off-black;
+  height: $navbar-behind--size;
+
+  box-shadow: 0 0 0 0 transparent;
+  border-bottom: 1px solid rgba(#014592,.3);
+
+  a{
+    height: $navbar-behind--size;
+  }
+  li{
+    height: $navbar-behind--size;
+    line-height: $navbar-behind--size;
+  }
+  &__arrow{
+    position: absolute;
+    top: 0;
+    left: 1em;
+    transform:rotateZ(180deg);
+
+    i{
+      font-size: 1em !important;
+      display: flex !important;
+      align-items:center;
+      color: $g-color-third;
+
+      height: $navbar-behind--size !important;
+      line-height: $navbar-behind--size !important;
+    }
+  }
+}

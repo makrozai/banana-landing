@@ -9,6 +9,16 @@
     background: $g-color-third;
     position: absolute;
   }
+  &__price{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 500;
+
+    &:before{
+      content: "S/";
+    }
+  }
   li{
     position: relative;
     padding-left: 3rem;
