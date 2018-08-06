@@ -58,10 +58,11 @@
           line-height: 1.2;
           width: 100%;
 
+          padding-left: 1.5em;
+          padding-right: 1.5em;
+
           @media #{$medium-and-down} {
             font-size: 14px;
-            padding-left: 1em;
-            padding-right: 1em;
           }
         }
         i{

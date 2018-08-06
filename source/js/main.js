@@ -9,6 +9,18 @@ function activeElement(elements, indexActive){
     })
     elements[indexActive].classList.add('active');
   }
+
+//scroll animation
+document.addEventListener('scroll', (e) => {
+  var navbar = document.querySelector(".c-navbar--fixed");
+  if (window.scrollY >=  100) {
+    navbar.classList.add("c-navbar--scrolling");
+  }else{
+    navbar.classList.remove("c-navbar--scrolling");
+  }
+})
+
+
 if (window.matchMedia("(max-width: 992px)").matches) {
 
   var CarouselM = document.querySelector('.c-carousel-mobile');
@@ -80,13 +92,5 @@ var animationFade = setInterval((() => {
 
 
 
-//scroll animation
-document.addEventListener('scroll', (e) => {
-  var navbar = document.querySelector(".c-navbar--fixed");
-  if (window.scrollY >=  100) {
-    navbar.classList.add("c-navbar--scrolling");
-  }else{
-    navbar.classList.remove("c-navbar--scrolling");
-  }
-})
+
 //let a = () => console.log("Hello World");
