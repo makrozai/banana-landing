@@ -1,0 +1,23 @@
+mixin order(order)
+  .row
+    .col.s12
+      h4.u-margin-bottom--s= order.name
+    .col.s6.m4
+      p.u-margin-top--none= 'Pedido # ' + order.number
+      span.c-badge-status.u-margin-left--none en proceso
+    .col.s6.m4.offset-m4.center
+      .c-total-pay
+        p Total a pagar:
+        p.c-price= order.price.total.dolars
+          span.c-price__cents= order.price.total.cents
+        a(href="#!" data-target='dropdown1').dropdown-trigger ver detalle
+        ul#dropdown1.dropdown-content.c-dropdown
+          li
+            p Gastos en compras:
+            span= 'S/' + order.price.buy
+          li
+            p Costo de envío:
+            span= 'S/' + order.price.ship
+          li
+            p Comisión Tudú:
+            span= 'S/' + order.price.comision

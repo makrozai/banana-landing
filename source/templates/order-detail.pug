@@ -14,74 +14,24 @@ html(lang="es")
     header
       .container
         .row.u-margin-top--m
-          .col.s12
-            h4.u-margin-bottom--s Compras en Plaza Vea
-          .col.s6.m4
-            p.u-margin-top--none Pedido # 00345
-            span.c-badge-status.u-margin-left--none en proceso
-          .col.s6.m4.offset-m4.center
-            .c-total-pay
-              p Total a pagar:
-              p.c-price 124
-                span.c-price__cents 50
-              a(href="#!" data-target='dropdown1').dropdown-trigger ver detalle
-              ul#dropdown1.dropdown-content.c-dropdown
-                li
-                  p Gastos en compras:
-                  span S/ 105.50
-                li
-                  p Costo de envío:
-                  span S/ 8.00
-                li
-                  p Comisión Tudú:
-                  span S/ 11.00
 
+          .col.s12
+            +order(order)
 
           .col.s12
             .u-separator.u-margin-tb--m
-          .col.s12.m6
-            ul.c-characters
-              li
-                p Fecha de entrega:
-                p 24/07/18 a las 04:24PM
-              li
-                p Dirección de entrega:
-                p 855 Hettinger Crossing
-              li
-                p Fecha de recojo:
-                p 24/07/18 a las 04:24PM
-              li
-                p Dirección de recojo:
-                p 855 Hettinger Crossing
-          .col.s12.m6
-            p.u-text-semibold.u-margin-bottom--none Detalles del pedido:
-            p.u-margin-top--none Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          .col.s12
+            +orderDetail(order)
         .row
           .col.s12.m6
-            .c-card.c-card__mobile
-                p.c-card__title Itinerario del pedido:
-                ul.c-itinerary
-                  span.c-itinerary__price 105.50
-                  li
-                    span Compra
-                    span 24/07 a las 12:00pm
-                    span Hacer compras en Plaza Vea
-                  li
-                    span Entrega
-                    span 24/07 a las 4:20pm
-                    span 855 Hettinger Crossing
+            +card('Itinerario del pedido:').c-card__mobile
+              +itinerary('105.50', itineraryOrder)
 
 
           .col.s12.m6
-            .c-card.c-card__mobile
-              .c-card-perfil.c-card-perfil--fixed
-                img(src="dist/img/image-user.png", alt="")
-                .c-card-perfil__description
-                  h4 Callie Perkings
-                  p 988 765 435
-                  p DNI: 45544234
-                a(href="tel:+51988765435").c-card-perfil__phone
-                  i.material-icons.icon-call
+            +card().c-card__mobile
+              +duer(duer)
+
             .right-align.c-card-perfil__button
               a(href="#form-pay").c-button.modal-trigger pagar
             #form-pay.modal.c-modal
@@ -91,15 +41,13 @@ html(lang="es")
                 form.row
                   .col.s12.u-padding-lr--none
                     p.u-text-medium Método de pago
-                  .c-tab.c-tab--blue.col.s12
-                    ul.tabs
-                      li.tab.col.s6
-                        a(href="#payOnline").active En línea
-                      li.tab.col.s6
-                        a(href="#payTransference") Transferencia
+
+                  +tabValues('default', 'en línea', 'Transferencia').c-tab--blue.col.s12
+
+
                   .col.s12.u-padding-lr--none
                     .u-separator
-                  #payOnline.col.s12.u-padding-lr--none
+                  #test0.col.s12.u-padding-lr--none
                     .row
                       .c-form__input.col.s12.m6
                         input(type="text" placeholder="Nombre del tarjetahabiente")
@@ -113,7 +61,7 @@ html(lang="es")
                           li
                             label Código de seguridad
                             input(type="time")
-                  #payTransference.col.s12.u-padding-lr--none
+                  #test1.col.s12.u-padding-lr--none
                     .row.left-align.c-modal__font
                       .col.s12.m4
                         p Número de cuenta:

@@ -1,13 +1,14 @@
 .c-header{
   display: flex;
   background: $g-color-first;
-  height: 100vh;
-  min-height: 650px;
+  min-height: 750px;
   color: white;
   position: relative;
 
   @media #{$medium-and-down} {
     padding: 0 1em;
+    min-height: 100vh;
+    height: auto;
   }
 
   &__container{

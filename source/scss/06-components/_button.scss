@@ -19,11 +19,30 @@
 
   transition:all .2s;
 
+  &:hover{
+    background: var(--g-color-second-hover);
+  }
+  &:focus{
+    background: var(--g-color-second-pressed);
+  }
+
+  $numbers: ('first','second','third','fourth');
+  @each $number in $numbers{
+    &.u-bg-#{$number}:hover {
+      background: var(--g-color-#{$number + '-hover'});
+    }
+    &.u-bg-#{$number}:focus {
+      background: var(--g-color-#{$number + '-pressed'});
+    }
+  }
   @media #{$medium-and-down} {
     height: $button-large-height - 10px;
     line-height: $button-large-height - 10px;
     min-width: 180px;
     font-size: 14px;
+
+
+
   }
 
   &-logged{
@@ -56,10 +75,6 @@
     }
   }
 
-  &--fourth{
-    background: $g-color-fourth;
-  }
-
   &--small{
     height: $button-large-height - 10px;
     line-height: $button-large-height - 6px;
@@ -84,9 +99,13 @@
       border: 1px solid var(--g-color-#{$number});
 
       &:hover{
-        background: var(--g-color-#{$number});
-        color: white;
+        background: var(--g-color-#{$number}) !important;
+        color: white !important;
 
+      }
+      &:focus{
+        color: white !important;
+        border: 1px solid transparent !important;
       }
     }
   }

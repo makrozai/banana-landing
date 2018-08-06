@@ -1,0 +1,9 @@
+mixin duer(duer)
+  .c-card-perfil.c-card-perfil--fixed
+    img(src= duer.image, alt="")
+    .c-card-perfil__description
+      h4= duer.name
+      p= duer.phone
+      p= 'DNI:' + duer.dni
+    a(href="tel:" + duer.phone).c-card-perfil__phone
+      i.material-icons.icon-call

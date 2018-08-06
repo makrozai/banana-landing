@@ -1,0 +1,19 @@
+mixin orderDetail(order)
+  .row
+    .col.s12.m6
+      ul.c-characters
+        li
+          p Fecha de entrega:
+          p= order.delivery.date
+        li
+          p Dirección de entrega:
+          p= order.delivery.address
+        li
+          p Fecha de recojo:
+          p= order.receive.date
+        li
+          p Dirección de recojo:
+          p= order.receive.address
+    .col.s12.m6
+      p.u-text-semibold.u-margin-bottom--none Detalles del pedido:
+      p.u-margin-top--none= order.description

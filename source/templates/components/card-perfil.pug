@@ -1,0 +1,21 @@
+mixin carPerfil(user, sald, ordersActives)
+  .row.u-padding-top--m
+    .col.s12.m6
+      .c-card-perfil
+        img(src= user.image, alt="")
+        .c-card-perfil__description
+          h4= user.name
+          p= user.phone
+          p= user.email
+          a(href="edit-perfil.html") Editar perfil
+    .col.s12.m6
+      .row
+        .col.s6
+          .c-card-perfil__info
+            p.c-price= sald.dolars
+              span.c-price__cents= sald.cents
+            p saldo a favor
+        .col.s6
+          .c-card-perfil__info
+            p= ordersActives
+            p pedidos activos

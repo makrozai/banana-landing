@@ -15,11 +15,16 @@ html(lang="es")
       img(src="dist/img/calendar-lg.png", alt="").c-header__image.c-header__image--phone
       img(src="dist/img/recibo-luz.png", alt="").c-header__image.c-header__image--paper
       .c-header__container.center
-        h1.c-header__title Delega tus <span>pendientes<br></span>a un equipo de asistentes personales capacitados.
+        h1.c-header__title Delega tus
+          ul.c-animation-text-fade
+            li pendientes
+            li pagos
+            li trámites
+          | a un equipo de asistentes personales capacitados.
         p.c-header__subtitle Comienza ahora a través de Messenger, Whatsapp, o vía web.
         div
           a(href="#!").c-button para el negocio
-          a(href="#!").c-button.c-button--fourth para tí
+          a(href="#!").c-button.u-bg-fourth para tí
       a(href="#!").c-header__scrolling
         i.material-icons.icon-arrow
     section.u-bg-fourth.u-padding-top--l.u-padding-bottom--xxl.u-diagonal

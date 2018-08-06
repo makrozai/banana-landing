@@ -1,5 +1,14 @@
 M.AutoInit();
 
+
+function activeElement(elements, indexActive){
+    //añade clase active al elemento
+    //quita a los demas que no esten en el index
+    elements.forEach((element) => {
+      element.classList.remove('active');
+    })
+    elements[indexActive].classList.add('active');
+  }
 if (window.matchMedia("(max-width: 992px)").matches) {
 
   var CarouselM = document.querySelector('.c-carousel-mobile');
@@ -37,14 +46,39 @@ if (window.matchMedia("(max-width: 992px)").matches) {
      })
   }
 
-  function activeElement(elements, indexActive){
-    //añade clase active al elemento
-    //quita a los demas que no esten en el index
-    elements.forEach((element) => {
-      element.classList.remove('active');
-    })
-    elements[indexActive].classList.add('active');
-  }
+
 }
+
+var animationTextFade = document.querySelector(".c-animation-text-fade");
+
+var animationTextFadeItem = animationTextFade.querySelectorAll('li');
+
+var loopAnimation = 1;
+
+animationTextFadeItem[0].classList.add("active");
+
+animationTextFadeItem.forEach((element) => {
+  var aBlock = document.createElement('br');
+  element.appendChild(aBlock);
+})
+
+var animationFade = setInterval((() => {
+  //desaparece el contenedor
+  animationTextFade.classList.toggle("u-fade-out");
+  setTimeout((() => {
+    //cambia el valor y aparece el contenedor
+    activeElement(animationTextFadeItem, loopAnimation);
+    animationTextFade.classList.toggle("u-fade-out");
+  }),1000)
+  //da al siguiente valor
+  loopAnimation++;
+
+  if (loopAnimation >= animationTextFadeItem.length) {
+    loopAnimation = 0;
+  }
+}), 4000);
+
+
+
 
 //let a = () => console.log("Hello World");

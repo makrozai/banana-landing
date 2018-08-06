@@ -12,37 +12,11 @@ html(lang="es")
 
     header
       .container
-        .row.u-padding-top--m
-          .col.s12.m6
-            .c-card-perfil
-              img(src="dist/img/image-user.png", alt="")
-              .c-card-perfil__description
-                h4 Callie perkings
-                p 998 765 435
-                p woodrow.glover@howe.tv
-                a(href="edit-perfil.html") Editar perfil
-          .col.s12.m6
-            .row
-              .col.s6
-                .c-card-perfil__info
-                  p.c-price 124
-                    span.c-price__cents 50
-                  p saldo a favor
-              .col.s6
-                .c-card-perfil__info
-                  p 5
-                  p pedidos activos
+        +carPerfil(user, sald, 5)
         .row
           .col.s12
-            .c-tab
-              ul.tabs
-                li.tab.col.s4
-                  a(href="#test1").active Activos
-                li.tab.col.s4
-                  a(href="#test2") Pasados
-                li.tab.col.s4
-                  a(href="#test3") Facturas
-          #test1.col.s12
+            +tabValues('default', 'Activos', 'Pasados','Facturas')
+          #test0.col.s12
             table
               tbody
                 each val in [1,2,3,4]
@@ -57,7 +31,7 @@ html(lang="es")
                     td.center
                       p.c-price 124
                         span.c-price__cents 50
-          #test2.col.s12
+          #test1.col.s12
             table
               tbody
                 each val in [1,2,3,4]
@@ -75,7 +49,7 @@ html(lang="es")
                         span.c-price__cents 50
                     td.right
                       a(href="#!").c-button.c-button--small Repetir
-          #test3.col.s12
+          #test2.col.s12
             table
               tbody
                 each val in [1,2,3,4]

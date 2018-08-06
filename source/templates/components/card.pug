@@ -1,0 +1,6 @@
+mixin card(title)
+  .c-card&attributes(attributes)
+    if title
+      p.c-card__title= title
+    if block
+      block

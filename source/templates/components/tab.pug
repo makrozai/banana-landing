@@ -1,0 +1,8 @@
+mixin tabValues(tabStyle, ...items)
+  .c-tab&attributes(attributes)
+    ul.tabs
+      - var length = 12 / items.length
+      each item,index in items
+        li.tab.col(class= 's' + length)
+          a(href="#test" + index)= item
+
