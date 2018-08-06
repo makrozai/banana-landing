@@ -80,5 +80,13 @@ var animationFade = setInterval((() => {
 
 
 
-
+//scroll animation
+document.addEventListener('scroll', (e) => {
+  var navbar = document.querySelector(".c-navbar--fixed");
+  if (window.scrollY >=  100) {
+    navbar.classList.add("c-navbar--scrolling");
+  }else{
+    navbar.classList.remove("c-navbar--scrolling");
+  }
+})
 //let a = () => console.log("Hello World");

@@ -1,6 +1,7 @@
 .c-navbar{
   background: transparent;
   box-shadow: 0 0 0 0 transparent;
+  transition:all .3s;
   &__logo{
     float: left;
     height: $navbar-height;
@@ -41,10 +42,13 @@
   }
 
   &--fixed{
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
+  }
+  &--scrolling{
+    background: $g-color-first;
   }
 
   ul{
