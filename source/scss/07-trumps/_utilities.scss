@@ -46,9 +46,12 @@
 
     &--reverse{
       margin-top: -$diagonal-size;
+      padding-bottom: 6em;
+
       clip-path: polygon(0 0,100% #{$diagonal-size},100% 100%,0 100%);
 
       @media #{$medium-and-down} {
+        padding-bottom: 1em;
         clip-path: polygon(0 0,100% #{$diagonal-size / 2},100% 100%,0 100%);
       }
     }

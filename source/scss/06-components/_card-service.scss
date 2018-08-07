@@ -20,13 +20,8 @@
 
       @media #{$medium-and-down} {
         width: 90%;
-        min-width: 8rem;
-        min-height: 8rem;
+        height: 7rem;
         object-fit:cover;
-      }
-      @media #{$small-and-down} {
-        width: 8rem;
-        height: 8rem;
       }
     }
   }
