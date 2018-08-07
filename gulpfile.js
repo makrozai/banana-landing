@@ -14,37 +14,37 @@ var gulp = require('gulp'),
 gulp.task('default', ['uglify', 'scss', 'pug', 'imagemin', 'webserver', 'watch']);
 
 gulp.task('uglify', function() {
-    gulp.src('source/js/materialize.js')
-        .pipe(plumber())
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
-    gulp.src('source/js/main.js')
-        .pipe(plumber())
-        //.pipe(concat('main.js'))
-        .pipe(babel({
-          presets: ['es2015']
-        }))
-        //.pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+  gulp.src('source/js/materialize.js')
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
+  gulp.src('source/js/main.js')
+    .pipe(plumber())
+    //.pipe(concat('main.js'))
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    //.pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('scss', function() {
-    gulp.src('source/scss/*.scss')
-        .pipe(plumber())
-        .pipe(sass())
-        .pipe(autoprefixer({browsers: ['last 3 versions', '> 5%', 'Firefox ESR']}))
-        .pipe(gulp.dest('dist/css'));
+  gulp.src('source/scss/*.scss')
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(autoprefixer({browsers: ['last 3 versions', '> 5%', 'Firefox ESR']}))
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('pug', function() {
-    gulp.src('source/templates/*.pug')
-        .pipe(plumber())
-        .pipe(pug({pretty: true}))
-        .pipe(gulp.dest('./'));
+  gulp.src('source/templates/*.pug')
+    .pipe(plumber())
+    .pipe(pug({pretty: true}))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('imagemin', function() {
-    gulp.src('source/img/**/*.{jpg,jpeg,png,gif,svg}')
+  gulp.src('source/img/**/*.{jpg,jpeg,png,gif,svg}')
     .pipe(plumber())
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
@@ -58,6 +58,7 @@ gulp.task('webserver', function() {
       open: true
     }));
 });
+
 
 gulp.task('watch', function() {
     gulp.watch('source/js/**/*.js', ['uglify']);
