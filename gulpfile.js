@@ -59,7 +59,6 @@ gulp.task('webserver', function() {
     }));
 });
 
-
 gulp.task('watch', function() {
     gulp.watch('source/js/**/*.js', ['uglify']);
     gulp.watch('source/scss/**/*.scss', ['scss']);

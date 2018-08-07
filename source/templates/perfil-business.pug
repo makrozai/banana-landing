@@ -13,8 +13,9 @@ html(lang="es")
     header
       .container
         +carPerfil(user, sald, 5)
+      .container.u-container-full--mobile
         .row
-          .col.s12
+          .col.s12.u-container-full--mobile
             +tabValues('default', 'Activos', 'Pasados','Facturas')
           #test0.col.s12
             table

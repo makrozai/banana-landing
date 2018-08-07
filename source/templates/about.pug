@@ -12,8 +12,8 @@ html(lang="es")
 
     header.c-banner.u-diagonal
       img(src="dist/img/image-banner.jpg", alt="")
-      .c-banner__container.center
-        h1.c-banner__title Sobre Tudú
+      .c-banner__container
+        h1.c-banner__title.center Sobre Tudú
         h2.c-banner__subtitle Nadie tiene tiempo para hacer
           span todo lo que necesita hacer
 
@@ -34,7 +34,7 @@ html(lang="es")
             +cardMember('dist/img/image-user.png','Daniela Arévalo -COO','Daniela diseñó y lidera las operaciones de La Victoria Lab, el laboratorio de innovación del grupo Intercorp, que tuvo un crecimiento de 8 a 50 personas en 2 años - con retos que esto implica.')
           .col.s12.m6.offset-m3
             +cardMember('dist/img/image-user.png','Eduardo Marisca - CTO','Eduardo viene liderando e incubando productos y servicios digitales en La Victoria Lab, el laboratorio de innovación del grupo Intercorp. Anteriormente, desarrolló en el MIT el primer estudio sistemático de la industria peruana de videojuegos como red de innovación periferica.')
-    +newsletter('¿Quieres formar parte de nuestro equipo?', false, '', 'Únete', '')
+    +newsletter('¿Quieres formar parte de nuestro equipo?', false, '', 'Únete', 'work.html')
     include blocks/footer
 
 

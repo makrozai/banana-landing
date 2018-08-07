@@ -79,6 +79,15 @@
       max-width: 850px;
       margin: 0 auto;
     }
+    &-full{
+      &--mobile{
+        @media #{$medium-and-down} {
+          width: 100%;
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+        }
+      }
+    }
   }
   &-separator{
     margin: .5em 0;

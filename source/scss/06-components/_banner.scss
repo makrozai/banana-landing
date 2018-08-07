@@ -8,6 +8,10 @@
   color: white;
   background: $g-color-first;
 
+  @media #{$medium-and-down} {
+    height: 500px;
+  }
+
   &__container{
     max-width: 800px;
   }
@@ -27,6 +31,12 @@
     font-weight: 500;
     font-size: 36px;
     margin-top: 1.3em;
+    text-align: center;
+
+    @media #{$medium-and-down} {
+      padding: 0 .5em;
+      text-align: left;
+    }
 
     span{
       display: block;

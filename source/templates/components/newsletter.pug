@@ -14,4 +14,4 @@ mixin newsletter(title, input, description, textButton,linkButton)
             button.c-button= textButton
       else
         .col.s12
-            a(href="#!").c-button.u-margin-top--m= textButton
+            a(href= linkButton).c-button.u-margin-top--m= textButton
