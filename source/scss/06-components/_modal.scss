@@ -55,6 +55,17 @@
   &__recover{
     margin-top: 6em;
   }
+  &__close{
+    color: $off-black;
+    font-size: 1em;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+
+    i{
+      font-size: 1em;
+    }
+  }
 }
 .modal-overlay{
   background-color: rgba(black, 1);
