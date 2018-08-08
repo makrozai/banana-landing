@@ -19,7 +19,7 @@ input,textarea{
     }
   }
 }
-input[type=password]{
+input{
   + .recover{
     display: inline-block;
     font-size: 16px;

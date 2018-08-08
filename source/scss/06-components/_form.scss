@@ -92,6 +92,24 @@
         }
       }
     }
+    &-icon{
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      border-radius: 6px;
+      height: 55px;
+      line-height: 55px;
+      padding: 0 1em;
+      background: white;
+
+      &.icon-eye{
+        cursor: pointer;
+      }
+    }
+
+    &--visible{
+      -webkit-text-security:none !important;
+    }
   }
   .select-wrapper input.select-dropdown{
     margin-bottom: 0;

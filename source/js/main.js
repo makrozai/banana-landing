@@ -4,6 +4,31 @@
   // materialize initial
   M.AutoInit();
 
+  //animation text
+  if (document.body.contains(document.querySelector('input[type="password"]'))) {
+    var inputPassword = document.querySelector('input[type="password"]');
+    var parentPassword = inputPassword.parentNode;
+
+
+    //create element
+      var aBlock = document.createElement('i');
+      aBlock.classList.add("materialize-icons");
+      aBlock.classList.add("icon-eye");
+      aBlock.classList.add("c-form__input-icon");
+      parentPassword.appendChild(aBlock);
+
+    //create interaction for input
+    var elementInteraction = parentPassword.querySelector('.icon-eye');
+
+    elementInteraction.onclick = function() {
+      if (inputPassword.type == 'password') {
+        inputPassword.type = 'text';
+      }else{
+        inputPassword.type = 'password';
+      }
+    }
+  }
+
   //scroll animation
   if (document.body.contains(document.querySelector(".c-navbar--fixed"))) {
     document.addEventListener('scroll', (e) => {
