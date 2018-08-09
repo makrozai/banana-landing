@@ -5,8 +5,8 @@
   M.AutoInit();
 
   //animation text
-  if (document.body.contains(document.querySelector('input[type="password"]'))) {
-    var inputPassword = document.querySelector('input[type="password"]');
+  if (document.body.contains(document.querySelector('.c-form__input input[type="password"]'))) {
+    var inputPassword = document.querySelector('.c-form__input input[type="password"]');
     var parentPassword = inputPassword.parentNode;
 
 
