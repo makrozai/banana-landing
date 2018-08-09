@@ -13,6 +13,7 @@ $navbar-behind--size: 45px;
 
   a{
     height: $navbar-behind--size;
+    margin: 0;
   }
   li{
     height: $navbar-behind--size;
@@ -29,6 +30,7 @@ $navbar-behind--size: 45px;
       display: flex !important;
       align-items:center;
       color: $g-color-third;
+      margin: 0 !important;
 
       height: $navbar-behind--size !important;
       line-height: $navbar-behind--size !important;

@@ -56,14 +56,18 @@
     margin-top: 6em;
   }
   &__close{
-    color: $off-black;
-    font-size: 1em;
+    color: $off-black !important;
     position: absolute;
+    z-index: 10;
     top: 1em;
     left: 1em;
 
     i{
-      font-size: 1em;
+      font-size: 18px !important;
+      margin: 0 !important;
+    }
+    &:hover{
+      color: $off-black !important;
     }
   }
 }

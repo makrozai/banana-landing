@@ -3,7 +3,29 @@ footer.c-footer.u-padding-top--m
     .c-footer__container
       .row
         .col.s12.m4
-          a(href="#!") Términos y condiciones
+          a(href="#passRecover").modal-trigger Términos y condiciones
+
+          #passRecover.modal.c-modal.c-tandc
+            a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
+              i.material-icons.icon-close
+            .modal-content
+              +navbaBehind('Términos y condiciones','close').hide-on-med-and-up
+              h3.u-text-medium.hide-on-small-and-down Términos y condiciones
+              .c-tandc__container
+                h4
+                  span 1
+                  | Condiciones del servicio
+                p Puedes usar nuestros productos sólo mediante un contrato vinculante con Pinterest, y solo bajo cumplimiento de estos términos y de todas las leyes aplicables. Cuando creas una cuenta en Pinterest, debes proporcionarnos datos completos y precisos. El uso o acceso de usuarios de menos de 13 años está prohibido. Si abres una cuenta en nombre de una empresa, organización u otra entidad, entonces (a) la apertura de la cuenta “te” incluye tanto a ti como a la entidad que representas, y (b) declaras y garantizas que estás autorizado a conceder todos los permisos y licencias incluidos en estos términos, y que además aceptas dichos términos en nombre de la entidad.
+
+                b En pocas palabras<br>
+                b No puedes usar Pinterest si eres menor de 13 años. Además, si usas Pinterest como parte de tu trabajo, tienes que crear una cuenta de empresa.
+
+                h4
+                  span 2
+                  | Privacidad
+                p Concedes a Pinterest, al igual que a nuestros usuarios, una licencia global libre de derechos de autor, no exclusiva, transferible y sujeta a licencias para usar, almacenar, visualizar, reproducir, guardar, modificar, crear trabajos derivados, producir y distribuir tu Contenido de Usuario en Pinterest con la finalidad exclusiva de operar, desarrollar, proveer y usar los Productos de Pinterest. Ninguna de estas Condiciones puede restringir otro tipo de derechos que Pinterest pueda tener sobre el Contenido del usuario, como por ejemplo, bajo otras licencias. Nos reservamos el derecho de eliminar o modificar el Contenido del usuario bajo cualquier motivo, incluyendo Contenido del usuario que consideramos que infringe nuestras Condiciones y políticas.
+                b En pocas palabras<br>
+                b No puedes usar Pinterest si eres menor de 13 años. Además, si usas Pinterest como parte de tu trabajo, tienes que crear una cuenta de empresa.
         .col.s12.m4
           a(href="about.html") Sobre Túdu
         .col.s12.m4

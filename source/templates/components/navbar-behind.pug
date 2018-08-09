@@ -1,6 +1,10 @@
-mixin navbaBehind(title)
+mixin navbaBehind(title, link)
   nav.c-navbar-behind&attributes(attributes)
-    a(href="perfil.html").c-navbar-behind__arrow
-      i.material-icons.icon-back
+    if (link == 'close')
+      a(href= "#!").c-navbar-behind__arrow.modal-close
+        i.material-icons.icon-back
+    else
+      a(href= link).c-navbar-behind__arrow
+        i.material-icons.icon-back
     ul
       li= title
