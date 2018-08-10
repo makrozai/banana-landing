@@ -70,6 +70,33 @@
       color: $off-black !important;
     }
   }
+  &__bill{
+    width: 60%;
+    @media #{$medium-and-down} {
+      width: 90%;
+    }
+    @media #{$small-and-down} {
+      height: 100vh;
+      overflow-Y: auto;
+      top: 0 !important;
+      width: 100%;
+      border-radius: 0;
+      padding-top: 0;
+    }
+    .modal-content{
+      padding: 0;
+    }
+    &__footer{
+      text-align: center;
+      font-size: 14px;
+      margin-top: 30px;
+
+      a{
+        color: $off-black;
+        font-weight: 500;
+      }
+    }
+  }
 }
 .modal-overlay{
   background-color: rgba(black, 1);

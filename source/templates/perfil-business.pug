@@ -17,7 +17,7 @@ html(lang="es")
         .row
           .col.s12.u-container-full--mobile
             +tabValues('default', 'Activos', 'Pasados','Facturas')
-          #test0.col.s12
+          #test0.col.s12.c-table
             table
               tbody
                 each val in [1,2,3,4]
@@ -32,7 +32,7 @@ html(lang="es")
                     td.center
                       p.c-price 124
                         span.c-price__cents 50
-          #test1.col.s12
+          #test1.col.s12.c-table
             table
               tbody
                 each val in [1,2,3,4]
@@ -50,32 +50,10 @@ html(lang="es")
                         span.c-price__cents 50
                     td.right
                       a(href="add-order.html").c-button.c-button--small Repetir
-          #test2.col.s12
+          #test2.col.s12.c-table
             table
               tbody
-                tr
-                  td
-                    p 24/07/18
-                    p 04:24PM
-                  td Compras en Plaza Vea
-                    span.c-badge-status.hide-on-med-and-up En Proceso
-                  td.hide-on-small-and-down
-                    span.c-badge-status En Proceso
-                  td.center
-                    p.c-price 124
-                      span.c-price__cents 50
-                tr
-                  td
-                    p 24/07/18
-                    p 04:24PM
-                  td Compras en Plaza Vea
-                    span.c-badge-status.hide-on-med-and-up En Proceso
-                  td.hide-on-small-and-down
-                    span.c-badge-status En Proceso
-                  td.center
-                    p.c-price 124
-                      span.c-price__cents 50
-                tr
+                tr(href="#passRecover").modal-trigger.c-bill--incomplete
                   td
                     p 24/07/18
                     p 04:24PM
@@ -86,7 +64,7 @@ html(lang="es")
                   td.center
                     p.c-price 124
                       span.c-price__cents 50
-                tr
+                tr(href="#passRecover").modal-trigger.c-bill--incomplete
                   td
                     p 24/07/18
                     p 04:24PM
@@ -97,6 +75,80 @@ html(lang="es")
                   td.center
                     p.c-price 124
                       span.c-price__cents 50
+                tr(href="#passRecover").modal-trigger
+                  td
+                    p 24/07/18
+                    p 04:24PM
+                  td Compras en Plaza Vea
+                    span.c-badge-status.hide-on-med-and-up En Proceso
+                  td.hide-on-small-and-down
+                    span.c-badge-status En Proceso
+                  td.center
+                    p.c-price 124
+                      span.c-price__cents 50
+                tr(href="#passRecover").modal-trigger
+                  td
+                    p 24/07/18
+                    p 04:24PM
+                  td Compras en Plaza Vea
+                    span.c-badge-status.hide-on-med-and-up En Proceso
+                  td.hide-on-small-and-down
+                    span.c-badge-status En Proceso
+                  td.center
+                    p.c-price 124
+                      span.c-price__cents 50
+
+          #passRecover.modal.c-modal.c-modal__bill
+            a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
+              i.material-icons.icon-close
+            .modal-content
+              +navbaBehind('Detalle de factura #0056','close').hide-on-med-and-up
+              h3.u-text-medium.hide-on-small-and-down.center Detalle de factura #0056
+              .row.c-resume-bill
+                .col.s7.m6
+                  .c-resume-bill__profile
+                    b Cliente : La Victoria Lab
+                    p RUC: 4578290498
+                    p Manuel Arrisueño 697 - La Victoria
+                .col.s5.m6
+                  .c-resume-bill__price
+                    p.c-price 373
+                      span.c-price__cents 50
+                    p total a pagar
+                    p fecha de pago: 14/08
+                    a(href="#!").hide-on-small-and-down Descargar factura
+                      i.material-icons.icon-pdf
+                .col.s12.center.u-margin-tb--m.hide-on-med-and-up
+                  a(href="#!").c-button pagar
+                .col.s12.u-margin-bottom--s.hide-on-med-and-up
+                  p.c-modal__bill__footer ¿Tienes alguna consulta o comentario sobre esta factura?
+                    a(href="#!") Escríbenos
+                .col.s12.u-separator
+              .row.u-margin-bottom--none
+                table.c-table-bill
+                  tbody
+                    each val in [1,2,3]
+                      tr
+                        td
+                          p ID: 0056
+                          p 14/07/18
+                        td
+                          b Compras en Plaza Vea
+                          p 10 Mandarinas, 2k tomates, 1k arroz, 3 cajas leche fresca, 2 botellas yogurt, 8 cajas…
+                          .right-align.hide-on-med-and-up
+                            p.c-price 373
+                              span.c-price__cents 50
+                            a(href="order-detail.html") ver detalle
+                        td.hide-on-small-and-down
+                          p.c-price 373
+                            span.c-price__cents 50
+                        td.hide-on-small-and-down
+                          a(href="order-detail.html") ver<br>detalle
+                .col.s12.hide-on-small-and-down
+                  p.c-modal__bill__footer ¿Tienes alguna consulta o comentario sobre esta factura?
+                    a(href="#!") Escríbenos
+                  a(href="#!").c-login__button.c-button pagar S/ 373.50
+
 
 
 

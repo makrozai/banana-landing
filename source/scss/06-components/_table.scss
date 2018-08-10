@@ -1,0 +1,15 @@
+.c-table{
+  @media #{$medium-and-down} {
+    padding: 0 !important;
+
+    tr{
+      display: flex;
+      padding-right: 1em;
+      padding-left: 1em;
+
+      td{
+        flex-grow: 1;
+      }
+    }
+  }
+}

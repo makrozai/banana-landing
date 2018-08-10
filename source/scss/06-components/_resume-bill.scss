@@ -1,0 +1,50 @@
+.c-resume-bill{
+  margin-bottom: 0 !important;
+  @media #{$small-and-down} {
+    margin-top: 2em;
+  }
+  p{
+    margin: 0;
+  }
+  b{
+    font-weight: 600;
+  }
+  &__price{
+    text-align: right;
+    @media #{$small-and-down} {
+      text-align: left;
+    }
+
+    .c-price{
+      font-size: 1.5em;
+      font-weight: 600;
+
+    }
+    p{
+      line-height: 1;
+      @media #{$small-and-down} {
+        line-height: 1.2;
+      }
+    }
+    a{
+      display: flex;
+      align-items:center;
+      justify-content: flex-end;
+      margin-top: 1em;
+      color: $off-black;
+
+      i{
+        margin-left: 5px;
+        text-decoration: none;
+      }
+    }
+
+    @media #{$small-and-down} {
+      display: flex;
+      flex-direction:column;
+      p:nth-child(2){
+        order:-1;
+      }
+    }
+  }
+}
