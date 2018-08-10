@@ -11,10 +11,10 @@
   text-align: center;
 
   @media #{$medium-and-down} {
-    display: inline-block;
+    display: block;
     margin-left: 0;
     margin-top: .5em;
-    min-width: 140px;
+    min-width: auto;
   }
 
   &--close{
