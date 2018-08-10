@@ -6101,7 +6101,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   var _defaults = {
     throttle: 100,
-    scrollOffset: 200, // offset - 200 allows elements near bottom of page to scroll
+    scrollOffset: 30, // offset - 200 allows elements near bottom of page to scroll
     activeClass: 'active',
     getActiveElement: function (id) {
       return 'a[href="#' + id + '"]';
