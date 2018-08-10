@@ -3,7 +3,7 @@
   flex-wrap:wrap;
   &--left{
     input,textarea{
-      text-align: left;
+      text-align: left !important;
     }
   }
   &__input{

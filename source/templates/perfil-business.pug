@@ -53,7 +53,7 @@ html(lang="es")
           #test2.col.s12.c-table
             table
               tbody
-                tr(href="#passRecover").modal-trigger.c-bill--incomplete
+                tr(href="#billDetail").modal-trigger.c-bill--incomplete
                   td
                     p 24/07/18
                     p 04:24PM
@@ -64,7 +64,7 @@ html(lang="es")
                   td.center
                     p.c-price 124
                       span.c-price__cents 50
-                tr(href="#passRecover").modal-trigger.c-bill--incomplete
+                tr(href="#billDetail").modal-trigger.c-bill--incomplete
                   td
                     p 24/07/18
                     p 04:24PM
@@ -75,7 +75,7 @@ html(lang="es")
                   td.center
                     p.c-price 124
                       span.c-price__cents 50
-                tr(href="#passRecover").modal-trigger
+                tr(href="#billDetail").modal-trigger
                   td
                     p 24/07/18
                     p 04:24PM
@@ -86,7 +86,7 @@ html(lang="es")
                   td.center
                     p.c-price 124
                       span.c-price__cents 50
-                tr(href="#passRecover").modal-trigger
+                tr(href="#billDetail").modal-trigger
                   td
                     p 24/07/18
                     p 04:24PM
@@ -98,7 +98,7 @@ html(lang="es")
                     p.c-price 124
                       span.c-price__cents 50
 
-          #passRecover.modal.c-modal.c-modal__bill
+          #billDetail.modal.c-modal.c-modal__bill
             a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
               i.material-icons.icon-close
             .modal-content
@@ -119,7 +119,7 @@ html(lang="es")
                     a(href="#!").hide-on-small-and-down Descargar factura
                       i.material-icons.icon-pdf
                 .col.s12.center.u-margin-tb--m.hide-on-med-and-up
-                  a(href="#!").c-button pagar
+                  a(href="#billForm").modal-close.modal-trigger.c-button pagar
                 .col.s12.u-margin-bottom--s.hide-on-med-and-up
                   p.c-modal__bill__footer ¿Tienes alguna consulta o comentario sobre esta factura?
                     a(href="#!") Escríbenos
@@ -147,7 +147,30 @@ html(lang="es")
                 .col.s12.hide-on-small-and-down
                   p.c-modal__bill__footer ¿Tienes alguna consulta o comentario sobre esta factura?
                     a(href="#!") Escríbenos
-                  a(href="#!").c-login__button.c-button pagar S/ 373.50
+                  a(href="#billForm").modal-close.modal-trigger.c-login__button.c-button pagar S/ 373.50
+
+          #billForm.modal.c-modal.c-modal__bill
+            a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
+              i.material-icons.icon-close
+            .modal-content
+              +navbaBehind('Consulta sobre factura #0056','close').hide-on-med-and-up
+              h3.u-text-medium.hide-on-small-and-down.center Detalle de factura #0056
+              form.row.c-resume-bill.c-form--left
+                .col.s7.m6
+                  .c-resume-bill__profile
+                    b Cliente : La Victoria Lab
+                    p RUC: 4578290498
+                    p Manuel Arrisueño 697 - La Victoria
+                .col.s5.m6
+                  .c-resume-bill__price
+                    p
+                    p Fecha de consulta
+                    p 14/07/18
+                .col.s12.c-form__input
+                  textarea(placeholder="Ingresa tu consulta")
+                .col.s12.center.u-margin-tb--m
+                  button.c-button.hide-on-med-and-up enviar
+                  button.c-login__button.c-button.hide-on-small-and-down enviar
 
 
 
