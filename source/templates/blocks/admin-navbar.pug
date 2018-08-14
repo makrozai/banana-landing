@@ -5,9 +5,16 @@ nav.c-navbar.c-navbar--admin
         img(src="dist/img/logo-tudu-pink.svg", alt="")
       a(href="add-order.html").c-navbar__new
         i.material-icons.icon-nuevo
+
+      //desktop menu
       ul#nav-mobile.left.hide-on-med-and-down
-        li.right
+        li.center-align
           a(href="#modal").c-button.c-button--small.c-button-linear--second.modal-trigger Hacer un pedido
+        li.right
+          a(href="#!")
+            1.material-icons.icon-logout Cerrar sesión
+
+      //mobile menu
       ul.hide-on-med-and-up.c-navbar__mobile
         li
           a(href="edit-perfil.html")

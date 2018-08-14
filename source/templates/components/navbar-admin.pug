@@ -6,9 +6,16 @@ mixin navbarAdmin()
           img(src="dist/img/logo-tudu-pink.svg", alt="")
         a(href="add-order.html").c-navbar__new
           i.material-icons.icon-nuevo
-        ul#nav-mobile.left.hide-on-med-and-down
+        a(href="add-order.html").c-button.c-button--small.c-button-linear--second.c-navbar__add Hacer un pedido
+
+        //menu desktop
+        ul.left.hide-on-med-and-down
           li.right
-            a(href="add-order.html").c-button.c-button--small.c-button-linear--second Hacer un pedido
+            a(href="#!")
+              i.material-icons.icon-logout
+              | Cerrar sesión
+
+        //menu mobile
         ul.hide-on-large-only.c-navbar__mobile
           li
             a(href="edit-perfil.html")
