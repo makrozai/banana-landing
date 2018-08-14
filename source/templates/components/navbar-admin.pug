@@ -1,38 +1,52 @@
 mixin navbarAdmin()
-  nav.c-navbar.c-navbar--admin&attributes(attributes)
-    .container
-      .nav-wrapper
-        a(href="perfil.html").c-navbar__logo
-          img(src="dist/img/logo-tudu-pink.svg", alt="")
-        a(href="add-order.html").c-navbar__new
-          i.material-icons.icon-nuevo
-        a(href="add-order.html").c-button.c-button--small.c-button-linear--second.c-navbar__add Hacer un pedido
+  .navbar-fixed
+    nav.c-navbar.c-navbar--admin.c-navbar--fixed&attributes(attributes)
+      .container
+        .nav-wrapper
+          a(href="perfil.html").c-navbar__logo
+            img(src="dist/img/logo-tudu-pink.svg", alt="")
+          a(href="add-order.html").c-navbar__new
+            i.material-icons.icon-nuevo
+          a(href="add-order.html").c-button.c-button--small.c-button-linear--second.c-navbar__add Hacer un pedido
 
-        //menu desktop
-        ul.left.hide-on-med-and-down
-          li.right
-            a(href="#!")
-              i.material-icons.icon-logout
-              | Cerrar sesión
+          //menu desktop
+          ul.left.hide-on-med-and-down
+            li.right
+              a(href="login.html")
+                i.material-icons.icon-logout
+                | Cerrar sesión
 
-        //menu mobile
-        ul.hide-on-large-only.c-navbar__mobile
-          li
-            a(href="edit-perfil.html")
-              i.materialize-icons.icon-edit
-          li
-            a(href="#!" data-target='navMore').dropdown-trigger
-              i.materialize-icons.icon-more
-
-            ul#navMore.dropdown-content.c-dropdown.c-dropdown__navbar
-              li
-                a(href="#!") Sobre Tudú
-              li
-                a(href="#!") Trabaja con Nosotros
-              li
-                a(href="#!") Contáctanos
+          //menu mobile
+          ul.hide-on-large-only.c-navbar__mobile
+            li
+              a(href="edit-perfil.html")
+                i.materialize-icons.icon-edit
+            li
+              a(href="#menuLog").modal-trigger
+                i.materialize-icons.icon-more
 
 
+  #menuLog.modal.c-modal.c-modal__bill
+    a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
+      i.material-icons.icon-close
+    .modal-content
+      +navbaBehind('Opciones','close').hide-on-med-and-up
+      ul.c-navbar-mobile
+        li
+          a(href="about.html") Sobre Tudú
+        li
+          a(href="work.html") Trabaja con Nosotros
+        li
+          a(href="#!") Términos y Condiciones
+        li
+          a(href="#!")
+            i.material-icons.icon-facebook
+          a(href="#!")
+            i.material-icons.icon-instagram
+        li.c-navbar-mobile__logout
+          a(href="perfil.html")
+            i.material-icons.icon-logout
+            | Cerrar sesión
   //-#modal.modal.c-modal
     .modal-content
       h2.center Nuevo Pedido

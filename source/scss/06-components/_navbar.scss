@@ -49,6 +49,10 @@
   }
   &--scrolling{
     background: $g-color-first;
+
+    &.c-navbar--fixed{
+      background-color: white !important;
+    }
   }
 
   ul{

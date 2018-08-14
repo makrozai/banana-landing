@@ -1,0 +1,23 @@
+.c-navbar-mobile{
+  padding: 2em 1em !important;
+  li{
+    padding: .5em 0;
+
+  }
+  a{
+    color: $g-color-third;
+    font-weight: 500;
+  }
+  i{
+    margin-right: 1em;
+  }
+
+  &__logout{
+    margin-top: 3em;
+    a{
+      display: flex;
+      align-items:center;
+      color: $g-color-second;
+    }
+  }
+}
