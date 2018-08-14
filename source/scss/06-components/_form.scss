@@ -32,7 +32,7 @@
         input{
           border-bottom: 0;
           border-top: 0;
-          text-align: center;
+          text-align: center !important;
           padding-left: 0;
           padding-right: 0;
         }
@@ -68,6 +68,14 @@
         i{
           font-size: 2em;
           display: block;
+        }
+        &.active{
+          label{
+            display: none;
+          }
+          input{
+            color: $g-color-first;
+          }
         }
       }
       &.error{

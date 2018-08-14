@@ -49,10 +49,6 @@
   }
   &--scrolling{
     background: $g-color-first;
-
-    &.c-navbar--fixed{
-      background-color: white !important;
-    }
   }
 
   ul{
@@ -87,6 +83,7 @@
     }
   }
   &--admin{
+    background: white !important;
     .c-navbar__new{
       background: $g-color-second;
       color: white;

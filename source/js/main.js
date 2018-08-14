@@ -33,7 +33,7 @@
   if (document.body.contains(document.querySelector(".c-navbar--fixed"))) {
     document.addEventListener('scroll', (e) => {
       var navbar = document.querySelector(".c-navbar--fixed");
-      if (window.scrollY >=  100) {
+      if (window.scrollY >=  50) {
         navbar.classList.add("c-navbar--scrolling");
       }else{
         navbar.classList.remove("c-navbar--scrolling");
@@ -84,7 +84,22 @@
     })
     createTextAnimation(animationTextFade, 4000);
   }
+  if (document.body.contains(document.querySelector('input[type="time"]'))) {
+    var inputTime = document.querySelectorAll('input[type="time"]');
+    var inputParent = [];
 
+    inputTime.forEach((element) => {
+      inputParent.push(element.parentNode);
+    })
+    inputParent.forEach((element) => {
+      element.onclick = function(){
+        element.classList.add("active");
+      }
+    })
+    /*inputParent.onclick = function(){
+      inputParent.classList.add("active");
+    }*/
+  }
 
 /* -----------------------function utilities----------------------*/
 
