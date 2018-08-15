@@ -1,0 +1,25 @@
+mixin modalBill(bill)
+  #billDetail.modal.c-modal.c-modal__bill
+    a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
+      i.material-icons.icon-close
+    .modal-content
+      +navbaBehind('Detalle de factura #' + bill.id,'close').hide-on-med-and-up
+      h3.u-text-medium.hide-on-small-and-down.center Detalle de factura #{'#'+ bill.id}
+
+      +summaryBill(bill)
+        .col.s12.center.u-margin-tb--m.hide-on-med-and-up
+          a(href="#!").c-button pagar
+        .col.s12.u-margin-bottom--s.hide-on-med-and-up
+          p.c-modal__bill__footer ¿Tienes alguna consulta o comentario sobre esta factura?
+            a(href="#billForm").modal-close.modal-trigger Escríbenos
+        .col.s12.u-separator
+
+      .row.u-margin-bottom--none
+        table.c-table-bill
+          tbody
+            each billOrder in billOrders
+              +rowBillOrder(billOrder)
+        .col.s12.hide-on-small-and-down
+          p.c-modal__bill__footer ¿Tienes alguna consulta o comentario sobre esta factura?
+            a(href="#billForm").modal-close.modal-trigger Escríbenos
+          a(href="#!").c-login__button.c-button pagar S/ 373.50

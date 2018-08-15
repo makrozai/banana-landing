@@ -49,12 +49,7 @@ html(lang="es")
               .col.s12.center
                 a(href="#confirm").c-button.modal-trigger.u-margin-top--s guardar
 
-                #confirm.modal.c-modal.c-modal__confirm
-                  .modal-content.center.u-padding-tb--l
-                    i.material-icons.icon-check
-                    h2.u-text-medium ¡Gracias por tu pedido!
-                    p.u-text-medium Nuestros dúers se comunicarán contigo en breve para confirmar los detalles.
-                    button.c-login__button.c-button entendido
+                +modalConfirm('¡Gracias por tu pedido!', 'Nuestros dúers se comunicarán contigo en breve para confirmar los detalles.')
 
 
 

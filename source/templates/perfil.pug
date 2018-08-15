@@ -22,38 +22,14 @@ html(lang="es")
           #test0.col.s12.c-table
             table
               tbody
-                each val in [1,2,3,4,5,6,7,8,9,10,11,12,13]
-                  tr
-                    td
-                      p 24/07/18
-                      p 04:24PM
-                    td Compras en Plaza Vea
-                      span.c-badge-status.hide-on-med-and-up En Proceso
-                    td.hide-on-small-and-down
-                      span.c-badge-status En Proceso
-                    td.center
-                      p.c-price 124
-                        span.c-price__cents 50
+                each order in orderList
+                  if (order.status != 'pendiente')
+                    +rowOrder(order)
+
           #test1.col.s12.c-table
             table
               tbody
-                each val in [1,2,3,4,5,6,7,8,9,10,11,12,13]
-                  tr
-                    td
-                      p 24/07/18
-                      p 04:24PM
-                    td Compras en Plaza Vea
-                      span.c-badge-status.c-badge-status--close.hide-on-small-and-down Cerrado
-
-                      p.c-price.hide-on-med-and-up 124
-                        span.c-price__cents 50
-                    td.hide-on-small-and-down
-                      p.c-price 124
-                        span.c-price__cents 50
-                    td.right
-                      a(href="add-order.html").c-button.c-button--small Repetir
-
-
-
+                each order in orderPastList
+                  +rowOrderPast(order)
 
     include blocks/scripts

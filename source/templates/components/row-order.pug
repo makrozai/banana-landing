@@ -1,0 +1,46 @@
+mixin rowOrder(order)
+  tr(class=order.bill?'modal-trigger c-bill--incomplete':'', href=order.bill? order.bill:'')
+    td
+      p= order.date
+      p= order.time
+    td #{order.title}
+      if (order.status == 'proceso')
+        span.c-badge-status.hide-on-med-and-up En Proceso
+      else
+        span.c-badge-status.c-badge-status--incomplete.hide-on-med-and-up PAGO PENDIENTE
+    td.hide-on-small-and-down
+      if (order.status == 'proceso')
+        span.c-badge-status En Proceso
+      else
+        span.c-badge-status.c-badge-status--incomplete PAGO PENDIENTE
+    td.center
+      p.c-price #{order.price.dolar}
+        span.c-price__cents #{order.price.cent}
+
+  //- FILA CON PAGO PENDIENTE EN FACTURAS
+
+  //-tr(href="#billDetail").modal-trigger.c-bill--incomplete
+  //-  td
+  //-    p 24/07/18
+  //-    p 04:24PM
+  //-  td Compras en Plaza Vea
+  //-    span.c-badge-status.c-badge-status--incomplete.hide-on-med-and-up PAGO PENDIENTE
+  //-  td.hide-on-small-and-down
+  //-    span.c-badge-status.c-badge-status--incomplete PAGO PENDIENTE
+  //-  td.center
+  //-    p.c-price 124
+  //-      span.c-price__cents 50
+
+  //- FILA CON PAGO EN PROCESOS
+
+  //-tr
+  //-  td
+  //-    p 24/07/18
+  //-    p 04:24PM
+  //-  td Compras en Plaza Vea
+  //-    span.c-badge-status.hide-on-med-and-up En Proceso
+  //-  td.hide-on-small-and-down
+  //-    span.c-badge-status En Proceso
+  //-  td.center
+  //-    p.c-price 124
+  //-      span.c-price__cents 50

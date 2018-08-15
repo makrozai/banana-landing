@@ -1,0 +1,16 @@
+mixin rowOrderPast(order)
+  tr
+    td
+      p= order.date
+      p= order.time
+    td Compras en Plaza Vea
+      if (order.status == "cerrado")
+        span.c-badge-status.c-badge-status--close.hide-on-small-and-down Cerrado
+
+      p.c-price.hide-on-med-and-up #{order.price.dolar}
+        span.c-price__cents #{order.price.cent}
+    td.hide-on-small-and-down
+      p.c-price #{order.price.dolar}
+        span.c-price__cents #{order.price.cent}
+    td.right
+      a(href= order.orderLink).c-button.c-button--small Repetir

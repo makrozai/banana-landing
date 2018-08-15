@@ -1,0 +1,23 @@
+mixin modalQueryBill(bill)
+  #billForm.modal.c-modal.c-modal__bill
+    a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
+      i.material-icons.icon-close
+    .modal-content
+      +navbaBehind('Consulta sobre factura #' + bill.id,'close').hide-on-med-and-up
+      h3.u-text-medium.hide-on-small-and-down.center Detalle de factura #{'#' + bill.id}
+      form.row.c-summary-bill.c-form--left
+        .col.s7.m6
+          .c-summary-bill__profile
+            b Cliente : #{bill.client}
+            p RUC: #{bill.ruc}
+            p #{bill.address}
+        .col.s5.m6
+          .c-summary-bill__price
+            p
+            p Fecha de consulta
+            p #{bill.date}
+        .col.s12.c-form__input
+          textarea(placeholder="Ingresa tu consulta")
+        .col.s12.center.u-margin-tb--m
+          button.c-button.hide-on-med-and-up enviar
+          button.c-login__button.c-button.hide-on-small-and-down enviar

@@ -1,0 +1,17 @@
+mixin summaryBill(bill)
+  .row.c-summary-bill
+    .col.s7.m6
+      .c-summary-bill__profile
+        b= 'Cliente : ' + bill.client
+        p= 'RUC: ' + bill.ruc
+        p= bill.address
+    .col.s5.m6
+      .c-summary-bill__price
+        p.c-price= bill.price.dolar
+          span.c-price__cents= bill.price.cent
+        p total a pagar
+        p= 'fecha de pago: ' + bill.date
+        a(href= bill.billLink).hide-on-small-and-down Descargar factura
+          i.material-icons.icon-pdf
+    if block
+      block
