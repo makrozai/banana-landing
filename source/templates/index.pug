@@ -10,7 +10,7 @@ html(lang="es")
   body
     +navbar()
 
-    main.c-header
+    header.c-header
       img(src="dist/img/reloj.png", alt="").c-header__image.c-header__image--clock
       img(src="dist/img/calendar-lg.png", alt="").c-header__image.c-header__image--phone
       img(src="dist/img/recibo-luz.png", alt="").c-header__image.c-header__image--paper
@@ -23,11 +23,12 @@ html(lang="es")
           | a un equipo de asistentes personales capacitados.
         p.c-header__subtitle Comienza ahora a través de Messenger, Whatsapp, o vía web.
         div
-          a(href="#!").c-button para el negocio
-          a(href="#!").c-button.u-bg-fourth para tí
-      a(href="#headerMain").c-header__scrolling
-        i.material-icons.icon-arrow
-    section#headerMain.u-bg-fourth.u-padding-top--l.u-padding-bottom--xxl.u-diagonal.scrollspy
+          a(href="#forBusiness").c-button para el negocio
+          a(href="#forMe").c-button.u-bg-fourth para tí
+      .c-header__scrolling
+        a(href="#!")
+          i.material-icons.icon-arrow
+    section#forBusiness.scrollspy.u-bg-fourth.u-padding-top--l.u-padding-bottom--xxl.u-diagonal
       .container.white-text
         .row
           .col.s12
@@ -36,7 +37,7 @@ html(lang="es")
             +cardService('dist/img/image-desktop.jpg',2,'45.00','Ricardo necesitaba sacar una vigencia de poder de su empresa.')
           .col.s12.m6
             +cardService('dist/img/image-desktop.jpg',4,'95.00','Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
-    section.u-bg-second.u-padding-top--xxl.u-diagonal--reverse
+    section#forMe.scrollspy.u-bg-second.u-padding-top--xxl.u-diagonal--reverse
       .container.white-text
         .row
           .col.s12
