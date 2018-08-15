@@ -1,0 +1,6 @@
+mixin galleryClient(clients)
+  .c-carousel-mobile
+    ul.c-gallery-client.c-carousel-mobile__elements
+      each client in clients
+        li.c-gallery-client__img
+          img(src= 'dist/img/clients/' + client.image , alt="")

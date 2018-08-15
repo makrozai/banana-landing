@@ -10,7 +10,7 @@ html(lang="es")
   body
     +navbar()
 
-    header.c-header
+    main.c-header
       img(src="dist/img/reloj.png", alt="").c-header__image.c-header__image--clock
       img(src="dist/img/calendar-lg.png", alt="").c-header__image.c-header__image--phone
       img(src="dist/img/recibo-luz.png", alt="").c-header__image.c-header__image--paper
@@ -25,9 +25,9 @@ html(lang="es")
         div
           a(href="#!").c-button para el negocio
           a(href="#!").c-button.u-bg-fourth para tí
-      a(href="#!").c-header__scrolling
+      a(href="#headerMain").c-header__scrolling
         i.material-icons.icon-arrow
-    section.u-bg-fourth.u-padding-top--l.u-padding-bottom--xxl.u-diagonal
+    section#headerMain.u-bg-fourth.u-padding-top--l.u-padding-bottom--xxl.u-diagonal.scrollspy
       .container.white-text
         .row
           .col.s12
@@ -64,11 +64,7 @@ html(lang="es")
           .col.s12
             h2 Empresas que ya confían en nosotros
           .col.s12
-            .c-carousel-mobile
-              ul.c-gallery-client.c-carousel-mobile__elements
-                each val in [1,2,3,4,5,6,7,8,9]
-                  li.c-gallery-client__img
-                    img(src= 'dist/img/clients/' + val + '.svg', alt="")
+            +galleryClient(clients)
 
     +newsletter('¿Quieres saber más sobre cómo podemos ayudarte?', true, 'Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros', 'Conversemos','')
     include blocks/footer
