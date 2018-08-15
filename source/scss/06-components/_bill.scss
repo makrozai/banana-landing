@@ -1,5 +1,6 @@
 .c-bill{
   &--incomplete{
+    cursor: pointer;
     background: rgba(1, 69, 146, 0.1);
   }
 }
