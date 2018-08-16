@@ -13,93 +13,6 @@
     @media #{$medium-and-down} {
       margin: .5em 0;
     }
-
-    &-datetime, &-target{
-      border: solid 1.3px lighten(#8e90ab, 15);
-      margin: 0;
-      border-radius: 6px;
-      display: flex;
-      align-items:center;
-      overflow: hidden;
-
-      input{
-        border-radius: 0;
-        color: white;
-      }
-      li{
-        position:relative;
-        width: 50%;
-        input{
-          border-bottom: 0;
-          border-top: 0;
-          text-align: center !important;
-          padding-left: 0;
-          padding-right: 0;
-        }
-        &:first-child{
-          padding-left: 1em;
-          padding-right: 1em;
-          width: auto;
-        }
-        &:last-child{
-          input{
-            border:none;
-          }
-        }
-
-        label{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform:translate(-50%,-50%);
-          text-align: center;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 1.2;
-          width: 100%;
-
-          padding-left: 1.5em;
-          padding-right: 1.5em;
-
-          @media #{$medium-and-down} {
-            font-size: 14px;
-          }
-        }
-        i{
-          font-size: 2em;
-          display: block;
-        }
-        &.active{
-          label{
-            display: none;
-          }
-          input{
-            color: $g-color-first;
-          }
-        }
-      }
-      &.error{
-        border: 2px solid $g-color-second;
-        + span{
-          color: $g-color-second;
-          font-size: 14px;
-        }
-      }
-    }
-    &-target{
-      li{
-        flex: 1 0 0;
-        width: 50%;
-
-        &:first-child{
-          padding-left: 0;
-          padding-right: 0;
-        }
-        input{
-          border-left:none;
-        }
-      }
-    }
     &-icon{
       position: absolute;
       top: 2px;
@@ -113,10 +26,6 @@
       &.icon-eye{
         cursor: pointer;
       }
-    }
-
-    &--visible{
-      -webkit-text-security:none !important;
     }
   }
   .select-wrapper input.select-dropdown{

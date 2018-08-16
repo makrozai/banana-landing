@@ -1,0 +1,36 @@
+mixin formInput(type,placeholder, arraySelect)
+  .c-form__input&attributes(attributes)
+    if (type == 'password')
+      input(type= type, placeholder= placeholder)
+      if block
+        block
+    else if (type == 'checkbox')
+      label
+        input(type="checkbox")
+        span Recordar
+    else if (type == 'textarea')
+      textarea( placeholder= placeholder)
+    else if (type == 'datetime')
+      ul.c-input-datetime
+        li
+          i.material-icons.icon-clock
+        li
+          label fecha de #{placeholder}
+          input(type="date")
+        li
+          label hora de #{placeholder} (hh:mm)
+          input(type="time")
+    else if (type == 'select')
+      select
+        option(value="0" disabled selected)= placeholder
+        each option in arraySelect
+          option(value= option)= option
+    else if (type == 'target')
+      ul.c-input-target
+        li
+          label fecha de vencimiento
+          input(type="date")
+        li
+          input(type="number" placeholder= "Código de seguridad")
+    else
+      input(type= type, placeholder= placeholder)

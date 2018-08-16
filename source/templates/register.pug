@@ -22,14 +22,10 @@ html(lang="es")
                 | Inicia con Facebook
               span.c-login__separator ó
             form(action="ty-register.html").row
-              .c-form__input.col.s12.m6
-                input(type="text" placeholder="Nombre")
-              .c-form__input.col.s12.m6
-                input(type="text" placeholder="Apellido")
-              .c-form__input.col.s12.m6
-                input(type="email" placeholder="Correo electrónico")
-              .c-form__input.col.s12.m6
-                input(type="text" placeholder="Teléfono")
+              +formInput('text','Nombre').col.s12.m6
+              +formInput('text','Apellido').col.s12.m6
+              +formInput('text','Correo electrónico').col.s12.m6
+              +formInput('text','Teléfono').col.s12.m6
               button.c-login__button.c-button.icon-back
 
 

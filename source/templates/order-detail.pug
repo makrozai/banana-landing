@@ -43,22 +43,13 @@ html(lang="es")
                   +tabValues('default', 'en línea', 'Transferencia').c-tab--blue.col.s12
 
 
-                  .col.s12.u-padding-lr--none
+                  .col.s12.u-padding-lr--none.u-margin-top--s
                     .u-separator
                   #test0.col.s12.u-padding-lr--none
                     .row
-                      .c-form__input.col.s12.m6
-                        input(type="text" placeholder="Nombre del tarjetahabiente")
-                      .c-form__input.col.s12.m6
-                        input(type="text" placeholder="Número de tarjeta")
-                      .c-form__input.col.s12
-                        ul.c-form__input-target
-                          li
-                            label fecha de vencimiento
-                            input(type="date")
-                          li
-                            label Código de seguridad
-                            input(type="time")
+                      +formInput('text','Nombre del tarjetahabiente').col.s12.m6
+                      +formInput('number','Número de tarjeta').col.s12.m6
+                      +formInput('target').col.s12
                   #test1.col.s12.u-padding-lr--none
                     .row.left-align.c-modal__font
                       .col.s12.m4

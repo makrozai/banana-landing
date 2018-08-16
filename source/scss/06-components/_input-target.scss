@@ -1,0 +1,18 @@
+.c-input-target{
+  @extend .c-input-datetime;
+  li{
+    flex: 1 0 0;
+    width: 50%;
+
+    &:first-child{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    input{
+      border-left:none;
+      &:not([type=date]){
+        color: $off-black;
+      }
+    }
+  }
+}

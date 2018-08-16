@@ -16,29 +16,14 @@ html(lang="es")
                   input(type="file").hide
           .col.s12.m8
             .c-form-admin.u-margin-tb--m
-              .row.valign-wrapper
-                .col.s4
-                  label(for="") Nombre
-                .col.s8
-                  input(type="text" value="Billy McBridge")
-              .row.valign-wrapper
-                .col.s4
-                  label(for="") Contraseña
-                .col.s8
-                  input(type="password" value="asdasdasdasdasd")
-              .row.valign-wrapper
-                .col.s4
-                  label(for="") Teléfono
-                .col.s8
-                  input(type="number" value="998765435")
-              .row.valign-wrapper
-                .col.s4
-                  label(for="") E-mail
-                .col.s8
-                  input(type="email" value="woodrow.glover@howe.tv")
-              .row.u-margin-top--m.c-form-admin__buttons
-                a(href="#!").c-button.c-button--small.c-button-linear--second Cancelar
-                a(href="#passRecover").c-button.c-button--small.u-margin-left--s.modal-trigger Guardar
+              +formInputAdmin('row','text', 'Nombre', 'Billy McBridge')
+              +formInputAdmin('row','password', 'Contraseña', 'asdasdasdasdasd')
+              +formInputAdmin('row','tel', 'Teléfono', '998765435')
+              +formInputAdmin('row','email', 'E-mail', 'woodrow.glover@howe.tv')
+              .row.u-margin-top--m
+                .col.s12.c-form-admin__buttons
+                  a(href="#!").c-button.c-button--small.c-button-linear--second Cancelar
+                  a(href="#passRecover").c-button.c-button--small.u-margin-left--s.modal-trigger Guardar
           #passRecover.modal.c-modal.c-modal__recover
             a(href="#!").c-modal__close.modal-close
               i.material-icons.icon-close

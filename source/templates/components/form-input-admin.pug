@@ -1,0 +1,7 @@
+mixin formInputAdmin(status, type, placeholder, value)
+  if (status == 'row')
+    .row.valign-wrapper
+      .col.s4
+        label(for="")= placeholder
+      .col.s8
+        input(type= type value= value)
