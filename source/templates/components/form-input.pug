@@ -7,7 +7,7 @@ mixin formInput(type,placeholder, arraySelect)
     else if (type == 'checkbox')
       label
         input(type="checkbox")
-        span Recordar
+        span= placeholder
     else if (type == 'textarea')
       textarea( placeholder= placeholder)
     else if (type == 'datetime')

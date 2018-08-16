@@ -3,7 +3,8 @@ mixin modalPassRecover()
     a(href="#!").c-modal__close.modal-close
       i.material-icons.icon-close
     .modal-content.center.u-padding-tb--m
-      h3.u-text-medium Cambiar contraseña
-      p.u-text-medium Has editado tu contraseña. Si quieres cambiarla, repite tu nueva contraseña:
-      +formInput('password','contraseña')
-      button.c-login__button.c-button guardar
+      h3.u-text-medium Contraseña olvidada
+      p.u-text-medium Ingresa tu correo electrónico y te mandaremos un link para que puedas crear una nueva contraseña.
+      form(action="")
+        +formInput('email','Correo electrónico')
+        button.c-login__button.c-button enviar
