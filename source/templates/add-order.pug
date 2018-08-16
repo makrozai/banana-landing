@@ -12,35 +12,12 @@ html(lang="es")
             h2.center Nuevo Pedido
           .col.s12
             form.row.c-form.c-form--left
-              .c-form__input.col.s12
-                input(type="text" placeholder="Título / descripción corta")
-              .c-form__input.col.s12.m6
-                input(type="text" placeholder="Dirección de recojo (si aplica)")
-              .c-form__input.col.s12.m6
-                ul.c-form__input-datetime
-                  li
-                    i.material-icons.icon-clock
-                  li
-                    label fecha de recojo
-                    input(type="date")
-                  li
-                    label hora de recojo (hh:mm)
-                    input(type="time")
-              .c-form__input.col.s12.m6
-                input(type="text" placeholder="Dirección de entrega (si aplica)")
-              .c-form__input.col.s12.m6
-                ul.c-form__input-datetime
-                  li
-                    i.material-icons.icon-clock
-                  li
-                    label fecha de entrega
-                    input(type="date")
-                  li
-                    label hora de entrega (hh:mm)
-                    input(type="time")
-              .c-form__input.col.s12
-                textarea(name="", cols="30", rows="10" placeholder="Descripción detallada del pedido")
-
+              +formInput('text','Título / descripción corta').col.s12
+              +formInput('text','Dirección de recojo (si aplica)').col.s12.m6
+              +formInput('datetime','recojo').col.s12.m6
+              +formInput('text','Dirección de entrega (si aplica)').col.s12.m6
+              +formInput('datetime','entrega').col.s12.m6
+              +formInput('textarea','Descripción detallada del pedido').col.s12
               .col.s12.center
                 a(href="#confirm").c-button.modal-trigger.u-margin-top--s guardar
 

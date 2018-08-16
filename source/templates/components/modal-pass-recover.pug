@@ -1,0 +1,9 @@
+mixin modalPassRecover()
+  #passRecover.modal.c-modal.c-modal__recover
+    a(href="#!").c-modal__close.modal-close
+      i.material-icons.icon-close
+    .modal-content.center.u-padding-tb--m
+      h3.u-text-medium Cambiar contraseña
+      p.u-text-medium Has editado tu contraseña. Si quieres cambiarla, repite tu nueva contraseña:
+      +formInput('password','contraseña')
+      button.c-login__button.c-button guardar

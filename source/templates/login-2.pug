@@ -34,9 +34,8 @@ html(lang="es")
         h3.u-text-medium Contraseña olvidada
         p.u-text-medium Ingresa tu correo electrónico y te mandaremos un link para que puedas crear una nueva contraseña.
         form(action="")
-          .c-form__input
-            input(type="email" placeholder="Correo electrónico")
-        button.c-login__button.c-button enviar
+          +formInput('email','Correo electrónico')
+          button.c-login__button.c-button enviar
 
 
 
