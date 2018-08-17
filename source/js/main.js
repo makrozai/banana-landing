@@ -100,6 +100,22 @@
       inputParent.classList.add("active");
     }*/
   }
+  if (document.body.contains(document.querySelector('input[type="date"]'))) {
+    var inputTime = document.querySelectorAll('input[type="date"]');
+    var inputParent = [];
+
+    inputTime.forEach((element) => {
+      inputParent.push(element.parentNode);
+    })
+    inputParent.forEach((element) => {
+      element.onclick = function(){
+        element.classList.add("active");
+      }
+    })
+    /*inputParent.onclick = function(){
+      inputParent.classList.add("active");
+    }*/
+  }
 
 /* -----------------------function utilities----------------------*/
 
