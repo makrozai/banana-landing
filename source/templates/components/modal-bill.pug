@@ -15,10 +15,8 @@ mixin modalBill(bill)
         .col.s12.u-separator
 
       .row.u-margin-bottom--none
-        table.c-table-bill
-          tbody
-            each billOrder in billOrders
-              +rowBillOrder(billOrder)
+        +table(billOrders,'bill').c-table-bill
+
         .col.s12.hide-on-small-and-down
           p.c-modal__bill__footer ¿Tienes alguna consulta o comentario sobre esta factura?
             a(href="#billForm").modal-close.modal-trigger Escríbenos

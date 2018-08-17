@@ -30,41 +30,8 @@ html(lang="es")
 
             .right-align.c-card-perfil__button.hide-on-small-and-down
               a(href="#form-pay").c-button.modal-trigger pagar
-            #form-pay.modal.c-modal
-              a(href="#!").c-modal__close.modal-close
-                i.material-icons.icon-close
-              .modal-content
-                h2.center Pagar
 
-                form.row
-                  .col.s12.u-padding-lr--none
-                    p.u-text-medium Método de pago
-
-                  +tabValues('default', 'en línea', 'Transferencia').c-tab--blue.col.s12
-
-
-                  .col.s12.u-padding-lr--none.u-margin-top--s
-                    .u-separator
-                  #test0.col.s12.u-padding-lr--none
-                    .row
-                      +formInput('text','Nombre del tarjetahabiente').col.s12.m6
-                      +formInput('number','Número de tarjeta').col.s12.m6
-                      +formInput('target').col.s12
-                  #test1.col.s12.u-padding-lr--none
-                    .row.left-align.c-modal__font
-                      .col.s12.m4
-                        p Número de cuenta:
-                        p Interbank ahorros soles
-                        span 234-455-677-778
-                      .col.s12.m4
-                        p Código interbancario:
-                        span 234-455-677-778
-                      .col.s12
-                        label.valign-wrapper.u-margin-top--s
-                          i.material-icons.icon-photo.u-text-second.u-margin-right--s
-                          | subir foto de voucher
-                          input(type="file")#inputPhoto.hide
-                  button.c-login__button.c-button pagar S/ 124.50
+            +modalPay('124.50')
           .col.s12
             p.u-text-medium.c-card-perfil--space Si necesitas modificar o cancelar tu pedido, contáctanos en
               a(href="#!").u-text-second  hola@tudu.pe

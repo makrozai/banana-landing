@@ -12,30 +12,16 @@ html(lang="es")
         .row
           .col.s12.u-container-full--mobile
             +tabValues('default', 'Activos', 'Pasados','Facturas')
-          #test0.col.s12.c-table
-            table
-              tbody
-                each order in orderList
-                  if (order.status != 'pendiente')
-                    +rowOrder(order)
 
-          #test1.col.s12.c-table
-            table
-              tbody
-                each order in orderPastList
-                  +rowOrderPast(order)
-          #test2.col.s12.c-table
-            table
-              tbody
-                each order in orderList
-                  +rowOrder(order)
+          +table(orderList)#test0.col.s12.c-table
+
+          +table(orderPastList,'past')#test1.col.s12.c-table
+
+          +table(orderList)#test2.col.s12.c-table
 
           +modalBill(bill)
 
           +modalQueryBill(bill)
-
-
-
 
 
 

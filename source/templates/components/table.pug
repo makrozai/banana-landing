@@ -1,0 +1,11 @@
+mixin table(arrayPlaceholder,style)
+  div&attributes(attributes)
+    table
+      tbody
+        each placeholder in arrayPlaceholder
+          if (style == 'bill')
+            +rowBillOrder(placeholder)
+          else if (style == 'past')
+            +rowOrderPast(placeholder)
+          else
+            +rowOrder(placeholder)

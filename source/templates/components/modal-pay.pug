@@ -1,0 +1,19 @@
+mixin modalPay(total)
+  #form-pay.modal.c-modal
+    a(href="#!").c-modal__close.modal-close
+      i.material-icons.icon-close
+    .modal-content
+      h2.center Pagar
+
+      form.row
+        .col.s12
+          p.u-text-medium Método de pago
+
+        .col.s12
+          +tabValues('default', 'en línea', 'Transferencia').c-tab--blue
+
+        .col.s12.u-margin-top--s
+          .u-separator
+        +payMethodOnline('test0')
+        +payMethodTransfer('test1')
+        button.c-login__button.c-button pagar S/ #{total}
