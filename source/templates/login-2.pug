@@ -14,11 +14,12 @@ html(lang="es")
         .c-login.u-margin-bottom--m
           .c-login__small
             h2.u-text-medium.u-margin-bottom--s Inicia sesión
-            form(action="perfil.html")
-              +formInput('password','Contraseña').u-margin-bottom--none.right-align
-                a(href="#passRecover").recover.modal-trigger La olvidé
+            form(action="perfil.html").row.u-margin-bottom--none
+              +formInput('password', 'passwordInput', 'Contraseña').col.s12.u-margin-tb--none
+              .c-input__recover.col.s12
+                a(href="#passRecover").modal-trigger La olvidé
 
-              +formInput('checkbox', 'Recordar').left-align.u-margin-tb--none
+              +formInput('checkbox', 'checkInput', 'Recordar').col.s12.u-margin-tb--none
               button.c-login__button.c-button.icon-back
         p.c-login__register ¿No tienes una cuenta?
           a(href="register.html") Regístrate

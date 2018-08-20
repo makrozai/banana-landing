@@ -1,126 +1,66 @@
 *{
   box-sizing: border-box;
 }
-input[type=number],
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=date],
-input[type=time],
-input[type=tel],
-textarea{
-  display: block;
-  text-align: center;
-  width: 100%;
-  border-radius: 6px;
-  padding: 1em;
-  outline: 0;
-  border: solid 1.3px lighten(#8e90ab, 15);
-  color: $g-color-first;
-  font-size: 18px;
-  font-weight: 500;
-  appearance:textfield;
-  height: 59px;
-  background: white;
+.input-field{
+  input:not([type]),
+  input[type=text]:not(.browser-default),
+  input[type=password]:not(.browser-default),
+  input[type=email]:not(.browser-default),
+  input[type=url]:not(.browser-default),
+  input[type=time]:not(.browser-default),
+  input[type=date]:not(.browser-default),
+  input[type=datetime]:not(.browser-default),
+  input[type=datetime-local]:not(.browser-default),
+  input[type=tel]:not(.browser-default),
+  input[type=number]:not(.browser-default),
+  input[type=search]:not(.browser-default),
+  textarea.materialize-textarea{
+    box-sizing:border-box;
+    border: $input-border;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-weight: 500;
+    color: $g-color-first;
 
-  @media #{$medium-and-down} {
-    font-size: 14px;
-  }
-
-  &::placeholder{
-    color:$g-color-first;
-  }
-}
-input[type=time]::-webkit-inner-spin-button,
-input[type=time]::-webkit-outer-spin-button,
-input[type=date]::-webkit-inner-spin-button,
-input[type=date]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-input[type=checkbox]{
-  display: none;
-
-  + span{
-    position: relative;
-    padding-left: 2em;
-
-    &:after{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1.4em;
-      height: 1.4em;
-      border: solid 1.3px lighten(#8e90ab, 15);
-      border-radius: 3px;
+    &.valid{
+      border-color: $input-success-color;
+      box-shadow: 0 0 0 0 transparent;
     }
-    &:before{
-      content: "check";
-      font-size: 22px;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform:translateY(-50%);
-      font-family: 'Material Icons';
-      font-weight: normal;
-      font-style: normal;
-      letter-spacing: normal;
-      text-transform: none;
-      display: inline-block;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-      -webkit-font-feature-settings: 'liga';
-      -webkit-font-smoothing: antialiased;
 
-      opacity: 0;
-      transition:all .1s;
-    }
-  }
-  &:checked + span:before{
-    opacity: 1;
-  }
-}
-textarea{
-  height: 7em;
-  resize:none;
-  text-align: left;
-}
-.select-wrapper{
-  input.select-dropdown {
-    border: solid 1.3px lighten(#8e90ab, 15);
-    font-size: 18px;
+    + label{
+      font-weight: 500;
+      width: 95%;
+      padding-left: 1em;
+      line-height: 2.2;
+      transition: all .2s ease-out;
 
-    @media #{$medium-and-down} {
-      font-size: 14px;
-    }
-    &:focus{
-      outline: none;
-      border: solid 1.3px lighten(#8e90ab, 15);
-    }
-  }
-  .dropdown-content{
-    box-shadow: 0 5px 10px 0 rgba(29, 34, 88, 0.3);
-    border-radius: 6px;
-
-    li{
-      span{
-        font-size: 18px;
-        font-weight: 500;
+      &.active{
         color: $g-color-first;
-
-        @media #{$medium-and-down} {
-          font-size: 14px;
-        }
+        transform: translateY(-24px) scale(.8);
+        padding-left: 0;
       }
     }
+
+    &:focus{
+      border: $input-border;
+      box-shadow: 0 0 0 0 transparent;
+    }
   }
 }
+.select-month, .select-year{
+  input[type=text]:not(.browser-default){
+    border: none;
+    padding: 0;
+    font-weight: 400;
 
-
-
+    &:focus{
+      border: none;
+    }
+  }
+}
+textarea.materialize-textarea{
+  min-height: 200px;
+}
 
 table{
   td{

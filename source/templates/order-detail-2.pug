@@ -1,0 +1,44 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  +head('Detalle del Pedido')
+  body
+    +navbarAdmin().hide-on-small-and-down
+
+    +navbaBehind('Pedido # 00345','perfil.html').hide-on-med-and-up
+    header
+      .container
+        .row.u-margin-top--m
+
+          .col.s12
+            +order(order)
+          .col.s12.center.hide-on-med-and-up
+            a(href="#form-pay").c-button.modal-trigger pagar
+          .col.s12
+            .u-separator.u-margin-tb--m
+          .col.s12
+            +orderDetail(order)
+        .row
+          .col.s12.m6
+            +card('Itinerario del pedido:').c-card__mobile
+              +itinerary('105.50', itineraryOrderExtend, 'c-itinerary--numbers')
+
+
+          .col.s12.m6
+            +card().c-card__mobile
+              +duer(duer)
+
+            .right-align.c-card-perfil__button.hide-on-small-and-down
+              a(href="#form-pay").c-button.modal-trigger pagar
+
+            +modalPay('124.50')
+          .col.s12
+            p.u-text-medium.c-card-perfil--space Si necesitas modificar o cancelar tu pedido, contáctanos en
+              a(href="#!").u-text-second  hola@tudu.pe
+              |  o llámanos al
+              a(href="#!").u-text-second  999 875 234
+
+
+
+
+    include blocks/scripts

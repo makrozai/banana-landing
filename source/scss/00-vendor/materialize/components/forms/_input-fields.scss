@@ -27,7 +27,7 @@ textarea.materialize-textarea {
   background-color: transparent;
   border: none;
   border-bottom: $input-border;
-  border-radius: 0;
+  border-radius: $input-radius;
   outline: none;
   height: $input-height;
   width: 100%;

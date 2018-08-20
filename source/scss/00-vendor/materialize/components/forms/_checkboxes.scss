@@ -30,12 +30,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
     z-index: 0;
-    border: 2px solid $radio-empty-color;
-    border-radius: 1px;
-    margin-top: 3px;
+    border: 1px solid $radio-empty-color;
+    border-radius: 5.4px;
+    margin-top: 0px;
     transition: .2s;
   }
 
@@ -69,6 +69,7 @@
     border-left: 2px solid transparent;
     border-right: $radio-border;
     border-bottom: $radio-border;
+    border-radius: 1px;
     transform: rotate(40deg);
     backface-visibility: hidden;
     transform-origin: 100% 100%;

@@ -1,14 +1,20 @@
 .c-header{
   display: flex;
   background: $g-color-first;
-  min-height: 750px;
+  min-height: 100vh;
   color: white;
   position: relative;
 
   @media #{$medium-and-down} {
-    padding: 0 1em;
+    padding: 0 5em;
     min-height: 100vh;
     height: auto;
+  }
+  @media #{$small-and-down} {
+    padding: 2em 1em;
+    min-height: auto;
+    height: 100vh;
+    max-height: 650px;
   }
 
   &__container{
@@ -16,6 +22,16 @@
     position: relative;
     z-index: 10;
     margin:  auto;
+
+    @media #{$medium-and-down} {
+      margin-top: 10em;
+    }
+    @media #{only screen and (max-width: 820px)} {
+      margin-top: 6em;
+    }
+    @media #{$small-and-down} {
+      margin-top: 7em;
+    }
   }
   &__title{
     font-weight:500;
@@ -23,8 +39,10 @@
     margin-bottom: 0;
     font-size: 48px;
 
-    @media #{$medium-and-down} {
+    @media #{only screen and (max-width: 820px)} {
       font-size: 30px;
+    }
+    @media #{$small-and-down} {
       text-align: left;
       margin-bottom: 1em;
       line-height: 1.2;
@@ -47,7 +65,8 @@
     position: absolute;
     max-width: 20%;
     @media #{$medium-and-down} {
-      max-width: 40%;
+      max-width: 150px;
+      width: 40%;
     }
 
     &--phone{

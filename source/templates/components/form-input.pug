@@ -1,7 +1,8 @@
-mixin formInput(type,placeholder, arraySelect)
-  .c-form__input&attributes(attributes)
+mixin formInput(type,id, placeholder, arraySelect)
+  .input-field&attributes(attributes)
     if (type == 'password')
-      input(type= type, placeholder= placeholder)
+      input(type= type class="validate" id= id)
+      label(for= id)= placeholder
       if block
         block
     else if (type == 'checkbox')
@@ -9,17 +10,18 @@ mixin formInput(type,placeholder, arraySelect)
         input(type="checkbox")
         span= placeholder
     else if (type == 'textarea')
-      textarea( placeholder= placeholder)
+      textarea(id = id).materialize-textarea
+      label(for= id)= placeholder
     else if (type == 'datetime')
       ul.c-input-datetime
         li
           i.material-icons.icon-clock
         li
           label fecha de #{placeholder}
-          input(type="date")
+          input(type="text").datepicker
         li
           label hora de #{placeholder} (hh:mm)
-          input(type="time")
+          input(type="text").timepicker
     else if (type == 'select')
       select
         option(value="0" disabled selected)= placeholder
@@ -33,4 +35,5 @@ mixin formInput(type,placeholder, arraySelect)
         li
           input(type="number" placeholder= "Código de seguridad")
     else
-      input(type= type, placeholder= placeholder)
+      input(type= type class="validate" id= id)
+      label(for= id)= placeholder

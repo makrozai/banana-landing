@@ -20,10 +20,34 @@
       content: "S/";
     }
   }
+  &--numbers{
+    li{
+      &:before{
+        display: none;
+      }
+      i{
+        display: block;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform:translateY(-50%);
+        text-align: center;
+        background: white;
+        box-shadow: 0 0 0 1px $g-color-third;
+        color: $g-color-third;
+        font-style: normal;
+        line-height: 2.3rem;
+      }
+    }
+  }
   li{
     position: relative;
     padding-left: 3rem;
     margin-bottom: 1em;
+
     &:before{
       content: "\e909";
       font-family: 'icomoon';

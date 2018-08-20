@@ -1,8 +1,10 @@
-mixin itinerary(price, list)
-  ul.c-itinerary
+mixin itinerary(price, list,numbers)
+  ul.c-itinerary(class= numbers)
     span.c-itinerary__price= price
-    each item in list
+    each item,index in list
       li
+        if numbers
+          i= index + 1
         span= item.title
         span= item.date
         span= item.address
