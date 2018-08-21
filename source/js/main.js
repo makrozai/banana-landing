@@ -5,29 +5,6 @@
   M.AutoInit();
 
   //animation text
-  if (document.body.contains(document.querySelector('.c-form__input input[type="password"]'))) {
-    var inputPassword = document.querySelector('.c-form__input input[type="password"]');
-    var parentPassword = inputPassword.parentNode;
-
-
-    //create element
-      var aBlock = document.createElement('i');
-      aBlock.classList.add("materialize-icons");
-      aBlock.classList.add("icon-eye");
-      aBlock.classList.add("c-form__input-icon");
-      parentPassword.appendChild(aBlock);
-
-    //create interaction for input
-    var elementInteraction = parentPassword.querySelector('.icon-eye');
-
-    elementInteraction.onclick = function() {
-      if (inputPassword.type == 'password') {
-        inputPassword.type = 'text';
-      }else{
-        inputPassword.type = 'password';
-      }
-    }
-  }
 
   //scroll animation
   if (document.body.contains(document.querySelector(".c-navbar--fixed"))) {
@@ -83,38 +60,6 @@
       element.appendChild(aBlock);
     })
     createTextAnimation(animationTextFade, 4000);
-  }
-  if (document.body.contains(document.querySelector('input[type="time"]'))) {
-    var inputTime = document.querySelectorAll('input[type="time"]');
-    var inputParent = [];
-
-    inputTime.forEach((element) => {
-      inputParent.push(element.parentNode);
-    })
-    inputParent.forEach((element) => {
-      element.onclick = function(){
-        element.classList.add("active");
-      }
-    })
-    /*inputParent.onclick = function(){
-      inputParent.classList.add("active");
-    }*/
-  }
-  if (document.body.contains(document.querySelector('input[type="date"]'))) {
-    var inputTime = document.querySelectorAll('input[type="date"]');
-    var inputParent = [];
-
-    inputTime.forEach((element) => {
-      inputParent.push(element.parentNode);
-    })
-    inputParent.forEach((element) => {
-      element.onclick = function(){
-        element.classList.add("active");
-      }
-    })
-    /*inputParent.onclick = function(){
-      inputParent.classList.add("active");
-    }*/
   }
 
 /* -----------------------function utilities----------------------*/

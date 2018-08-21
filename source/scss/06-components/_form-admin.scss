@@ -21,6 +21,11 @@
    padding: .5em 1em;
    height: 45px;
    box-sizing:border-box;
+   color: $g-color-first;
+
+   @media #{$medium-and-down}{
+    font-size: 14px;
+   }
 
   }
   @media #{$medium-and-down} {
