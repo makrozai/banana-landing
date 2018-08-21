@@ -17,11 +17,11 @@ mixin formInput(type,id, placeholder, arraySelect)
         li
           i.material-icons.icon-clock
         li
-          label fecha de #{placeholder}
-          input(type="text").datepicker
+          //-label fecha de #{placeholder}
+          input(type="text" placeholder= 'fecha de ' + placeholder).datepicker
         li
-          label hora de #{placeholder} (hh:mm)
-          input(type="text").timepicker
+          //-label hora de #{placeholder} (hh:mm)
+          input(type="text" placeholder= 'fecha de ' + placeholder).datepicker
     else if (type == 'select')
       select
         option(value="0" disabled selected)= placeholder

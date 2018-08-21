@@ -6,7 +6,7 @@ html(lang="es")
     +navbar().u-bg-first
 
     header
-      .container.u-container--medium
+      .container
         .row.u-margin-top--xl
           .col.s12
             h2.center Nuevo Pedido
@@ -15,7 +15,7 @@ html(lang="es")
               +formInput('text','nameFirst','Nombre completo').col.s12.m6
               +formInput('select','optionSelect', 'selecciona el tipo de pedido',options).col.s12.m6
               +formInput('email','emailOrder','Correo electrónico').col.s12.m6
-              +formInput('number','phoneOrder','Número de teléfono').col.s12.m6
+              +formInput('tel','phoneOrder','Número de teléfono').col.s12.m6
               +formInput('text','addressFirst','Dirección de recojo (si aplica)').col.s12.m6
               +formInput('datetime','dateFirst','recojo').col.s12.m6
               +formInput('text','addressSecond','Dirección de entrega (si aplica)').col.s12.m6

@@ -9,7 +9,7 @@
     display: flex;
     align-items:center;
 
-    @media #{$medium-and-down} {
+    @media #{$small-and-down} {
       height: $navbar-height-mobile
     }
     img{
@@ -23,7 +23,7 @@
   &__new{
     display: none;
     position: absolute;
-    top: .5em;
+    top: .3em;
     left: 50%;
     background: white;
     width: 3em;
@@ -38,6 +38,10 @@
     }
     @media #{$medium-and-down} {
       display: block;
+      top: 1em;
+    }
+    @media #{$small-and-down} {
+      top: .35em;
     }
   }
 

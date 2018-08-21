@@ -21,7 +21,12 @@
     padding-right: 1em;
     font-weight: 500;
     font-size: 18px;
+    text-align: left;
     color: $g-color-first;
+
+    @media only screen and (max-width: $medium-screen) {
+      font-size: 15.5px;
+    }
 
     &::placeholder{
       color: $off-black;
@@ -74,13 +79,6 @@ table{
     &:first-child{
       font-weight: 400;
     }
-    &:last-child{
-      @media #{$medium-and-down}{
-        padding-top: 2.5em;
-        padding-bottom: 0;
-        vertical-align: text-bottom;
-      }
-    }
 
     @media #{$medium-and-down}{
       padding-top: 10px;
@@ -100,4 +98,16 @@ table{
       }
     }
   }
+}
+.dropdown-content{
+  li > span{
+    font-size: 18px;
+    font-weight: 500;
+
+    @media #{$medium-and-down}{
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
 }
