@@ -35,6 +35,18 @@
     &.valid{
       border-color: $input-success-color;
       box-shadow: 0 0 0 0 transparent;
+
+      + label.active{
+        color: $input-success-color;
+      }
+    }
+    &.invalid{
+      border-color: $input-error-color;
+      box-shadow: 0 0 0 0 transparent;
+
+      + label.active{
+        color: $input-error-color;
+      }
     }
 
     + label{
