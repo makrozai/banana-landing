@@ -13,15 +13,16 @@ html(lang="es")
       .c-header__container
         .c-login.u-margin-bottom--m
           .c-login__small
-            h2.u-text-medium.u-margin-bottom--s Inicia sesión
-
-            a(href="#!").c-button-logged.u-margin-tb--xs
-              img(src="dist/img/icons/gmail.png", alt="")
-              | Inicia con Google
-            a(href="#!").c-button-logged.u-margin-tb--xs
-              img(src="dist/img/icons/facebook.png", alt="")
-              | Inicia con Facebook
-            span.c-login__separator ó
+            h2.u-text-medium.u-margin-bottom--xs Inicia sesión
+            .row.u-margin-bottom--none
+              .col.s12
+                a(href="#!").c-button-logged.u-margin-tb--xs
+                  img(src="dist/img/icons/gmail.png", alt="")
+                  | Inicia con Google
+                a(href="#!").c-button-logged.u-margin-tb--xs
+                  img(src="dist/img/icons/facebook.png", alt="")
+                  | Inicia con Facebook
+                span.c-login__separator ó
 
             form(action="login-2.html").row.u-margin-bottom--none
               +formInput('number','phoneInput', 'Teléfono').col.s12.u-margin-tb--none
