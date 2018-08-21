@@ -8,8 +8,9 @@ mixin newsletter(title, input, description, textButton,linkButton)
             p= description
       if input
         form.row
-          .col.s12.m6
-            input(type="text" placeholder="Ingresa tu correo electrónico").c-newsletter
+          .input-field.col.s12.m6.c-newsletter
+            input(type="text")#newsletterInput
+            label(for="#newsletterInput") Ingresa tu correo electrónico
           .col.s12
             button.c-button= textButton
       else

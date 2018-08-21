@@ -21,11 +21,11 @@ html(lang="es")
                 img(src="dist/img/icons/facebook.png", alt="")
                 | Inicia con Facebook
               span.c-login__separator ó
-            form(action="ty-register.html").row
-              //+formInput('text','Nombre').col.s12.m6
-              //+formInput('text','Apellido').col.s12.m6
-              //+formInput('email','Correo electrónico').col.s12.m6
-              //+formInput('tel','Teléfono').col.s12.m6
+            form(action="ty-register.html").row.u-margin-bottom--none
+              +formInput('text','nameRegister','Nombre').col.s12.m6
+              +formInput('text','lastRegister','Apellido').col.s12.m6
+              +formInput('email','emailRegister','Correo electrónico').col.s12.m6
+              +formInput('tel','phoneRegister','Teléfono').col.s12.m6
               button.c-login__button.c-button.icon-back
 
 

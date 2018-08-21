@@ -1,0 +1,22 @@
+.c-input-target{
+  @extend .c-input-datetime;
+
+  li{
+    width: 50%;
+
+    &:first-child{
+      width: 50%;
+
+      input[type=text]:not(.browser-default),
+      input[type=number]:not(.browser-default){
+        border-left:none;
+      }
+    }
+    &:last-child{
+      input[type=text]:not(.browser-default),
+      input[type=number]:not(.browser-default){
+        border:none;
+      }
+    }
+  }
+}

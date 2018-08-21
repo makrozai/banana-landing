@@ -12,7 +12,7 @@
     position: relative;
     overflow-y: hidden;
 
-    input[type=text]:not(.browser-default){
+    input[type=text]:not(.browser-default),input[type=number]:not(.browser-default){
       border-radius:0;
       border-top: 0;
       border-bottom: 0;

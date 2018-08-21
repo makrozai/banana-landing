@@ -12,15 +12,15 @@ html(lang="es")
             h2.center Nuevo Pedido
           .col.s12
             form.row.c-form
-              //+formInput('text','Nombre completo').col.s12.m6
-              //+formInput('select', 'selecciona el tipo de pedido',options).col.s12.m6
-              //+formInput('email','Correo electrónico').col.s12.m6
-              //+formInput('number','Número de teléfono').col.s12.m6
-              //+formInput('text','Dirección de recojo (si aplica)').col.s12.m6
-              //+formInput('datetime','recojo').col.s12.m6
-              //+formInput('text','Dirección de entrega (si aplica)').col.s12.m6
-              //+formInput('datetime','entrega').col.s12.m6
-              //+formInput('textarea','Descripción detallada del pedido').col.s12
+              +formInput('text','nameFirst','Nombre completo').col.s12.m6
+              +formInput('select','optionSelect', 'selecciona el tipo de pedido',options).col.s12.m6
+              +formInput('email','emailOrder','Correo electrónico').col.s12.m6
+              +formInput('number','phoneOrder','Número de teléfono').col.s12.m6
+              +formInput('text','addressFirst','Dirección de recojo (si aplica)').col.s12.m6
+              +formInput('datetime','dateFirst','recojo').col.s12.m6
+              +formInput('text','addressSecond','Dirección de entrega (si aplica)').col.s12.m6
+              +formInput('datetime','dateSecond','entrega').col.s12.m6
+              +formInput('textarea','areaOrder','Descripción detallada del pedido').col.s12
               .col.s12.center
                 a(href="#confirm").c-button.modal-trigger.u-margin-top--s guardar
 

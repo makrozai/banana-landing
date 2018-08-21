@@ -101,4 +101,11 @@
 .modal-overlay{
   background-color: rgba(black, 1);
 }
-
+.modal{
+  .modal{
+    width: 70%;
+  }
+  .modal-overlay{
+    background: transparent;
+  }
+}

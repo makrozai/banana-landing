@@ -1,12 +1,26 @@
 .c-form-admin{
-  input{
+  input:not([type]),
+  input[type=text]:not(.browser-default),
+  input[type=password]:not(.browser-default),
+  input[type=email]:not(.browser-default),
+  input[type=url]:not(.browser-default),
+  input[type=time]:not(.browser-default),
+  input[type=date]:not(.browser-default),
+  input[type=datetime]:not(.browser-default),
+  input[type=datetime-local]:not(.browser-default),
+  input[type=tel]:not(.browser-default),
+  input[type=number]:not(.browser-default),
+  input[type=search]:not(.browser-default),
+  textarea.materialize-textarea{
    border-top: none;
    border-left: none;
    border-right: none;
    border-radius: 0;
+   font-size: 18px;
    text-align: left;
    padding: .5em 1em;
    height: 45px;
+   box-sizing:border-box;
 
   }
   @media #{$medium-and-down} {

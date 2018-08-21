@@ -1,6 +1,6 @@
 mixin payMethodOnline(id)
   .col.s12(id= id)
-    .row
-      //+formInput('text','Nombre del tarjetahabiente').col.s12.m6
-      //+formInput('number','Número de tarjeta').col.s12.m6
-      //+formInput('target').col.s12
+    .row.u-margin-bottom--none
+      +formInput('text','nameTarget','Nombre del tarjetahabiente').col.s12.m6
+      +formInput('number','numberTarget','Número de tarjeta').col.s12.m6
+      +formInput('target').col.s12

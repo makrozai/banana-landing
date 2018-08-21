@@ -2,9 +2,9 @@ mixin modalPassRecover()
   #passRecover.modal.c-modal.c-modal__recover
     a(href="#!").c-modal__close.modal-close
       i.material-icons.icon-close
-    .modal-content.center.u-padding-tb--m
+    .modal-content.center.u-padding-top--m
       h3.u-text-medium Contraseña olvidada
       p.u-text-medium Ingresa tu correo electrónico y te mandaremos un link para que puedas crear una nueva contraseña.
-      form(action="")
-        //+formInput('email','Correo electrónico')
+      form(action="").row
+        +formInput('email','emailRecover','Correo electrónico').col.s12
         button.c-login__button.c-button enviar

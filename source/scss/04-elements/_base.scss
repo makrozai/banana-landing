@@ -20,7 +20,12 @@
     padding-left: 1em;
     padding-right: 1em;
     font-weight: 500;
+    font-size: 18px;
     color: $g-color-first;
+
+    &::placeholder{
+      color: $off-black;
+    }
 
     &.valid{
       border-color: $input-success-color;

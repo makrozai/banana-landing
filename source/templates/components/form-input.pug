@@ -30,10 +30,9 @@ mixin formInput(type,id, placeholder, arraySelect)
     else if (type == 'target')
       ul.c-input-target
         li
-          label fecha de vencimiento
-          input(type="date")
+          input(type="text", placeholder= 'fecha de vencimiento').datepicker
         li
-          input(type="number" placeholder= "Código de seguridad")
+          input(type="number", class="validate", placeholder='Código de seguridad')
     else
       input(type= type class="validate" id= id)
       label(for= id)= placeholder

@@ -16,8 +16,7 @@ mixin modalQueryBill(bill)
             p
             p Fecha de consulta
             p #{bill.date}
-        .col.s12.c-form__input
-          textarea(placeholder="Ingresa tu consulta")
-        .col.s12.center.u-margin-tb--m
+        +formInput('textarea','areaQuery','Ingresa tu consulta').col.s12
+        .col.s12.center
           button.c-button.hide-on-med-and-up enviar
           button.c-login__button.c-button.hide-on-small-and-down enviar
