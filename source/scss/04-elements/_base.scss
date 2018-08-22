@@ -115,6 +115,7 @@ table{
   li > span{
     font-size: 18px;
     font-weight: 500;
+    color: $g-color-first;
 
     @media #{$medium-and-down}{
       font-size: 14px;

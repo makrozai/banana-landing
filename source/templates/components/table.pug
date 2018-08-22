@@ -1,6 +1,8 @@
 mixin table(arrayPlaceholder,style)
   div&attributes(attributes)
     table
+      thead
+
       tbody
         each placeholder in arrayPlaceholder
           if (style == 'bill')
@@ -9,3 +11,5 @@ mixin table(arrayPlaceholder,style)
             +rowOrderPast(placeholder)
           else
             +rowOrder(placeholder)
+
+

@@ -24,10 +24,10 @@
       margin-top: 10em;
     }
     @media #{only screen and (max-width: 820px)} {
-      margin-top: 6em;
+      margin-top: 8em;
     }
     @media #{$small-and-down} {
-      margin-top: 7em;
+      margin-top: 3em;
     }
   }
   &__title{
@@ -101,6 +101,20 @@
 
     @media #{$medium-and-down} {
       margin: .5em;
+    }
+  }
+
+  &--landing{
+    min-height: auto;
+    height: 100vh;
+    max-height: 900px;
+    @media #{$medium-and-down} {
+      height: 100vh;
+      max-height: 500px;
+      min-height: auto;
+    }
+    @media #{$medium-and-down} {
+      max-height: 550px;
     }
   }
 }
