@@ -56,10 +56,6 @@
 
     animationTextFadeItem[0].classList.add("active");
 
-    //animationTextFadeItem.forEach((element) => {
-      //var aBlock = document.createElement('br');
-      //element.appendChild(aBlock);
-    //})
     createTextAnimation(animationTextFade, 4000);
   }
 

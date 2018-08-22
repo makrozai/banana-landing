@@ -10,8 +10,8 @@ mixin order(order)
         p Total a pagar:
         p.c-price= order.price.total.dolars
           span.c-price__cents= order.price.total.cents
-        a(href="#!" data-target='dropdown1').dropdown-trigger ver detalle
-        ul#dropdown1.dropdown-content.c-dropdown
+        a(href="#!" data-target='orderPriceDrop').dropdown-trigger ver detalle
+        ul#orderPriceDrop.dropdown-content.c-dropdown
           li
             p Gastos en compras:
             span= 'S/' + order.price.buy

@@ -8,6 +8,10 @@
   opacity: 1;
   transition:all .3s;
 
+  @media #{$medium-and-down} {
+    width: 160px;
+  }
+
   li{
     display: none;
     opacity: 0;

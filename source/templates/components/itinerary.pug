@@ -1,6 +1,7 @@
 mixin itinerary(price, list,numbers)
   ul.c-itinerary(class= numbers)
-    span.c-itinerary__price= price
+    if price
+      span.c-itinerary__price= price
     each item,index in list
       li
         if numbers

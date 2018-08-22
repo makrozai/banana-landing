@@ -1,0 +1,123 @@
+-->cardBenefit
+  --:: parametros : icono, color, titulo, descripcion
+  ::-- esta en landing home
+
+-->Duer
+  --:: parametros : imagen, nombre, telefono, dni
+  ::-- esta en orden del pedido
+
+-->cardMember
+  --:: parametros : imagen, nombre, descripcion
+  ::-- esta en sobre tudu card de miembros de tudu
+
+-->cardPerfil
+  --:: parametros : usuario{imagen, nombre, telefono, email}, saldo, pedidos activos
+  ::-- esta en perfil y perfil de empresa
+
+-->cardService
+  --:: parametros : imagen, horas, precio, descripcion
+  ::-- esta en landing home, "para el negocio y para ti"
+
+-->cardWork
+  --:: parametros : titulo, descripcion, link de postular
+  ::-- esta en trabaja con nosotros
+
+-->card
+  --:: parametros : titulo(esto es opcional)
+  ::-- este componente solo es un contenedor, debe integrarse otros dentro
+
+-->formInputAdmin
+  --:: parametros : estado, tipo, placeholder, valor
+  ::-- este solo se utiliza en la edicion del perfil
+
+-->formInput
+  --:: parametros : tipo, id, placeholder, arreglo de opciones(en el caso que sea un select)
+  ::-- esto es reutilizable para inputs(los de admin)
+
+-->galleryClient
+  --:: parametros : arreglo de imagenes
+  ::-- galeria de clientes en landing home
+
+-->itinerary
+  --:: parametros : precio(opcional), lista de elementos, clase de numeros(opcional, en caso necesite numeros)
+  ::-- esta en detalle de pedido, una lista con el itinerario de pedido
+
+-->modalBill
+  --:: parametros : informacion completa de factura
+  ::-- perfil de empresa, llama a 3 componentes mas para terminar su estructura (navbaBehind, summaryBill, table)
+
+--summaryBill
+  --:: parametros : informacion completa de factura[cliente, ruc, direccion, precio, fecha, link de descarga]
+  ::-- este resumen va dentro del modal de factura
+
+-->modalQueryBill
+  --::parametros : informacion completa de factura
+  ::-- modal de consultas para facturas
+
+-->modalConfirm
+  --:: parametros : titulo, descripcion
+  ::-- confirmacion de cambios
+
+-->modalPassModify
+  --:: sin parametros
+  ::-- modifica valores en perfil(editar perfil)
+
+-->modalPassRecover
+  --::  sin parametros
+  ::-- este modal se encarga de recuperar contraseña con email.
+
+-->modalPay
+  --:: parametros : total a pagar
+  ::-- contienne un tab(componente) e inputs en detalle del pedido
+
+-->payMethodOnline
+  --:: parametros : id de tab
+  ::-- formulario de pago online
+
+-->payMethodTransfer
+  --:: parametros : id de tab
+  ::-- formulario de pago por transferencia
+
+-->navbar
+  --:: se utiliza como bloque
+  ::--menu principal en landing sin logeo
+
+-->navbarAdmin
+  --:: se utiliza como bloque
+  ::-- menu logeado en el sistema
+
+-->navbaBehind
+  --:: parametros : titulo, link
+  ::-- menu que aparece en modales
+
+-->newsletter
+  --:: parametros : titulo, input(boolean), descripcion, texto de boton, link del boton(opcional)
+  ::-- elemento para landing home y sobre tudu(se utiliza con o sin input de formulario)
+
+-->order
+  --:: parametros : detalle completo de pedido
+  ::-- detalles de pedido y valor
+
+-->orderDetail
+  --:: parametros : detalle completo de pedido
+  ::-- detalles de pedido y descripcion (va junto al componente order)
+
+-->table
+  --:: parametros : arreglo de datos, estilo de columnas
+  ::-- este es un contenedor de cada fila introducida
+
+-->rowBillOrder
+  --:: parametros : arreglo de data [id, fecha, nombre, descripcion, precio]
+  ::-- esta fila solamente es usada para facturas
+
+-->rowOrderPast
+  --:: parametros : arreglo de pedido[fecha, hora, estado, precio, id]
+  ::-- esta fila es de pedidos pasados
+
+-->rowOrder
+  --:: parametros : arreglo de pedidos[fecha, hora, estilo de factura(si es factura), estado, precio]
+  ::-- esta fila es general para todos los pedidos
+
+-->tab
+  --:: parametros : estilo de tabla, [valores de tab]
+  ::-- existen 2 tipos de estilo mostrado en tabla perfil y pagos
