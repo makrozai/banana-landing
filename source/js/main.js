@@ -49,16 +49,17 @@
     }
 
   }
+  //animation text fade
   if (document.body.contains(document.querySelector(".c-animation-text-fade"))) {
     var animationTextFade = document.querySelector(".c-animation-text-fade");
     var animationTextFadeItem = animationTextFade.querySelectorAll('li');
 
     animationTextFadeItem[0].classList.add("active");
 
-    animationTextFadeItem.forEach((element) => {
-      var aBlock = document.createElement('br');
-      element.appendChild(aBlock);
-    })
+    //animationTextFadeItem.forEach((element) => {
+      //var aBlock = document.createElement('br');
+      //element.appendChild(aBlock);
+    //})
     createTextAnimation(animationTextFade, 4000);
   }
 
@@ -96,7 +97,7 @@
           //cambia el valor y aparece el contenedor
           activeElement(animationTextFadeItem, loop);
           textFade.classList.toggle("u-fade-out");
-        }),1000)
+        }),500)
         //da al siguiente valor
         loop++;
 

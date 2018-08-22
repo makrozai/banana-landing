@@ -1,5 +1,9 @@
 .c-animation-text-fade{
-  display: inline;
+  display: inline-block;
+  text-align: left;
+  width: 260px;
+  margin-top: 0;
+  margin-bottom: 0;
   color: $g-color-second;
   opacity: 1;
   transition:all .3s;
