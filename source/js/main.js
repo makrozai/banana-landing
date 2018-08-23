@@ -59,6 +59,30 @@
     createTextAnimation(animationTextFade, 4000);
   }
 
+  //input password
+  if (document.body.contains(document.querySelector('input[type="password"]'))) {
+    var inputPassword = document.querySelector('input[type="password"]');
+    var parentPassword = inputPassword.parentNode;
+
+    //create element
+      var aBlock = document.createElement('i');
+      aBlock.classList.add("materialize-icons");
+      aBlock.classList.add("icon-eye");
+      aBlock.classList.add("c-input__password-icon");
+      parentPassword.appendChild(aBlock);
+
+    //create interaction for input
+    var elementInteraction = parentPassword.querySelector('.icon-eye');
+
+    elementInteraction.onclick = function() {
+      if (inputPassword.type == 'password') {
+        inputPassword.type = 'text';
+      }else{
+        inputPassword.type = 'password';
+      }
+    }
+  }
+
 /* -----------------------function utilities----------------------*/
 
   // agrega clase active al dar click en botones
