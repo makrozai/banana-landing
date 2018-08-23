@@ -31,6 +31,7 @@
     border-radius: 50%;
     color: $g-color-first;
     transform:translateX(-50%);
+    box-shadow: 0 4px 6px 0 #0b0d23;
     i{
       text-align: center;
       line-height: 3rem !important;
@@ -87,10 +88,11 @@
     }
   }
   &--admin{
-    background: white !important;
+    background: white ;
     .c-navbar__new{
       background: $g-color-second;
       color: white;
+      box-shadow: 0 4px 6px 0 transparent;
     }
     ul{
       a{
@@ -101,6 +103,9 @@
         i{
           font-size: 1.5em;
           margin-right: .5em;
+        }
+        @media #{$medium-and-down} {
+          padding: 0;
         }
       }
     }

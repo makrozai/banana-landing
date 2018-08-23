@@ -33,12 +33,15 @@
     }
 
     &.valid{
-      border-color: $input-success-color;
+      border-color: rgba($input-border-color,.5);
       box-shadow: 0 0 0 0 transparent;
 
-      + label.active{
-        color: $input-success-color;
-      }
+      background-image: url(../img/icons/check.svg);
+      background-size: 1.5em 1.5em;
+      background-repeat: no-repeat;
+      background-position: 97% center;
+      padding-right: 2.5em;
+
     }
     &.invalid{
       border-color: $input-error-color;

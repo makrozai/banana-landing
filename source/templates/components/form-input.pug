@@ -17,11 +17,11 @@ mixin formInput(type,id, placeholder, arraySelect)
         li
           i.material-icons.icon-clock
         li
-          //-label fecha de #{placeholder}
-          input(type="text" placeholder= 'fecha de ' + placeholder).datepicker
+          input(type="text" id='dateInput' + placeholder).datepicker
+          label(for='dateInput' + placeholder) fecha de #{placeholder}
         li
-          //-label hora de #{placeholder} (hh:mm)
-          input(type="text" placeholder= 'hora de ' + placeholder).timepicker
+          input(type="text" id='timeInput' + placeholder).timepicker
+          label(for='timeInput' + placeholder) hora de #{placeholder}
     else if (type == 'select')
       select
         option(value="0" disabled selected)= placeholder
@@ -30,9 +30,11 @@ mixin formInput(type,id, placeholder, arraySelect)
     else if (type == 'target')
       ul.c-input-target
         li
-          input(type="text", placeholder= 'fecha de vencimiento').datepicker
+          input(type="text", id='dateInputVencimiento').datepicker
+          label(for='dateInputVencimiento') fecha de vencimiento
         li
-          input(type="number", class="validate", placeholder='Código de seguridad')
+          input(type="number", id='InputNumberSecurity')
+          label(for='InputNumberSecurity') Código de seguridad
     else
       input(type= type class="validate" id= id)
       label(for= id)= placeholder

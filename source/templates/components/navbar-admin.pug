@@ -1,6 +1,6 @@
 mixin navbarAdmin()
-  .navbar-fixed
-    nav.c-navbar.c-navbar--admin.c-navbar--fixed&attributes(attributes)
+  .navbar-fixed&attributes(attributes)
+    nav.c-navbar.c-navbar--admin.c-navbar--fixed
       .container
         .nav-wrapper
           a(href="perfil.html").c-navbar__logo
@@ -24,6 +24,8 @@ mixin navbarAdmin()
             li
               a(href="#menuLog").modal-trigger
                 i.materialize-icons.icon-more
+    if block
+      block
 
 
   #menuLog.modal.c-modal.c-modal__bill

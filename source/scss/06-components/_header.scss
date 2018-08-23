@@ -29,6 +29,10 @@
     @media #{$small-and-down} {
       margin-top: 3em;
     }
+
+    &.c-header--small{
+      margin-top: auto ;
+    }
   }
   &__title{
     font-weight:500;

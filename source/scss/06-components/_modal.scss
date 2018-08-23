@@ -51,6 +51,11 @@
       transform:translate(-50%,-50%);
 
     }
+    h4{
+      @media #{$medium-and-down} {
+        font-size: 16px;
+      }
+    }
   }
   &__recover{
     margin-top: 6em;
