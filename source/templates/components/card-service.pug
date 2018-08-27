@@ -1,10 +1,10 @@
-mixin cardService(image,hour,price,description)
-  .c-card-service&attributes(attributes)
-    .c-card-service__image
+mixin service(image,hour,price,description)
+  .c-service&attributes(attributes)
+    .c-service__image
       img(src= image, alt="")
-      .c-card-service__badge
+      .c-service__badge
         span.hide-on-med-and-down= hour  + ' horas ahorrada'
-        span.c-card-service__price.hide-on-large-only= price
-    p.c-card-service__description= description
-      span.c-card-service__price.hide-on-med-and-down= price
+        span.c-service__price.hide-on-large-only= price
+    p.c-service__description= description
+      span.c-service__price.hide-on-med-and-down= price
       span.hide-on-large-only= hour  + ' horas ahorrada'
