@@ -1,6 +1,10 @@
 .c-table{
   @media #{$medium-and-down} {
-    padding: 0 !important;
+    &, &.col{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
 
     tr{
       display: flex;
