@@ -73,13 +73,19 @@
       left: 0;
       background: $g-color-first;
       color: white;
-      padding:.7em 1em;
+      padding:.6em 1.2em;
       margin-bottom: 0;
       width: 100%;
       align-items:center;
 
       img{
         max-width: 40px;
+      }
+      .c-card-perfil__description{
+        transform:translateY(2.5px);
+      }
+      .c-card-perfil__phone{
+        padding: 0 1.5em 0 2em;
       }
       h4{
         &:before{
