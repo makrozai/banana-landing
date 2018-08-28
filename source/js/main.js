@@ -4,7 +4,6 @@
   // materialize initial
   M.AutoInit();
 
-  //animation text
 
   //scroll animation
   if (document.body.contains(document.querySelector(".c-navbar--fixed"))) {
