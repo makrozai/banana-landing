@@ -4,6 +4,7 @@
 
   @media #{$medium-and-down} {
     margin-bottom: 3em;
+    align-items: flex-start;
   }
   &__image{
     position: relative;
@@ -28,6 +29,8 @@
   &__badge{
     background: white;
     display: inline-block;
+    min-width: 200px;
+    text-align: center;
     color: $g-color-first;
     font-weight: 500;
     padding: .5em .7em;
@@ -39,6 +42,7 @@
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 
     @media #{$medium-and-down} {
+      min-width: auto;
       right: 1em;
       box-shadow: 0 2px 8px 0 transparent;
     }
@@ -52,9 +56,11 @@
   }
   &__description{
     margin-bottom: .3rem;
+    font-size: 20px;
 
     @media #{$medium-and-down} {
       margin-top: 0;
+      font-size: 15px;
       width: 60%;
     }
 
@@ -67,6 +73,13 @@
     @media #{$medium-and-down} {
       &--reverse{
         flex-direction:row-reverse;
+
+        img{
+          margin-left: auto;
+        }
+        .c-service__badge{
+          right: 0;
+        }
       }
     }
   }

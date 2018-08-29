@@ -1,0 +1,9 @@
+.c-carousel{
+  &-mobile{
+    margin-bottom: 6em;
+
+    @media #{$medium-and-down} {
+      margin-bottom: 3em;
+    }
+  }
+}
