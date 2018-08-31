@@ -26,6 +26,11 @@
     z-index: -1;
     opacity: .2;
   }
+  &__title{
+    @media #{$small-and-down} {
+      font-size: 35px;
+    }
+  }
 
   &__subtitle{
     font-weight: 500;
@@ -35,6 +40,8 @@
 
     @media #{$small-and-down} {
       padding: 0 .5em;
+      font-size: 30px;
+      line-height: 1.2;
       text-align: left;
     }
 
