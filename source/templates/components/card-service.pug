@@ -3,8 +3,14 @@ mixin service(image,hour,price,description)
     .c-service__image
       img(src= image, alt="")
       .c-service__badge
-        span.hide-on-med-and-down= hour  + ' horas ahorrada'
+        if(hour == 1)
+          span.hide-on-med-and-down= hour  + ' hora ahorrada'
+        else
+          span.hide-on-med-and-down= hour  + ' horas ahorradas'
         span.c-service__price.hide-on-large-only= price
     p.c-service__description= description
       span.c-service__price.hide-on-med-and-down= price
-      span.hide-on-large-only= hour  + ' horas ahorrada'
+      if(hour == 1)
+        span.hide-on-large-only= hour  + ' hora ahorrada'
+      else
+        span.hide-on-large-only= hour  + ' horas ahorradas'
