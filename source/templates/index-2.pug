@@ -1,0 +1,107 @@
+include settings/mixins
+<!DOCTYPE html>
+html(lang="es")
+  +head('Tudú')
+  body
+    +navbar-fake()
+
+    header.c-header.c-header--landing
+      img(src="dist/img/reloj.png", alt="").c-header__image.c-header__image--clock
+      img(src="dist/img/calendar-lg.png", alt="").c-header__image.c-header__image--phone
+      img(src="dist/img/recibo-luz.png", alt="").c-header__image.c-header__image--paper
+      .c-header__container.center
+        h1.c-header__title Delega tus
+          ul.c-animation-text-fade
+            li pendientes
+            li pagos
+            li trámites
+          <br>
+          | a un equipo de asistentes personales capacitados.
+
+        p.c-header__subtitle Comienza ahora a través de Messenger, Whatsapp, o vía web.
+        div
+          a(href="#forBusiness").c-button.u-bg-fourth para el negocio
+          a(href="#forMe").c-button para ti
+      .c-header__scrolling
+        a(href="#!")
+          i.material-icons.icon-arrow
+    section#forBusiness.scrollspy.u-bg-fourth.u-padding-top--l.u-padding-bottom--xxl.u-diagonal
+      .container.white-text
+        .row
+          .col.s12
+            h2.center.u-margin-bottom--s Para el negocio
+          .col.s12.m6
+            +service('dist/img/image-desktop-1.jpg',2,'45.00','Ricardo necesitaba sacar una vigencia de poder de su empresa.')
+          .col.s12.m6
+            +service('dist/img/image-desktop-2.jpg',4,'95.00','Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
+    section#forMe.scrollspy.u-bg-second.u-padding-top--xxl.u-diagonal--reverse
+      .container.white-text
+        .row
+          .col.s12
+            h2.center.u-margin-bottom--s Para ti
+          .col.s12.m6
+            +service('dist/img/image-desktop-1.jpg',1,'16.00','A Andrea se le venció el recibo de Luz del Sur y no tenía tiempo de ir hasta allá').c-service__mobile--reverse
+          .col.s12.m6
+            +service('dist/img/image-desktop-4.jpg',8,'200.00','Natalia necesitaba legalizar su diploma de maestría en el extranjero').c-service__mobile--reverse
+    section.u-padding-top--l
+      .container.center-align
+        .row
+          .col.s12
+            h2 ¿Por qué Tudú?
+          .col.s12.m6
+            +benefit('hours','second','Horas Ahorradas','Olvídate de las horas invertidas fuera de la casa o de la oficina en compras, trámites y pagos. ')
+          .col.s12.m6
+            +benefit('enfocate','fourth','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+          .col.s12.m6
+            +benefit('comunicacion','second','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+          .col.s12.m6
+            +benefit('programa','fourth','Programa Pedidos','¿Necesitas ayuda siempre con el mismo pendiente? Programa tu pedido y deja que un dúer se encargue.')
+    section.u-padding-top--m
+      .container.center-align
+        .row
+          .col.s12
+            h2 Empresas que ya confían en nosotros
+          .col.s12
+            +galleryClient(clients)
+
+    +newsletter('¿Quieres saber más sobre cómo podemos ayudarte?', true, 'Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros', 'Conversemos','')
+
+
+    footer.c-footer.u-padding-top--m
+      .container.center
+        .c-footer__container
+          .row
+            .col.s12.m4.offset-m2
+              a(href="#passRecover").modal-trigger Términos y condiciones
+
+              #passRecover.modal.c-modal.c-tandc
+                a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
+                  i.material-icons.icon-close
+                .modal-content
+                  +navbaBehind('Términos y condiciones','close').hide-on-med-and-up
+                  h3.u-text-medium.hide-on-small-and-down Términos y condiciones
+                  .c-tandc__container
+                    h4
+                      span 1
+                      | Condiciones del servicio
+                    p Puedes usar nuestros productos sólo mediante un contrato vinculante con Pinterest, y solo bajo cumplimiento de estos términos y de todas las leyes aplicables. Cuando creas una cuenta en Pinterest, debes proporcionarnos datos completos y precisos. El uso o acceso de usuarios de menos de 13 años está prohibido. Si abres una cuenta en nombre de una empresa, organización u otra entidad, entonces (a) la apertura de la cuenta “te” incluye tanto a ti como a la entidad que representas, y (b) declaras y garantizas que estás autorizado a conceder todos los permisos y licencias incluidos en estos términos, y que además aceptas dichos términos en nombre de la entidad.
+
+                    b En pocas palabras<br>
+                    b No puedes usar Pinterest si eres menor de 13 años. Además, si usas Pinterest como parte de tu trabajo, tienes que crear una cuenta de empresa.
+
+                    h4
+                      span 2
+                      | Privacidad
+                    p Concedes a Pinterest, al igual que a nuestros usuarios, una licencia global libre de derechos de autor, no exclusiva, transferible y sujeta a licencias para usar, almacenar, visualizar, reproducir, guardar, modificar, crear trabajos derivados, producir y distribuir tu Contenido de Usuario en Pinterest con la finalidad exclusiva de operar, desarrollar, proveer y usar los Productos de Pinterest. Ninguna de estas Condiciones puede restringir otro tipo de derechos que Pinterest pueda tener sobre el Contenido del usuario, como por ejemplo, bajo otras licencias. Nos reservamos el derecho de eliminar o modificar el Contenido del usuario bajo cualquier motivo, incluyendo Contenido del usuario que consideramos que infringe nuestras Condiciones y políticas.
+                    b En pocas palabras<br>
+                    b No puedes usar Pinterest si eres menor de 13 años. Además, si usas Pinterest como parte de tu trabajo, tienes que crear una cuenta de empresa.
+            .col.s12.m4
+              a(href="about.html") Sobre Tudú
+            .col.s12
+              a(href="#!")
+                i.material-icons.icon-facebook
+              a(href="#!")
+                i.material-icons.icon-instagram
+        .c-footer__copy
+          p Horario de atención: Lunes a Viernes (9AM a 6PM), Sábados (9AM a 1PM)
+    include blocks/scripts
