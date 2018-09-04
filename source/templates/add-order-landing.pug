@@ -12,8 +12,8 @@ html(lang="es")
             h2.center Nuevo Pedido
           .col.s12
             form.row.c-form
-              +formInput('text','nameFirst','Nombre completo').col.s12.m6
-              +formInput('select','optionSelect', 'selecciona el tipo de pedido',options).col.s12.m6
+              +formInput('text','nameFirst','Nombre completo').col.s12
+              //+formInput('select','optionSelect', 'selecciona el tipo de pedido',options).col.s12.m6
               +formInput('email','emailOrder','Correo electrónico').col.s12.m6
               +formInput('tel','phoneOrder','Número de teléfono').col.s12.m6
               +formInput('text','addressFirst','Dirección de recojo (si aplica)').col.s12.m6
