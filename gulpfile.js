@@ -9,9 +9,10 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     imagemin = require('gulp-imagemin'),
     webserver = require('gulp-webserver'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    fontmin = require('gulp-fontmin');
 
-gulp.task('default', ['uglify', 'scss', 'pug', 'imagemin', 'webserver', 'watch']);
+gulp.task('default', ['uglify', 'scss', 'pug', 'imagemin', 'fontmin', 'webserver', 'watch']);
 
 gulp.task('uglify', function() {
   gulp.src('source/js/materialize.js')
@@ -50,6 +51,12 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('fontmin', function() {
+  gulp.src('source/fonts/**/*.ttf')
+    .pipe(fontmin({text: '天地玄黄 宇宙洪荒'}))
+    .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('webserver', function() {
   gulp.src('./')
     .pipe(webserver({
@@ -63,5 +70,6 @@ gulp.task('watch', function() {
     gulp.watch('source/js/**/*.js', ['uglify']);
     gulp.watch('source/scss/**/*.scss', ['scss']);
     gulp.watch('source/templates/**/*.pug', ['pug']);
+    gulp.watch('source/fonts/**/*.ttf', ['fontmin']);
     gulp.watch('source/img/*.{jpg,jpeg,png,gif,svg}', ['imagemin']);
 });

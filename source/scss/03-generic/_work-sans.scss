@@ -5,57 +5,89 @@
 */
 @font-face {
   font-family: "worksans";
+  src: url('#{$font-path}worksans/WorkSans-Thin.eot'); /* IE9 Compat Modes */
   src: local(worksans Thin),
-    url("#{$font-path}worksans/worksans-thin.woff2") format("woff2"),
-    url("#{$font-path}worksans/worksans-thin.woff") format("woff");
+    url('#{$font-path}worksans/WorkSans-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url("#{$font-path}worksans/WorkSans-Thin.woff2") format("woff2"), /* Super Modern Browsers */
+    url("#{$font-path}worksans/WorkSans-Thin.woff") format("woff"), /* Pretty Modern Browsers */
+    url('#{$font-path}worksans/WorkSans-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('#{$font-path}worksans/WorkSans-Thin.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: 100;
 }
 @font-face {
   font-family: "worksans";
+  src: url('#{$font-path}worksans/WorkSans-ExtraLight.eot'); /* IE9 Compat Modes */
   src: local(worksans ExtraLight),
-    url("#{$font-path}worksans/worksans-extralight.woff2") format("woff2"),
-    url("#{$font-path}worksans/worksans-extralight.woff") format("woff");
+    url('#{$font-path}worksans/WorkSans-ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url("#{$font-path}worksans/WorkSans-ExtraLight.woff2") format("woff2"), /* Super Modern Browsers */
+    url("#{$font-path}worksans/WorkSans-ExtraLight.woff") format("woff"), /* Pretty Modern Browsers */
+    url('#{$font-path}worksans/WorkSans-ExtraLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('#{$font-path}worksans/WorkSans-ExtraLight.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: 200;
 }
 @font-face {
   font-family: "worksans";
+  src: url('#{$font-path}worksans/Worksans-Light.eot'); /* IE9 Compat Modes */
   src: local(worksans Light),
-    url("#{$font-path}worksans/worksans-light.woff2") format("woff2"),
-    url("#{$font-path}worksans/worksans-light.woff") format("woff");
+    url('#{$font-path}worksans/Worksans-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url("#{$font-path}worksans/worksans-light.woff2") format("woff2"), /* Super Modern Browsers */
+    url("#{$font-path}worksans/Worksans-Light.woff") format("woff"), /* Pretty Modern Browsers */
+    url('#{$font-path}worksans/Worksans-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('#{$font-path}worksans/Worksans-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: 300;
 }
 @font-face {
   font-family: "worksans";
+  src: url('#{$font-path}worksans/Worksans-Regular.eot'); /* IE9 Compat Modes */
   src: local(worksans Regular),
-    url("#{$font-path}worksans/worksans-regular.woff2") format("woff2"),
-    url("#{$font-path}worksans/worksans-regular.woff") format("woff");
+    url('#{$font-path}worksans/Worksans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url("#{$font-path}worksans/worksans-regular.woff2") format("woff2"), /* Super Modern Browsers */
+    url("#{$font-path}worksans/Worksans-Regular.woff") format("woff"), /* Pretty Modern Browsers */
+    url('#{$font-path}worksans/Worksans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('#{$font-path}worksans/Worksans-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: 400;
 }
 @font-face {
   font-family: "worksans";
+  src: url('#{$font-path}worksans/Worksans-Medium.eot'); /* IE9 Compat Modes */
   src: local(worksans Medium),
-    url("#{$font-path}worksans/worksans-medium.woff2") format("woff2"),
-    url("#{$font-path}worksans/worksans-medium.woff") format("woff");
+    url('#{$font-path}worksans/Worksans-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url("#{$font-path}worksans/worksans-medium.woff2") format("woff2"), /* Super Modern Browsers */
+    url("#{$font-path}worksans/Worksans-Medium.woff") format("woff"), /* Pretty Modern Browsers */
+    url('#{$font-path}worksans/Worksans-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('#{$font-path}worksans/Worksans-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: 500;
 }
 @font-face {
   font-family: "worksans";
+  src: url('#{$font-path}worksans/Worksans-SemiBold.eot'); /* IE9 Compat Modes */
   src: local(worksans SemiBold),
-    url("#{$font-path}worksans/worksans-semibold.woff2") format("woff2"),
-    url("#{$font-path}worksans/worksans-semibold.woff") format("woff");
+    url('#{$font-path}worksans/Worksans-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url("#{$font-path}worksans/worksans-semibold.woff2") format("woff2"), /* Super Modern Browsers */
+    url("#{$font-path}worksans/Worksans-SemiBold.woff") format("woff"), /* Pretty Modern Browsers */
+    url('#{$font-path}worksans/Worksans-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('#{$font-path}worksans/Worksans-SemiBold.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: 600;
 }
 @font-face {
   font-family: "worksans";
+  src: url('#{$font-path}worksans/Worksans-Bold.eot'); /* IE9 Compat Modes */
   src: local(worksans Bold),
-    url("#{$font-path}worksans/worksans-bold.woff2") format("woff2"),
-    url("#{$font-path}worksans/worksans-bold.woff") format("woff");
+    url('#{$font-path}worksans/Worksans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url("#{$font-path}worksans/worksans-bold.woff2") format("woff2"), /* Super Modern Browsers */
+    url("#{$font-path}worksans/Worksans-Bold.woff") format("woff"), /* Pretty Modern Browsers */
+    url('#{$font-path}worksans/Worksans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('#{$font-path}worksans/Worksans-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: 700;
 }
 @font-face {
   font-family: "worksans";
+  src: url('#{$font-path}worksans/Worksans-ExtraBold.eot'); /* IE9 Compat Modes */
   src: local(worksans ExtraBold),
-    url("#{$font-path}worksans/worksans-extrabold.woff2") format("woff2"),
-    url("#{$font-path}worksans/worksans-extrabold.woff") format("woff");
+    url('#{$font-path}worksans/Worksans-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url("#{$font-path}worksans/worksans-extrabold.woff2") format("woff2"), /* Super Modern Browsers */
+    url("#{$font-path}worksans/Worksans-ExtraBold.woff") format("woff"), /* Pretty Modern Browsers */
+    url('#{$font-path}worksans/Worksans-ExtraBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('#{$font-path}worksans/Worksans-ExtraBold.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: 800;
 }
