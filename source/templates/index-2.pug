@@ -64,7 +64,25 @@ html(lang="es")
           .col.s12
             +galleryClient(clients)
 
-    +newsletter('¿Quieres saber más sobre cómo podemos ayudarte?', true, 'Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros', 'Conversemos','')
+    section#newsletter.scrollspy.u-bg-first.u-padding-top--l.u-padding-bottom--xxl.u-diagonal
+      .container.white-text
+        .row
+          .col.s12.u-margin-bottom--s
+            h2.c-header__title ¿Cómo empiezo?
+            ol.browser-default
+              li Escríbenos por <a href="http://messenger.com/t/tuduperu">Messenger</a>, <a href="whatsapp://send?text=Hola Tudú!&phone=+51970828835">WhatsApp</a>, o <a href="mailto:pedidos@tudu.pe">correo electrónico</a> y cuéntanos cómo podemos ayudarte hoy.
+              li Te enviamos la fecha y hora programada para tu pedido, y la tarifa estimada.
+              li Una vez aceptada la tarifa, un dúer sale a atender tu pedido en la fecha acordada.
+          .col.s12
+            h2.c-header__title ¿Quieres saber más sobre cómo podemos ayudarte?
+            p Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros
+          form.row
+            .input-field.col.s12.m6.c-newsletter
+              input(type="text")#newsletterInput
+              label(for="newsletterInput") Ingresa tu correo electrónico
+            .col.s12
+              button.c-button Conversemos
+
 
 
     footer.c-footer.u-padding-top--m
@@ -96,7 +114,7 @@ html(lang="es")
                     b En pocas palabras<br>
                     b No puedes usar Pinterest si eres menor de 13 años. Además, si usas Pinterest como parte de tu trabajo, tienes que crear una cuenta de empresa.
             .col.s12.m4
-              a(href="about.html") Sobre Tudú
+              a(href="about-2.html") Sobre Tudú
             .col.s12
               a(href="#!")
                 i.material-icons.icon-facebook
