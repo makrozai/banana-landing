@@ -18,7 +18,11 @@ html(lang="es")
           <br>
           | a un equipo de asistentes personales capacitados.
 
-        p.c-header__subtitle Comienza ahora a través de Messenger, Whatsapp, o vía web.
+        p.c-header__subtitle Comienza ahora a través de 
+          a(href="http://messenger.com/t/tuduperu", target="_blank") Messenger
+          |, 
+          a(href="https://api.whatsapp.com/send?text=Hola%20Tudú!&phone=+51970828835", target="_blank") Whatsapp
+          |, o vía web.
         div
           a(href="#forBusiness").c-button.u-bg-fourth para el negocio
           a(href="#forMe").c-button para ti
@@ -31,31 +35,55 @@ html(lang="es")
           .col.s12
             h2.center.u-margin-bottom--s Para el negocio
           .col.s12.m6
-            +service('dist/img/image-desktop-1.jpg',2,'45.00','Ricardo necesitaba sacar una vigencia de poder de su empresa.')
+            +service('dist/img/image-desktop-1.jpg',
+                      2,
+                      '55.00',
+                      'Ricardo necesitaba sacar una vigencia de poder de su empresa.')
           .col.s12.m6
-            +service('dist/img/image-desktop-2.jpg',4,'95.00','Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
+            +service('dist/img/image-desktop-2.jpg',
+                      4,
+                      '95.00',
+                      'Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
     section#forMe.scrollspy.u-bg-second.u-padding-top--xxl.u-diagonal--reverse
       .container.white-text
         .row
           .col.s12
             h2.center.u-margin-bottom--s Para ti
           .col.s12.m6
-            +service('dist/img/image-desktop-1.jpg',1,'16.00','A Andrea se le venció el recibo de Luz del Sur y no tenía tiempo de ir hasta allá').c-service__mobile--reverse
+            +service('dist/img/image-desktop-5.JPG',
+                      1,
+                      '18.00',
+                      'A Andrea se le venció el recibo de Luz del Sur y no tenía tiempo de ir hasta allá').c-service__mobile--reverse
           .col.s12.m6
-            +service('dist/img/image-desktop-4.jpg',8,'200.00','Natalia necesitaba legalizar su diploma de maestría en el extranjero').c-service__mobile--reverse
+            +service('dist/img/image-desktop-4.jpg',
+                      8,
+                      '200.00',
+                      'Natalia necesitaba legalizar su diploma de maestría en el extranjero').c-service__mobile--reverse
     section.u-padding-top--l
       .container.center-align
         .row
           .col.s12
             h2 ¿Por qué Tudú?
           .col.s12.m6
-            +benefit('hours','second','Horas Ahorradas','Olvídate de las horas invertidas fuera de la casa o de la oficina en compras, trámites y pagos. ')
+            +benefit('hours',
+                      'second',
+                      'Horas Ahorradas',
+                      'Olvídate de las horas invertidas fuera de la casa o de la oficina en compras, trámites y pagos. ')
           .col.s12.m6
-            +benefit('enfocate','fourth','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+            +benefit('enfocate',
+                      'fourth',
+                      'Enfócate en lo que importa',
+                      'Dedica tu tiempo a las cosas realmente   importantes de tu vida o tu negocio.')
           .col.s12.m6
-            +benefit('comunicacion','second','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+            +benefit('comunicacion',
+                      'second',
+                      'Comunicación siempre',
+                      'En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
           .col.s12.m6
-            +benefit('programa','fourth','Programa Pedidos','¿Necesitas ayuda siempre con el mismo pendiente? Programa tu pedido y deja que un dúer se encargue.')
+            +benefit('programa',
+                      'fourth',
+                      'Programa Pedidos',
+                      '¿Necesitas ayuda siempre con el mismo pendiente? Programa tu pedido y deja que un dúer se encargue.')
     section.u-padding-top--m
       .container.center-align
         .row
@@ -69,19 +97,13 @@ html(lang="es")
         .row
           .col.s12.u-margin-bottom--s
             h2.c-header__title ¿Cómo empiezo?
-            ol.browser-default
-              li Escríbenos por <a href="http://messenger.com/t/tuduperu">Messenger</a>, <a href="whatsapp://send?text=Hola Tudú!&phone=+51970828835">WhatsApp</a>, o <a href="mailto:pedidos@tudu.pe">correo electrónico</a> y cuéntanos cómo podemos ayudarte hoy.
+            ol.browser-default.c-newsletter__list
+              li Escríbenos por <a href="http://messenger.com/t/tuduperu" target="_blank">Messenger</a>, <a href="https://api.whatsapp.com/send?text=Hola%20Tudú!&phone=+51970828835" target="_blank">WhatsApp</a>, o <a href="mailto:pedidos@tudu.pe">correo electrónico</a> y cuéntanos cómo podemos ayudarte hoy.
               li Te enviamos la fecha y hora programada para tu pedido, y la tarifa estimada.
               li Una vez aceptada la tarifa, un dúer sale a atender tu pedido en la fecha acordada.
+          
           .col.s12
-            h2.c-header__title ¿Quieres saber más sobre cómo podemos ayudarte?
-            p Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros
-          form.row
-            .input-field.col.s12.m6.c-newsletter
-              input(type="text")#newsletterInput
-              label(for="newsletterInput") Ingresa tu correo electrónico
-            .col.s12
-              button.c-button Conversemos
+            a(href="https://tuduperu.typeform.com/to/lOLTw6" target="_blank").c-button Conversemos
 
 
 

@@ -58,7 +58,13 @@
 
   ul{
     width: 85%;
-
+    &.right{
+      width: auto;
+      
+      li{
+        float: right;
+      }
+    }
     a{
       &:hover{
         background: transparent;
