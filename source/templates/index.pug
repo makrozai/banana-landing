@@ -3,7 +3,7 @@ include settings/mixins
 html(lang="es")
   +head('Tudú')
   body
-    +navbar()
+    +navbar-fake()
 
     header.c-header.c-header--landing
       img(src="dist/img/reloj.png", alt="").c-header__image.c-header__image--clock
@@ -18,7 +18,11 @@ html(lang="es")
           <br>
           | a un equipo de asistentes personales capacitados.
 
-        p.c-header__subtitle Comienza ahora a través de Messenger, Whatsapp, o vía web.
+        p.c-header__subtitle Comienza ahora a través de 
+          a(href="http://messenger.com/t/tuduperu", target="_blank") Messenger
+          |, 
+          a(href="https://api.whatsapp.com/send?text=Hola%20Tudú!&phone=+51970828835", target="_blank") Whatsapp
+          |, o vía web.
         div
           a(href="#forBusiness").c-button.u-bg-fourth para el negocio
           a(href="#forMe").c-button para ti
@@ -31,31 +35,55 @@ html(lang="es")
           .col.s12
             h2.center.u-margin-bottom--s Para el negocio
           .col.s12.m6
-            +service('dist/img/image-desktop-1.jpg',2,'45.00','Ricardo necesitaba sacar una vigencia de poder de su empresa.')
+            +service('dist/img/image-desktop-1.jpg',
+                      2,
+                      '55.00',
+                      'Ricardo necesitaba sacar una vigencia de poder de su empresa.')
           .col.s12.m6
-            +service('dist/img/image-desktop-2.jpg',4,'95.00','Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
+            +service('dist/img/image-desktop-2.jpg',
+                      4,
+                      '95.00',
+                      'Karina necesitaba conseguir cotizaciones para cambiar de proveedor de bolsas.')
     section#forMe.scrollspy.u-bg-second.u-padding-top--xxl.u-diagonal--reverse
       .container.white-text
         .row
           .col.s12
             h2.center.u-margin-bottom--s Para ti
           .col.s12.m6
-            +service('dist/img/image-desktop-1.jpg',1,'16.00','A Andrea se le venció el recibo de Luz del Sur y no tenía tiempo de ir hasta allá').c-service__mobile--reverse
+            +service('dist/img/image-desktop-3.jpg',
+                      1,
+                      '18.00',
+                      'A Andrea se le venció el recibo de Luz del Sur y no tenía tiempo de ir hasta allá').c-service__mobile--reverse
           .col.s12.m6
-            +service('dist/img/image-desktop-4.jpg',8,'200.00','Natalia necesitaba legalizar su diploma de maestría en el extranjero').c-service__mobile--reverse
+            +service('dist/img/image-desktop-4.jpg',
+                      8,
+                      '200.00',
+                      'Natalia necesitaba legalizar su diploma de maestría en el extranjero').c-service__mobile--reverse
     section.u-padding-top--l
       .container.center-align
         .row.u-cols-equals
           .col.s12
             h2 ¿Por qué Tudú?
           .col.s12.m6
-            +benefit('hours','second','Horas Ahorradas','Olvídate de las horas invertidas fuera de la casa o de la oficina en compras, trámites y pagos. ')
+            +benefit('hours',
+                      'second',
+                      'Horas Ahorradas',
+                      'Olvídate de las horas invertidas fuera de la casa o de la oficina en compras, trámites y pagos. ')
           .col.s12.m6
-            +benefit('enfocate','fourth','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+            +benefit('enfocate',
+                      'fourth',
+                      'Enfócate en lo que importa',
+                      'Dedica tu tiempo a las cosas realmente   importantes de tu vida o tu negocio.')
           .col.s12.m6
-            +benefit('comunicacion','second','Comunicación siempre','En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
+            +benefit('comunicacion',
+                      'second',
+                      'Comunicación siempre',
+                      'En caso sea necesario, conversa con nosotros por WhatsApp mientras el pedido se lleva a cabo.')
           .col.s12.m6
-            +benefit('programa','fourth','Programa Pedidos','¿Necesitas ayuda siempre con el mismo pendiente? Programa tu pedido y deja que un dúer se encargue.')
+            +benefit('programa',
+                      'fourth',
+                      'Programa Pedidos',
+                      '¿Necesitas ayuda siempre con el mismo pendiente? Programa tu pedido y deja que un dúer se encargue.')
     section.u-padding-top--m
       .container.center-align
         .row
@@ -64,8 +92,115 @@ html(lang="es")
           .col.s12
             +galleryClient(clients)
 
-    +newsletter('¿Quieres saber más sobre cómo podemos ayudarte?', true, 'Solicita que un asistente te llame para darte más información o agenda una reunión con nosotros', 'Conversemos','')
-    include blocks/footer
+    section#newsletter.scrollspy.u-bg-first.u-padding-top--l.u-padding-bottom--xxl.u-diagonal
+      .container.white-text
+        .row
+          .col.s12.u-margin-bottom--s
+            h2.c-header__title ¿Cómo empiezo?
+            ol.browser-default.c-newsletter__list
+              li Escríbenos por <a href="http://messenger.com/t/tuduperu" target="_blank">Messenger</a>, <a href="https://api.whatsapp.com/send?text=Hola%20Tudú!&phone=+51970828835" target="_blank">WhatsApp</a>, o <a href="mailto:pedidos@tudu.pe">correo electrónico</a> y cuéntanos cómo podemos ayudarte hoy.
+              li Te enviamos la fecha y hora programada para tu pedido, y la tarifa estimada.
+              li Una vez aceptada la tarifa, un dúer sale a atender tu pedido en la fecha acordada.
+          
+          .col.s12
+            a(href="https://tuduperu.typeform.com/to/lOLTw6" target="_blank").c-button Conversemos
+
+
+
+    footer.c-footer.u-padding-top--m
+      .container.center
+        .c-footer__container
+          .row
+            .col.s12.m4.offset-m2
+              a(href="#passRecover").modal-trigger Términos y condiciones
+
+              #passRecover.modal.c-modal.c-tandc
+                a(href="#!").c-modal__close.modal-close.hide-on-small-and-down
+                  i.material-icons.icon-close
+                .modal-content
+                  +navbaBehind('Términos y condiciones','close').hide-on-med-and-up
+                  h3.u-text-medium.hide-on-small-and-down Términos y condiciones
+                  .c-tandc__container
+                    h4
+                      span 1
+                      | Términos y condiciones generales de uso y contratación
+                    p Los presentes términos y condiciones generales de uso y contratación se aplican a Tudu S.A.C., que a continuación será referida como Plataforma Tudú, cuyo dominio es www.tudu.pe así como a todos los sitios relacionados o vinculados. Al utilizar el servicio de la Plataforma Tudú por cualquiera de nuestros canales de atención, muestras tu conformidad con las presentes condiciones.
+
+                    //-b En pocas palabras<br>
+                    //-b No puedes usar Pinterest si eres menor de 13 años. Además, si usas Pinterest como parte de tu trabajo, tienes que crear una cuenta de empresa.
+
+                    h4
+                      span 2
+                      | Objeto del presente
+                    p La Plataforma Tudú es una empresa de tecnología que ofrece servicios de asistencia “on demand” o “por horas” en “trámites”, “recojos” “compras”, “gestiones”, “averiguaciones” y “pagos” a nombre de terceros.
+                    p La Plataforma Tudú facilita estos servicios empleando los servicios de terceros, los Dúers,  para llevar a cabo el encargo consignado por el Cliente, así como los servicios de proveedores que no tienen relación comercial con la Plataforma Tudú.
+                    p Los Dúers, son profesionales independientes que colaboran con la Plataforma Tudú. Estos realizan la prestación la prestación de servicios de asistencia en un tiempo determinado de acuerdo a la solicitud del Cliente.
+
+                    h4
+                      span 3
+                      | Funcionamiento del servicio de asistencia
+                    p El Cliente puede utilizar cualquiera de nuestros canales de atención para solicitar un nuevo servicio: Facebook Messenger, WhatsApp, llamada o correo electrónico. Una vez recibida la solicitud de servicio, la solicitud será  analizada, cotizada y, tras la aprobación de la tarifa por parte del Cliente, el servicio será asignado a un Dúer para ser ejecutado de acuerdo a las indicaciones del Cliente y la disponibilidad de los Dúers.
+                    p El servicio de <b>“recojo”</b> consiste en el recojo de un producto y su posterior entrega en las direcciones establecidas por el Cliente y verificadas por la Plataforma Tudú. El Cliente es responsable de consignar correctamente las direcciones de recojo y entrega, por lo que exonera a la Plataforma Tudú y al Dúer de cualquier demora o error producto de la consignación errónea de dichas direcciones.
+                    p El servicio de <b>“Asistencia en compra”</b> consiste en la solicitud que realiza el Cliente a la Plataforma Tudú para la compra, a su nombre, de productos en cualquier comercio. La Plataforma Tudú asigna a un Dúer para la ejecución de la compra y su posterior entrega según las indicaciones y especificaciones brindadas por el Cliente. El Cliente debe proporcionar al Dúer, en detalle, la información necesaria sobre el producto en la tienda física de su preferencia. El Cliente tendrá comunicación constante con el Dúer para que éste ejecute el servicio encomendado de acuerdo a las indicaciones del propio Cliente.
+                    p En caso de ocurrir cualquier negligencia o error en las indicaciones que el Cliente consigne para la compra del producto solicitado, éste exime a Tudú y al Dúer de cualquier responsabilidad. En caso que el error provenga de parte del Dúer o de la Plataforma Tudú, ésta última se compromete al cambio del objeto adquirido en su nombre. 
+                    p Si el producto y/o servicio no se encontrara disponible al momento de la compra, el Dúer enviará opciones alternativas por Whatsapp. En caso de que el Cliente no se encuentre de acuerdo con ninguna de las opciones expuestas por el Dúer, y, consecuentemente, no esté interesado en las opciones alternativas, deberá asumir nuestras Políticas de Cancelación de Servicio. 
+                    p El servicio de <b>“Trámites”</b> y <b>“Gestiones”</b> consiste en tramitar los documentos o gestiones que el Cliente solicita a la Plataforma Tudú de acuerdo a las especificaciones proporcionadas por el cliente. El Cliente debe proporcionar, en detalle, la información necesaria sobre el trámite o gestión que desea que sea realizado por un Dúer en la institución correspondiente. 
+                    p El Cliente tendrá comunicación constante con el Dúer, para que éste ejecute, a su nombre, el servicio encomendado de acuerdo a las indicaciones del propio Cliente. En caso de ocurrir cualquier negligencia o error en las indicaciones que el Cliente consigne para la tramitación, éste exime a Tudú y al Dúer de cualquier responsabilidad.
+                    p En caso el Cliente no responda las llamadas o mensajes durante el tiempo pactado para la prestación del servicio, el Dúer esperará 15 minutos antes de retirarse. De no obtener respuesta, el Cliente asumirá la tarifa mínima.
+                    p En caso el Cliente no se encontrase en el lugar consignado para la entrega, el Dúer llevará el producto a la oficina central de la Plataforma Tudú donde será almacenado mientras entramos en contacto con el Cliente y se define un nuevo lugar de entrega. La reprogramación del servicio será cargada al Cliente.
+                    p La Plataforma Tudú y el Dúer actúan como intermediarios de la compra y tramitación de documentos, por lo tanto, no asumen responsabilidad alguna sobre la calidad o idoneidad de los productos adquiridos o de la correcta prestación de los servicios ofrecidos directamente por terceros.
+
+                    h4
+                      span 4
+                      | Devolución de productos
+                    p En caso el Cliente desee realizar la devolución de un producto, éste deberá dirigirse directamente a la misma tienda física de su preferencia en la que se realizó la compra con el comprobante de compra que el Dúer le proporcionó en el momento de la entrega del pedido.
+
+                    h4
+                      span 5
+                      | Nuestras Tarifas y Pago por los Servicios
+                    p La tarifa de cada servicio es calculada en función del tiempo y los kilómetros que deba utilizar y recorrer el Dúer para la ejecución del servicio. El Cliente conocerá la tarifa estimada antes de la contratación del servicio. Esto implica conocer el tiempo contratado para la ejecución de la tarea encomendada, el mismo que podría aumentar durante la prestación del servicio y, por ende, afectar la tarifa final del servicio. 
+                    p Una vez finalizado el servicio, el Cliente deberá cancelar el monto total de las compras o pagos realizados en su nombre así como la tarifa final de su servicio. El cliente puede realizar el pago a través de una transferencia bancaria, en efectivo o usando su tarjeta de crédito. Este último tiene un recargo del 5% (cinco por ciento) que corresponde al costo del servicio de las plataformas de pago: *CULQI y **PAGATERA.
+                    p *CULQI es una plataforma online que permite la realización de cobros con tarjeta de débito o crédito.
+                    p ** PAGATERA es una máscara que aloja a la plataforma CULQI permitiendo la generación de links de pago seguros.
+
+                    h4
+                      span 6
+                      | Cancelación de pedidos
+                    p En caso el Cliente decida cancelar el servicio, luego de que el Dúer haya sido asignado a la hora pactada, se le cobrará la tarifa mínima del servicio seleccionado.
+                    
+                    h4
+                      span 7
+                      | Servicios que rechazamos
+                    p La plataforma Tudú rechaza solicitudes de servicios que sean ilegales.
+
+                    h4
+                      span 8
+                      | Quejas o Sugerencias
+                    p Estamos para ayudarte, puedes contactarnos por cualquiera de nuestros canales o directamente al 970828835 de lunes a viernes de 9am - 6pm y los sábados de 9am a 1pm.
+
+                    h4
+                      span 10
+                      | Política de privacidad
+                    p Toda información brindada por el cliente, sobre su identidad, datos personales, datos de sus compras, quedarán grabados en nuestro sistema con la única finalidad de facilitar el servicio de manera exclusiva por la Plataforma Tudú sin opción de difusión a terceras personas.
+
+                    h4
+                      span 11
+                      | Modificación de los términos y condiciones
+                    p La Plataforma Tudú protege toda información brindada por el Cliente y está comprometida con la seguridad de sus datos de acuerdo a la legislación vigente. Toda información que se brinde será debidamente tratada y conservada con la única finalidad de brindar un servicio exclusivo por nuestra Plataforma.
+
+                    h4
+                      span 12
+                      | Ley aplicable y jurisdicción
+                    p Los presentes Términos y Condiciones se rigen por la ley peruana y cualquier disputa que se produzca con relación a la validez, aplicación o interpretación de los mismos, incluyendo la Política de Privacidad, será resuelta de acuerdo a Ley.
+            .col.s12.m4
+              a(href="about.html") Sobre Tudú
+            .col.s12
+              a(href="https://www.facebook.com/tuduperu" target='_blank')
+                i.material-icons.icon-facebook
+              a(href="https://www.instagram.com/tuduperu/" target='_blank')
+                i.material-icons.icon-instagram
+        .c-footer__copy
+          p Horario de atención: Lunes a Viernes (9AM a 6PM), Sábados (9AM a 1PM)
 
 
     include blocks/scripts

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Work Sans Light";
+    src: url("worksans-light.eot"); /* IE9 */
+    src: url("worksans-light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("worksans-light.woff") format("woff"), /* chrome, firefox */
+    url("worksans-light.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("worksans-light.svg#Work Sans Light") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

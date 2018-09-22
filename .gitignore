@@ -1,5 +1,7 @@
 node_modules/*
-dist/*
+source/*
 .sass-cache/
 source/transpiled_js
-*.html
+.sftp-config.json
+componentsVueList.txt
+package.json

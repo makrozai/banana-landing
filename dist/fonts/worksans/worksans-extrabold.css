@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Work Sans ExtraBold";
+    src: url("worksans-extrabold.eot"); /* IE9 */
+    src: url("worksans-extrabold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("worksans-extrabold.woff") format("woff"), /* chrome, firefox */
+    url("worksans-extrabold.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("worksans-extrabold.svg#Work Sans ExtraBold") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
