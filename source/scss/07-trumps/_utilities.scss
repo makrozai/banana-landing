@@ -99,4 +99,8 @@
   &-fade-out{
     opacity: 0;
   }
+  &-cols-equals{
+    display: flex;
+    flex-wrap:wrap;
+  }
 }
